@@ -1,0 +1,13 @@
+در پنجره Advanced Scripting Options:
+
+Script DROP and CREATE را پیدا کرده و آن را به Script CREATE تغییر دهید
+
+Types of data to script را به Schema only تنظیم کنید
+
+Script for Server Version را به نسخه SQL Server مقصد تنظیم کنید
+
+Script USE DATABASE را غیرفعال کنید (اگر نیاز ندارید)
+
+OK را بزنید
+
+Next و سپس Finish را بزنید تا اسکریپت تولید شود

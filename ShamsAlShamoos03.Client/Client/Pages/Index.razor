@@ -2,108 +2,137 @@
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.Layouts
 @using Syncfusion.Blazor.Inputs
 
-<!-- 🔴 NAVBAR -->
-     <SfAppBar CssClass="main-navbar">
-    <ChildContent>
-        <div class="container d-flex justify-content-between align-items-center">
-            <h4 class="text-white m-0">ShamsAlShamoos</h4>
-            <div>
-                <SfButton CssClass="e-flat text-white">Features</SfButton>
-                <SfButton CssClass="e-flat text-white">Pricing</SfButton>
-                <SfButton CssClass="e-flat text-white">Contact</SfButton>
-            </div>
+<SfAppBar CssClass="navbar-glass">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo">ShamsAlShamoos</div>
+        <div>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <SfButton CssClass="e-primary e-small ms-3">Get Started</SfButton>
         </div>
-    </ChildContent>
+    </div>
 </SfAppBar>
 
-<!-- 🔴 HERO -->
-<section class="hero-section text-center text-white">
-    <div class="container">
-        <h1 class="display-3 fw-bold">Build Smarter Solutions</h1>
-        <p class="lead mt-3">
-            Powerful Blazor WebAssembly platform powered by Syncfusion UI.
+<SfCarousel Height="250px" CssClass="mt-5">
+    <CarouselItems>
+        <CarouselItem>
+            <Template>
+                <div class="text-center p-4">
+                    <p>"This platform changed everything."</p>
+                    <strong>- CTO, FinTech</strong>
+                </div>
+            </Template>
+        </CarouselItem>
+
+        <CarouselItem>
+            <Template>
+                <div class="text-center p-4">
+                    <p>"Clean architecture and amazing UI."</p>
+                    <strong>- Software Architect</strong>
+                </div>
+            </Template>
+        </CarouselItem>
+    </CarouselItems>
+</SfCarousel>
+
+<!-- HERO -->
+<section class="hero-corporate">
+    <div class="container text-center text-white">
+        <h1 class="hero-title">سامانه جامع مدیریت شمس الشموس</h1>
+
+        <p class="hero-subtitle">
+            راهکار یکپارچه مدیریت اطلاعات، برنامه‌ریزی و گزارش‌گیری سازمانی
         </p>
-        <SfButton CssClass="e-primary e-large mt-4">
-            Get Started
-        </SfButton>
-    </div>
-</section>
 
-<!-- 🔴 FEATURES -->
-<section class="container py-5 text-center">
-    <h2 class="mb-5">Features</h2>
-    <div class="row">
-        <div class="col-md-4">
-            <h5>High Performance</h5>
-            <p>Optimized WebAssembly execution with minimal load time.</p>
-        </div>
-        <div class="col-md-4">
-            <h5>Modern UI</h5>
-            <p>Powered by Syncfusion professional components.</p>
-        </div>
-        <div class="col-md-4">
-            <h5>Scalable Architecture</h5>
-            <p>Clean architecture with Hosted Blazor model.</p>
+        <div class="mt-4">
+            <SfButton CssClass="e-primary e-large">
+                ورود به سامانه
+            </SfButton>
         </div>
     </div>
 </section>
-
-<!-- 🔴 PRICING -->
-<section class="pricing-section py-5 text-center">
-    <div class="container">
-        <h2 class="mb-5">Pricing</h2>
-        <div class="row">
+<!-- FEATURES -->
+<section id="features" class="section">
+    <div class="container text-center">
+        <h2>Why Choose Us</h2>
+        <div class="row mt-5">
             <div class="col-md-4">
-                <div class="pricing-card">
-                    <h4>Basic</h4>
-                    <h2>$19</h2>
-                    <p>Essential features</p>
-                    <SfButton CssClass="e-outline">Choose</SfButton>
+                <div class="feature-card">
+                    <h5>مدیریت اطلاعات پرسنلی</h5>
+                    <p>دسترسی متمرکز و امن به اطلاعات سازمانی.</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="pricing-card popular">
+                <div class="feature-card">
+                    <h5>🎨 Modern UI</h5>
+                    <p>Professional Syncfusion components.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h5>🔐 Secure</h5>
+                    <p>Hosted architecture with strong backend separation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="section bg-light text-center">
+    <div class="container">
+        <h2>Simple Pricing</h2>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h4>Starter</h4>
+                    <h2>$19</h2>
+                    <SfButton CssClass="e-outline mt-3">Choose Plan</SfButton>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card featured">
                     <h4>Pro</h4>
                     <h2>$49</h2>
-                    <p>Advanced features</p>
-                    <SfButton CssClass="e-primary">Choose</SfButton>
+                    <SfButton CssClass="e-primary mt-3">Choose Plan</SfButton>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="pricing-card">
                     <h4>Enterprise</h4>
                     <h2>$99</h2>
-                    <p>All features included</p>
-                    <SfButton CssClass="e-outline">Choose</SfButton>
+                    <SfButton CssClass="e-outline mt-3">Choose Plan</SfButton>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 🔴 TESTIMONIALS -->
-<section class="container py-5 text-center">
-    <h2 class="mb-5">Testimonials</h2>
-    <p>"This platform completely transformed our workflow!"</p>
-    <p class="fw-bold">- Happy Client</p>
+<!-- TESTIMONIALS -->
+<section class="section text-center">
+    <div class="container">
+        <h2>What Clients Say</h2>
+        <p class="testimonial">
+            “This platform transformed our workflow completely.”
+        </p>
+        <strong>- CTO, Tech Company</strong>
+    </div>
 </section>
 
-<!-- 🔴 CONTACT -->
-<section class="contact-section py-5 text-white">
-    <div class="container">
-        <h2 class="text-center mb-4">Contact Us</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <SfTextBox Placeholder="Your Name" FloatLabelType="FloatLabelType.Auto"></SfTextBox>
-                <SfTextBox Placeholder="Email" CssClass="mt-3" FloatLabelType="FloatLabelType.Auto"></SfTextBox>
-                <SfTextBox Placeholder="Message" CssClass="mt-3" Multiline="true"></SfTextBox>
-                <SfButton CssClass="e-primary e-block mt-3">
-                    Send Message
-                </SfButton>
-            </div>
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+    <div class="container text-center text-white">
+        <h2>Contact Us</h2>
+        <div class="contact-form mt-4">
+            <SfTextBox Placeholder="Your Name" FloatLabelType="FloatLabelType.Auto"></SfTextBox>
+            <SfTextBox Placeholder="Email" CssClass="mt-3" FloatLabelType="FloatLabelType.Auto"></SfTextBox>
+            <SfTextBox Placeholder="Message" CssClass="mt-3" Multiline="true"></SfTextBox>
+            <SfButton CssClass="e-primary e-block mt-3">
+                Send Message
+            </SfButton>
         </div>
     </div>
 </section>

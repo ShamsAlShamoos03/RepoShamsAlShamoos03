@@ -10,6 +10,8 @@
 		<!-- فقط بسته‌هایی که برای مدل‌ها یا کمکی نیاز است -->
 		<PackageReference Include="AutoMapper" Version="14.0.0" />
 		<PackageReference Include="Dapper" Version="2.1.35" />
+		<PackageReference Include="GemBox.Document" Version="35.0.1363" />
+		<PackageReference Include="MD.PersianDateTime.Core" Version="2.3.5" />
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.1" />
 	</ItemGroup>
 

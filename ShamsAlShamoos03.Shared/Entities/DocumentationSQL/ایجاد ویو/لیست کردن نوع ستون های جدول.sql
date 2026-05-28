@@ -1,0 +1,11 @@
+﻿USE NewsDB;
+GO
+
+SELECT 
+    COLUMN_NAME AS [نام ستون],
+    DATA_TYPE AS [نوع داده],
+    CHARACTER_MAXIMUM_LENGTH AS [حداکثر طول],
+    IS_NULLABLE AS [قابل تهی بودن]
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'DailyPlanEvidence01_Tbl'
+ORDER BY ORDINAL_POSITION;
