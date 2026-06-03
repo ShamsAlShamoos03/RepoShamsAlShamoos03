@@ -14,21 +14,9 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            //this.Database.CommandTimeout = 180;
-
-            //Database.SetInitializer(new ApplicationDbContext());
-            //this.ConfigureAwait.Configuration.LazyLoadingEnabled = false;
-            //this.Configuration.ProxyCreationEnabled = false;
-            //this.ConfigureAwait.
 
             Database.SetCommandTimeout(15001100);
         }
-        //public class ApplicationDbContext : DbContext
-        //{
-        //    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-        //        : base(options)
-        //    {
-        //    }
 
         public virtual DbSet<Answer> Answers { get; set; }
         public virtual DbSet<Choice> Choices { get; set; }

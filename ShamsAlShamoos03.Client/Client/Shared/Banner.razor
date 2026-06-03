@@ -1,0 +1,245 @@
+﻿ @using Microsoft.AspNetCore.Components.Authorization
+
+@inject NavigationManager Nav
+                                @inject AuthenticationStateProvider AuthStateProvider
+
+<section class="banner-wrapper">
+    <div class="container">
+        <div class="row align-items-center">
+
+    
+
+
+
+            <div class="col-lg-6 col-md-12">
+                 <div class="wrapper-content">
+                    <h1 style="color: #ffffff; font-size: 32px; font-weight: bold;">سامانه‌ای هوشمند و یکپارچه</h1>
+                    <h2 style="color: #ffdd99; font-size: 24px;">برای تصمیم‌گیری بهتر، سرعت بیشتر و آسایش کاربران</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="color: #ffffff; font-size: 18px; margin: 10px 0;">✅ بهبود فرآیند تصمیم‌گیری مدیران</li>
+                        <li style="color: #ffffff; font-size: 18px; margin: 10px 0;">✅ افزایش سرعت و کارایی در امور</li>
+                        <li style="color: #ffffff; font-size: 18px; margin: 10px 0;">✅ تجربه‌ای راحت و لذت‌بخش برای کاربران</li>
+                    </ul>
+                    <p style="font-size: 16px; color: #d1eaff;">سامانه‌ای نوین، متناسب با نیازهای امروز</p>
+                </div>
+            </div>
+
+
+
+ 
+
+            <div class="col-lg-6 col-md-12">
+                <div class="banner-courses-category">
+                    <ul>
+
+                        <li>
+                            <a target="_blank" href="http://porsan.net" style="text-align: center; display: block;">
+                                <img src="/ThemeSite/assets/img/ArmArtesh01.png" alt="logo" style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'">
+                                <br>
+                                سامانه پورسان
+                            </a>
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="https://meraj.nez.net/index.php/login" style="text-align: center; display: block;">
+                                <img src="/ThemeSite/assets/img/meraj.JPG" alt="logo" style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'">
+                                <br>
+                                معراج نزاجا
+                            </a>
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="https://hatef.nez.net/account/login" style="text-align: center; display: block;">
+                                <img src="/ThemeSite/assets/img/hatef.png" alt="logo" style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'">
+                                <br>
+                                سامانه هاتف
+                            </a>
+                        </li>
+          
+
+                        <li>
+                            <a target="_blank" href="http://192.180.10.66/faces/index.xhtml" style="text-align: center; display: block;">
+                                <img src="/ThemeSite/assets/img/fish.png" alt="logo" style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'">
+                                <br>
+                                سامانه فیش
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="/blazorpersonnel01/BDailyPlanEvidence01" style="text-align: center; display: block;">
+                                <img src="/ThemeSite/assets/img/amar.png" alt="logo" style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'">
+                                <br>
+                                سامانه آمار
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="/blazorpersonnel01/BHistoryEvaluation01" style="text-align: center; display: block;">
+                                <img src="/ThemeSite/assets/img/arzyabi01.png" alt="logo" style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'">
+                                <br>
+                                ارزیابی بازرسی
+                            </a>
+                        </li>
+
+               
+                        <li class="nav-item">
+                            <a asp-area="ImageKalaArea"
+                               asp-controller="Gallery"
+                               asp-action="search01"
+                               class="nav-link"
+                               style="text-align: center; display: block;" target="_blank">
+                                <img src="/ThemeSite/assets/img/Gallery01.png"
+                                     alt="logo"
+                                     style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'" />
+                                <br />
+                                آرشیو تصاویر
+                            </a>
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="/blazorpersonnel01/BHistoryTraficPersonal01" style="text-align: center; display: block;">
+                                <img src="/ThemeSite/assets/img/Trafic01.png" alt="logo" style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'">
+                                <br>
+                                تردد اشخاص
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)"
+                               @onclick='() => GoToPageAfterLogin("/Shamoos/HistoryRegister")'
+                               style="text-align:center;display:block;cursor:pointer;">
+
+                                <img src="/ThemeSite/assets/img/RegisterKala01.png"
+                                     alt="logo"
+                                     style="width:118px;height:53px;vertical-align:middle;" />
+
+                                <br />
+                                ثبت اقلام
+                            </a>
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="/blazorpersonnel01/BHistoryRokn04GRDDastoor01" style="text-align: center; display: block;">
+                                <img src="/ThemeSite/assets/img/RegisterReduceWorkPersonal01.png" alt="logo" style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'">
+                                <br>
+                                لوحه نگهبانی
+                            </a>
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="/blazorpersonnel01/BHistoryRokn04ArrestDastoor01" style="text-align: center; display: block;">
+                                <img src="/ThemeSite/assets/img/RegisterReduceWorkPersonal01.png" alt="logo" style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'">
+                                <br>
+                                بازداشتی
+                            </a>
+                        </li>
+
+
+
+                        <li>
+                            <a target="_blank" href="/blazorpersonnel01/BHistoryRokn04jamDastoor01" style="text-align: center; display: block;">
+                                <img src="/ThemeSite/assets/img/RegisterReduceWorkPersonal01.png" alt="logo" style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'">
+                                <br>
+                                سامانه دستور جام
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="/blazorpersonnel01/BHistoryRokn04FLYDastoor01" style="text-align: center; display: block;">
+                                <img src="/ThemeSite/assets/img/RegisterReduceWorkPersonal01.png" alt="logo" style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'">
+                                <br>
+                                سامانه دستور تجهیزات
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="/blazorpersonnel01/BHistoryRokn04FAVADastoor01" style="text-align: center; display: block;">
+                                <img src="/ThemeSite/assets/img/RegisterReduceWorkPersonal01.png" alt="logo" style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'">
+                                <br>
+                                سامانه دستور فاوا
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="/blazorpersonnel01/BHistoryRokn04TRNDastoor01" style="text-align: center; display: block;">
+                                <img src="/ThemeSite/assets/img/RegisterReduceWorkPersonal01.png" alt="logo" style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'">
+                                <br>
+                                سامانه دستور ترابری
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="/blazorpersonnel01/BHistoryVazifehDastoorPersonal01" style="text-align: center; display: block;">
+                                <img src="/ThemeSite/assets/img/RegisterReduceWorkPersonal01.png" alt="logo" style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'">
+                                <br>
+                                سامانه دستور وظیفه
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="/blazorpersonnel01/BHistoryReduceWorkPersonal01" style="text-align: center; display: block;">
+                                <img src="/ThemeSite/assets/img/RegisterReduceWorkPersonal01.png" alt="logo" style="width: 118px; height: 53px; vertical-align: middle; transition: transform 0.2s ease-in-out;"
+                                     onmouseover="this.style.transform='scale(1.2)'"
+                                     onmouseout="this.style.transform='scale(1)'">
+                                <br>
+                                ثبت تقلیل
+                            </a>
+                        </li>
+
+             
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@code {
+
+    private bool IsLoggedIn;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState =
+            await AuthStateProvider.GetAuthenticationStateAsync();
+
+        IsLoggedIn =
+            authState.User.Identity?.IsAuthenticated ?? false;
+    }
+
+    private void GoToPageAfterLogin(string returnUrl)
+    {
+        if (IsLoggedIn)
+        {
+            Nav.NavigateTo(returnUrl, true);
+        }
+        else
+        {
+            Nav.NavigateTo($"/login?returnUrl={Uri.EscapeDataString(returnUrl)}");
+        }
+    }
+}

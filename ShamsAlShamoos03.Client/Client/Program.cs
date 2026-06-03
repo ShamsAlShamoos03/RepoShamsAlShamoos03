@@ -1,6 +1,9 @@
- using Microsoft.AspNetCore.Components.Web;
+using Blazored.LocalStorage;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
  using ShamsAlShamoos03.Client.Client;
+//using ShamsAlShamoos03.Client.Client.Services;
 using ShamsAlShamoos03.Client.Services;
 using Syncfusion.Blazor;
 using Syncfusion.Licensing;
@@ -8,6 +11,8 @@ using System.Globalization;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.RegularExpressions;
+using Blazored.LocalStorage;
+using Microsoft.AspNetCore.Components.Authorization;
 
 //فارسی کردن
 var culture = new CultureInfo("fa-IR");
@@ -26,6 +31,8 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
+ 
+
 
 // HttpClient
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
@@ -40,8 +47,18 @@ builder.Services.AddScoped<HistoryRegisterService>();
 // رجیستر Syncfusion
 builder.Services.AddSyncfusionBlazor();
 
+builder.Services.AddScoped<AuthenticationStateProvider, SimpleAuthProvider>();
 
- 
+
+
+builder.Services.AddBlazoredLocalStorage();
+
+builder.Services.AddAuthorizationCore();
+
+builder.Services.AddScoped<SimpleAuthProvider>();
+builder.Services.AddScoped<AuthenticationStateProvider>(sp =>
+    sp.GetRequiredService<SimpleAuthProvider>());
+
 
 
 

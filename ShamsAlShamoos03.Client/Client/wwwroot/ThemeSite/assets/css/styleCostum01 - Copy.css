@@ -1,0 +1,50 @@
+/* نوار تبلیغات چسبیده به پایین سایت */
+.advertise-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #000000; 
+   
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    z-index: 9999; /* روی همه عناصر باشه */
+}
+
+/* کانتینر برای تبلیغات متحرک */
+.marquee-container {
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    animation: marquee 40s linear infinite;
+}
+
+/* تبلیغات کنار هم در یک خط */
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee-scroll 20s linear infinite;
+}
+
+.marquee-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    padding: 0 15px;
+    padding-right: 20px; /* فاصله بین متون */
+    display: inline-block;
+}
+
+.separator {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+
+/* انیمیشن حرکت تبلیغات از راست به چپ */
+@keyframes marquee-scroll {
+    from { transform: translateX(-100%); } /* شروع از سمت راست */
+    to { transform: translateX(100%); } /* تمام شدن در سمت چپ */
+}

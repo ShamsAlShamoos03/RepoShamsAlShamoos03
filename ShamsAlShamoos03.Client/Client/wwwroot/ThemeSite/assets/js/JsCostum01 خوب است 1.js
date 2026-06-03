@@ -1,0 +1,346 @@
+ 
+// document.addEventListener("DOMContentLoaded", function () {
+//     var marqueeContent = document.querySelector(".marquee-content");
+//     var marqueeContainer = document.querySelector(".marquee-container");
+
+//     if (marqueeContent && marqueeContainer) {
+//         var textWidth = marqueeContent.scrollWidth; // گرفتن عرض متن کامل
+//         var containerWidth = marqueeContainer.clientWidth; // عرض کانتینر
+
+//         var speed = Math.max(20, textWidth / 20); // تعیین مدت‌زمان بر اساس عرض متن
+//         marqueeContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+//     }
+// });
+ 
+// document.addEventListener("DOMContentLoaded", function () {
+//     var marqueeContent = document.querySelector(".marquee-content");
+//     var marqueeContainer = document.querySelector(".marquee-container");
+
+//     if (marqueeContent && marqueeContainer) {
+//         var textWidth = marqueeContent.scrollWidth; // گرفتن عرض متن کامل
+//         var containerWidth = marqueeContainer.clientWidth; // عرض کانتینر
+
+//         // تعیین مدت‌زمان بر اساس طول متن، با حداقل و حداکثر سرعت مناسب
+//         var speed = Math.max(10, textWidth / 50); // مقدار کمتر باعث سریع‌تر آمدن متن می‌شود
+
+//         marqueeContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+
+//         // اضافه کردن افکتی برای شروع سریع‌تر
+//         marqueeContent.style.transform = "translateX(100%)";
+//         setTimeout(() => {
+//             marqueeContent.style.transition = "transform 1s ease-out";
+//             marqueeContent.style.transform = "translateX(0)";
+//         }, 0); // بعد از ۲۰۰ میلی‌ثانیه شروع کند
+//     }
+// });
+
+
+ 
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     var marqueeContent = document.querySelector(".marquee-content");
+    //     var marqueeContainer = document.querySelector(".marquee-container");
+
+    //     if (marqueeContent && marqueeContainer) {
+    //         var textWidth = marqueeContent.scrollWidth; // عرض کل متن تبلیغات
+    //         var containerWidth = marqueeContainer.clientWidth; // عرض کانتینر
+
+    //         // تنظیم حداقل و حداکثر مدت زمان حرکت (عدد کمتر = شروع سریع‌تر)
+    //         var speed = Math.max(15, textWidth / 40);
+
+    //         // اضافه کردن یک نسخه‌ی تکراری از متن برای حرکت بدون توقف
+    //         var duplicateContent = marqueeContent.cloneNode(true);
+    //         marqueeContainer.appendChild(duplicateContent);
+
+    //         // اعمال تنظیمات انیمیشن
+    //         marqueeContainer.style.display = "flex";
+    //         marqueeContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+    //         duplicateContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+
+    //         // اطمینان از شروع فوری تبلیغ
+    //         marqueeContent.style.transform = "translateX(0)";
+    //         duplicateContent.style.transform = "translateX(0)";
+    //     }
+    // });
+ 
+ 
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     var marqueeContent = document.querySelector(".marquee-content");
+    //     var marqueeContainer = document.querySelector(".marquee-container");
+
+    //     if (marqueeContent && marqueeContainer) {
+    //         var textWidth = marqueeContent.scrollWidth; // عرض کل متن تبلیغات
+    //         var containerWidth = marqueeContainer.clientWidth; // عرض کانتینر
+
+    //         // تعیین سرعت متناسب با طول متن
+    //         var speed = Math.max(15, textWidth / 50); 
+
+    //         // اضافه کردن یک نسخه‌ی تکراری از متن برای حرکت بی‌وقفه
+    //         var duplicateContent = marqueeContent.cloneNode(true);
+    //         marqueeContainer.appendChild(duplicateContent);
+
+    //         // تنظیم مقدار اولیه برای جلوگیری از تأخیر
+    //         marqueeContent.style.transform = "translateX(0)";
+    //         duplicateContent.style.transform = "translateX(0)";
+
+    //         // اطمینان از اجرای فوری انیمیشن
+    //         setTimeout(() => {
+    //             marqueeContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+    //             duplicateContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+    //         }, 50); // تأخیر ۵۰ میلی‌ثانیه برای اطمینان از پردازش اولیه
+    //     }
+    // });
+ 
+
+
+ 
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     var marqueeContainer = document.querySelector(".marquee-container");
+    //     var marqueeContent = document.querySelector(".marquee-content");
+
+    //     if (marqueeContent && marqueeContainer) {
+    //         var textWidth = marqueeContent.scrollWidth; // عرض کل متن
+
+    //         // ایجاد یک کپی برای نمایش پیوسته
+    //         var duplicateContent = marqueeContent.cloneNode(true);
+    //         marqueeContainer.appendChild(duplicateContent);
+
+    //         // تنظیم انیمیشن با سرعت متناسب
+    //         var speed = Math.max(10, textWidth / 50); 
+
+    //         marqueeContainer.style.display = "flex"; // نمایش کنار هم دو نسخه متن
+    //         marqueeContainer.style.width = `${textWidth * 2}px`; // دو برابر عرض متن
+    //         marqueeContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+    //         duplicateContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+
+    //         // موقعیت اولیه نسخه دوم
+    //         duplicateContent.style.position = "absolute";
+    //         duplicateContent.style.left = `${textWidth}px`;
+    //     }
+    // });
+  
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     var marqueeContainer = document.querySelector(".marquee-container");
+    //     var marqueeContent = document.querySelector(".marquee-content");
+
+    //     if (marqueeContent && marqueeContainer) {
+    //         var textWidth = marqueeContent.scrollWidth; // عرض متن
+
+    //         // ایجاد نسخه‌ی تکراری کنار متن اصلی
+    //         var duplicateContent = marqueeContent.cloneNode(true);
+    //         marqueeContainer.appendChild(duplicateContent);
+
+    //         // محاسبه سرعت حرکت بر اساس طول متن
+    //         var speed = Math.max(10, textWidth / 50); 
+
+    //         // استایل لازم برای نمایش پیوسته
+    //         marqueeContainer.style.display = "flex";
+    //         marqueeContainer.style.width = `${textWidth * 2}px`; // دو برابر عرض متن
+
+    //         // تنظیم انیمیشن
+    //         marqueeContainer.style.animation = `marquee-scroll ${speed}s linear infinite`;
+    //     }
+    // });
+ 
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     var marqueeContainer = document.querySelector(".marquee-container");
+    //     var marqueeContent = document.querySelector(".marquee-content");
+
+    //     if (marqueeContent && marqueeContainer) {
+    //         var textWidth = marqueeContent.scrollWidth; // عرض متن
+
+    //         // ایجاد نسخه‌ی تکراری برای حرکت پیوسته
+    //         var duplicateContent = marqueeContent.cloneNode(true);
+    //         marqueeContainer.appendChild(duplicateContent);
+
+    //         // تنظیم انیمیشن با سرعت متناسب با طول متن
+    //         var speed = Math.max(10, textWidth / 50); 
+
+    //         // نمایش پیوسته و بدون مکث
+    //         marqueeContainer.style.display = "flex";
+    //         marqueeContainer.style.width = `${textWidth * 2}px`; // دو برابر عرض متن
+
+    //         // اجرای انیمیشن از **راست به چپ**
+    //         marqueeContainer.style.animation = `marquee-scroll ${speed}s linear infinite`;
+    //     }
+    // });
+ 
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     var marqueeContainer = document.querySelector(".marquee-container");
+    //     var marqueeContent = document.querySelector(".marquee-content");
+    
+    //     if (marqueeContent && marqueeContainer) {
+    //         var textWidth = marqueeContent.scrollWidth; // عرض متن
+    //         var containerWidth = marqueeContainer.clientWidth; // عرض کانتینر
+    
+    //         // ایجاد یک نسخه‌ی تکراری از متن برای حرکت بی‌وقفه
+    //         var duplicateContent = marqueeContent.cloneNode(true);
+    //         duplicateContent.classList.add("marquee-duplicate");
+    //         marqueeContainer.appendChild(duplicateContent);
+    
+    //         // تنظیم سرعت حرکت متناسب با طول متن
+    //         var speed = Math.max(10, textWidth / 50);
+    
+    //         // تنظیم مقدار اولیه برای حرکت بی‌وقفه
+    //         marqueeContent.style.transform = "translateX(100%)";
+    //         duplicateContent.style.transform = "translateX(100%)";
+    
+    //         // اطمینان از اجرای بدون مکث
+    //         setTimeout(() => {
+    //             marqueeContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+    //             duplicateContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+    //         }, 50); // تأخیر جزئی برای پردازش اولیه
+    //     }
+    // });
+    
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     var marqueeContent = document.querySelector(".marquee-content");
+    //     var marqueeContainer = document.querySelector(".marquee-container");
+    //     console.log("Marquee Content:", marqueeContent);
+    //     console.log("Marquee Container:", marqueeContainer);
+
+    //     if (!marqueeContent || !marqueeContainer) {
+    //         console.log("مشکل: یکی از المنت‌ها یافت نشد!");
+    //         return;
+    //     }
+
+
+    //     if (marqueeContent && marqueeContainer) {
+    //         var textWidth = marqueeContent.scrollWidth; // عرض کل متن
+    //         var containerWidth = marqueeContainer.clientWidth; // عرض کانتینر
+    
+    //         // تنظیم سرعت متناسب با طول متن
+    //         var speed = Math.max(10, textWidth / 50); // متناسب‌سازی سرعت
+    
+    //         // ایجاد نسخه‌ی تکراری برای حرکت بی‌وقفه
+    //         var duplicateContent = marqueeContent.cloneNode(true);
+    //         marqueeContainer.appendChild(duplicateContent);
+    //         console.log("Text Width: ", textWidth);
+    //         console.log("Container Width: ", containerWidth);
+    //         // تنظیم انیمیشن برای حرکت پیوسته
+    //         marqueeContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+    //         duplicateContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+    //     }
+    // });
+    
+
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     var marqueeContent = document.querySelector(".marquee-content");
+    //     var marqueeContainer = document.querySelector(".marquee-container");
+    
+    //     if (marqueeContent && marqueeContainer) {
+    //         var textWidth = marqueeContent.scrollWidth; // گرفتن عرض متن کامل
+    //         var containerWidth = marqueeContainer.clientWidth; // عرض کانتینر
+    
+    //         // تعیین مدت‌زمان بر اساس طول متن، با حداقل و حداکثر سرعت مناسب
+    //         var speed = Math.max(10, textWidth / 50); // مقدار کمتر باعث سریع‌تر آمدن متن می‌شود
+    
+    //         marqueeContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+    
+    //         // اضافه کردن افکتی برای شروع سریع‌تر
+    //         marqueeContent.style.transform = "translateX(100%)";
+    //         setTimeout(() => {
+    //             marqueeContent.style.transition = "transform 1s ease-out";
+    //             marqueeContent.style.transform = "translateX(0)";
+    //         }, 50); // بعد از ۲۰۰ میلی‌ثانیه شروع کند
+    //     }
+    // });
+
+
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     var marqueeContent = document.querySelector(".marquee-content");
+    //     var marqueeContainer = document.querySelector(".marquee-container");
+    
+    //     if (marqueeContent && marqueeContainer) {
+    //         var textWidth = marqueeContent.scrollWidth; // گرفتن عرض متن کامل
+    //         var containerWidth = marqueeContainer.clientWidth; // عرض کانتینر
+    
+    //         // ثابت نگه داشتن مدت زمان انیمیشن
+    //         var baseSpeed = 10; // سرعت ثابت
+    //         var speed = Math.max(baseSpeed, textWidth / 50); // حداقل سرعت ثابت
+    
+    //         marqueeContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+    
+    //         // اضافه کردن افکتی برای شروع سریع‌تر
+    //         marqueeContent.style.transform = "translateX(100%)";
+    //         setTimeout(() => {
+    //             marqueeContent.style.transition = "transform 1s ease-out";
+    //             marqueeContent.style.transform = "translateX(0)";
+    //         }, 50); // بعد از ۲۰ میلی‌ثانیه شروع کند
+    //     }
+    // });
+    
+    
+
+
+
+
+
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     var marqueeContent = document.querySelector(".marquee-content");
+    //     var marqueeContainer = document.querySelector(".marquee-container");
+    
+    //     if (marqueeContent && marqueeContainer) {
+    //         var textWidth = marqueeContent.scrollWidth; // گرفتن عرض متن کامل
+    //         var containerWidth = marqueeContainer.clientWidth; // عرض کانتینر
+    
+    //         // ثابت نگه داشتن مدت زمان انیمیشن
+    //         var baseSpeed = 10; // سرعت ثابت
+    //         var speed = Math.max(baseSpeed, textWidth / 50); // حداقل سرعت ثابت
+    
+    //         // تنظیم انیمیشن با استفاده از مدت زمان ثابت
+    //         marqueeContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+    
+    //         // تغییر فاصله از سمت راست به مقدار دلخواه
+    //         marqueeContent.style.setProperty('--marquee-padding-right', '100px'); // اینجا مقدار 100px را می‌توانید تغییر دهید
+    
+    //         // اضافه کردن افکتی برای شروع سریع‌تر
+    //         marqueeContent.style.transform = "translateX(0)";
+    //         setTimeout(() => {
+    //             marqueeContent.style.transition = "transform 1s ease-out";
+    //             marqueeContent.style.transform = "translateX(-100%)"; // حرکت از راست به چپ
+    //         }, 50); // بعد از ۲۰ میلی‌ثانیه شروع کند
+    //     }
+    // });
+    
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var marqueeContent = document.querySelector(".marquee-content");
+        var marqueeContainer = document.querySelector(".marquee-container");
+        if (marqueeContent) {
+            var text = marqueeContent.innerText || marqueeContent.textContent;
+    
+            // بررسی اینکه آیا متن به زبان فارسی است یا نه
+            var isPersian = /[\u0600-\u06FF]/.test(text);
+    
+            if (isPersian) {
+                marqueeContent.style.direction = "rtl"; // اگر فارسی بود، جهت متن را rtl تنظیم می‌کند
+            } else {
+                marqueeContent.style.direction = "ltr"; // در غیر این صورت، متن به سمت چپ به راست خواهد رفت
+            }
+        }
+        if (marqueeContent && marqueeContainer) {
+            var textWidth = marqueeContent.scrollWidth; // گرفتن عرض متن کامل
+            var containerWidth = marqueeContainer.clientWidth; // عرض کانتینر
+    
+            // تعیین مدت‌زمان بر اساس طول متن، با حداقل و حداکثر سرعت مناسب
+            var speed = Math.max(10, textWidth / 50); // مقدار کمتر باعث سریع‌تر آمدن متن می‌شود
+    
+            marqueeContent.style.animation = `marquee-scroll ${speed}s linear infinite`;
+    
+            // اضافه کردن افکتی برای شروع سریع‌تر
+            marqueeContent.style.transform = "translateX(100%)";
+            setTimeout(() => {
+                marqueeContent.style.transition = "transform 1s ease-out";
+                marqueeContent.style.transform = "translateX(0)";
+            }, 50); // بعد از ۲۰ میلی‌ثانیه شروع کند
+        }
+    });
+    
+
+    
+ 
+ 

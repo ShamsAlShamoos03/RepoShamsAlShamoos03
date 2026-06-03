@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using ShamsAlShamoos03.Infrastructure;
- using ShamsAlShamoos03.Infrastructure.Persistence.Contexts;
+using ShamsAlShamoos03.Infrastructure.Persistence.Contexts;
 using ShamsAlShamoos03.Infrastructure.Persistence.Repositories;
 using ShamsAlShamoos03.Infrastructure.Persistence.UnitOfWork;
 using ShamsAlShamoos03.Server.Services;
@@ -10,33 +10,38 @@ using ShamsAlShamoos03.Shared.Entities;
 using Syncfusion.Licensing;
 using System.Globalization;
 
-
-//فارسی کردن
+// ========================================
+// فارسی سازی
+// ========================================
 var culture = new CultureInfo("fa-IR");
+
 CultureInfo.DefaultThreadCurrentCulture = culture;
 CultureInfo.DefaultThreadCurrentUICulture = culture;
-//فارسی کردن
 
- 
-
-
+// ========================================
+// Syncfusion License
+// ========================================
 var licenseKey = "MTU4NUAzMjM3MkUzMTJFMzluT08wbzRnYm4zUlFDOVRzWVpYbUtuSEl0aUhTZmNMYjQxekhrV0NVRnlzPQ==";
 
 SyncfusionLicenseProvider.RegisterLicense(licenseKey);
 
-
+// ========================================
+// Builder
+// ========================================
 var builder = WebApplication.CreateBuilder(args);
 
-// --------------------
-// 1️⃣ Services
-// --------------------
+// ========================================
+// Services
+// ========================================
 
 // Controllers + Swagger
 builder.Services.AddControllers();
+
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen();
 
-// CORS (برای اینکه Client به سرور وصل شود)
+// CORS
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
@@ -47,8 +52,9 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Session + Cache
-builder.Services.AddDistributedMemoryCache(); // برای Session
+// Session
+builder.Services.AddDistributedMemoryCache();
+
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -56,38 +62,85 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-// EF Core DbContext
+// DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+{
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
-builder.Services.AddIdentity<ApplicationUsers, IdentityRole>()
+// Identity
+builder.Services
+    .AddIdentity<ApplicationUsers, ApplicationRoles>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
-// UnitOfWork و Repository
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/login";
+});
+
+// Authorization
+builder.Services.AddAuthorization();
+
+// Repository + UnitOfWork
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 builder.Services.AddScoped<IDapperGenericRepository, DapperGenericRepository>();
+
 builder.Services.AddScoped<APIDataService01>();
+
+// Infrastructure
 builder.Services.AddInfrastructure(builder.Configuration);
 
-// AutoMapper (اختیاری اگر داری)
+// AutoMapper
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-// --------------------
-// 2️⃣ Build App
-// --------------------
+// ========================================
+// Build App
+// ========================================
 var app = builder.Build();
 
-
-var qrFilesPath = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "QrFiles"));
+// ========================================
+// Create Folders
+// ========================================
+var qrFilesPath = Path.Combine(
+    Directory.GetCurrentDirectory(),
+    "QrFiles");
 
 if (!Directory.Exists(qrFilesPath))
 {
     Directory.CreateDirectory(qrFilesPath);
 }
- 
 
+var personelImagePath = @"D:\upload\PersonelImage1";
 
+// ========================================
+// Middleware
+// ========================================
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+
+    app.UseSwaggerUI();
+}
+else
+{
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+
+// Routing
+app.UseRouting();
+
+// Blazor Files
+app.UseBlazorFrameworkFiles();
+
+// wwwroot
+app.UseStaticFiles();
+
+// QrFiles
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(qrFilesPath),
@@ -95,30 +148,43 @@ app.UseStaticFiles(new StaticFileOptions
 });
 
 
-// --------------------
-// 3️⃣ Middleware
-// --------------------
-if (app.Environment.IsDevelopment())
+ 
+if (!Directory.Exists(personelImagePath))
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    Directory.CreateDirectory(personelImagePath);
 }
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseRouting();
-// Serve Blazor framework files (_framework)
-app.UseBlazorFrameworkFiles();
-// CORS قبل از MapControllers
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(personelImagePath),
+    RequestPath = "/PersonelImage1"
+});
+
+//// Personel Images
+//app.UseStaticFiles(new StaticFileOptions
+//{
+//    FileProvider = new PhysicalFileProvider(personelImagePath),
+//    RequestPath = "/PersonelImage1"
+//});
+
+// CORS
 app.UseCors();
 
-// Session middleware
+// Session
 app.UseSession();
 
+// Auth
+app.UseAuthentication();
+
+app.UseAuthorization();
+
+// Controllers
 app.MapControllers();
+
+// Blazor Fallback
 app.MapFallbackToFile("index.html");
 
-// --------------------
-// 4️⃣ Run
-// --------------------
+// ========================================
+// Run
+// ========================================
 app.Run();

@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="GemBox.Document" Version="35.0.1363" />
     <PackageReference Include="MD.PersianDateTime.Core" Version="2.3.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.22" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.1" />
 
@@ -48,6 +49,8 @@
   <ItemGroup>
     <ProjectReference Include="..\ShamsAlShamoos03.Application\ShamsAlShamoos03.Application.csproj" />
     <ProjectReference Include="..\ShamsAlShamoos03.Infrastructure\ShamsAlShamoos03.Infrastructure.csproj" />
+	  <ProjectReference Include="..\ShamsAlShamoos03.Client\Client\ShamsAlShamoos03.Client.Client.csproj" />
+
   </ItemGroup>
 
 </Project>

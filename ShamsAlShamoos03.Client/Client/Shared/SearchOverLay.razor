@@ -1,0 +1,43 @@
+﻿@* SearchOverLay.razor *@
+@if (IsSearchOpen)
+{
+    <div class="search-overlay">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="search-overlay-layer"></div>
+                <div class="search-overlay-layer"></div>
+                <div class="search-overlay-layer"></div>
+
+                <div class="search-overlay-close" @onclick="ToggleSearch">
+                    <span class="search-overlay-close-line"></span>
+                    <span class="search-overlay-close-line"></span>
+                </div>
+
+                <div class="search-overlay-form">
+                    <form onsubmit="return false">
+                        <input type="text" class="input-search" placeholder="جستجو ...">
+                        <button type="button" @onclick="OnSearchClicked">
+                            <i class='bx bx-search-alt'></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private bool IsSearchOpen { get; set; } = false;
+
+    public void ToggleSearch()
+    {
+        IsSearchOpen = !IsSearchOpen;
+        StateHasChanged();
+    }
+
+    private void OnSearchClicked()
+    {
+        // TODO: اضافه کردن منطق جستجو
+        Console.WriteLine("Search clicked!");
+    }
+}

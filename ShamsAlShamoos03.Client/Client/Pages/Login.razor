@@ -1,0 +1,317 @@
+﻿@page "/login"
+@layout LoginLayout
+
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using ShamsAlShamoos03.Shared.Entities
+@using ShamsAlShamoos03.Shared.Models
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+@using Microsoft.AspNetCore.Components
+@inject NavigationManager Nav
+@inject HttpClient Http
+@inject AuthenticationStateProvider AuthStateProvider
+
+<PageTitle>ورود کاربران</PageTitle>
+
+<div class="login-page-container">
+
+    <!-- فرم ورود (سمت چپ) -->
+    <div class="login-form-section">
+
+        <div class="login-wrapper">
+
+            <!-- لوگو -->
+            <div class="text-center mb-4">
+                <a href="/" class="d-inline-block">
+                    <img src="ShamsAlShamoos03.png"
+                         width="120"
+                         class="mb-3"
+                         style="cursor: pointer;" />
+                </a>
+                <p class="text-muted">
+                    سامانه جامع مدیریت شمس الشموس
+                </p>
+            </div>
+
+            <!-- پیام خطا -->
+            @if (!string.IsNullOrWhiteSpace(ErrorMessage))
+            {
+                <div class="alert alert-danger">
+                    @ErrorMessage
+                </div>
+            }
+
+            <!-- پیام موفق -->
+            @if (!string.IsNullOrWhiteSpace(SuccessMessage))
+            {
+                <div class="alert alert-success">
+                    @SuccessMessage
+                </div>
+            }
+
+            <!-- فرم -->
+            <div class="login-card shadow-lg">
+                <EditForm Model="this" OnValidSubmit="LoginUser">
+                    <DataAnnotationsValidator />
+
+                    <!-- انتخاب کاربر -->
+                    <div class="mb-4">
+                        <SfDropDownList TValue="string"
+                                        TItem="UserVm"
+                                        Placeholder="انتخاب کاربر"
+                                        DataSource="@UserPersonnelList"
+                                        @bind-Value="SelectedMelliCode"
+                                        Width="100%"
+                                        AllowFiltering="true"
+                                        IgnoreCase="true"
+                                        FilterType="Syncfusion.Blazor.DropDowns.FilterType.Contains"
+                                        PopupHeight="300px">
+
+                            <DropDownListFieldSettings Text="Title"
+                                                       Value="ID">
+                            </DropDownListFieldSettings>
+
+                            <DropDownListTemplates TItem="UserVm">
+                                <ItemTemplate Context="item">
+                                    <div class="d-flex align-items-center gap-3 p-1">
+                                        <img src="@item.TitleEn1"
+                                             width="45"
+                                             height="45"
+                                             style="border-radius:50%; object-fit:cover;" />
+                                        <div>
+                                            @item.Title
+                                        </div>
+                                    </div>
+                                </ItemTemplate>
+                            </DropDownListTemplates>
+                        </SfDropDownList>
+                    </div>
+
+                    <!-- رمز عبور -->
+                    <div class="mb-4">
+                        <SfTextBox Type="InputType.Password"
+                                   Placeholder="رمز عبور"
+                                   FloatLabelType="FloatLabelType.Auto"
+                                   @bind-Value="Password">
+                        </SfTextBox>
+                    </div>
+
+                    <!-- دکمه ورود -->
+                    <div class="d-grid">
+                        <SfButton CssClass="e-primary e-large login-btn"
+                                  IsPrimary="true"
+                                  type="submit">
+                            @(IsLoading ? "در حال ورود..." : "ورود به سامانه")
+                        </SfButton>
+                    </div>
+                </EditForm>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- تصویر سمت راست -->
+    <div class="login-image-section">
+        <div class="login-image-container">
+            <img src="images/login-image.jpg"
+                 class="login-image"
+                 alt="Login Image" />
+
+            <div class="overlay-content">
+                <h1>
+                    ShamsAlShamoos
+                </h1>
+                <p>
+                    راهکار جامع مدیریت اطلاعات و فرایندهای سازمانی
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    /* ساختار اصلی با استفاده از Grid (مقاوم در برابر RTL) */
+    .login-page-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 100vh;
+        width: 100%;
+        direction: ltr; /* Forces left-to-right for layout only */
+    }
+
+    /* فرم ورود - همیشه در سمت چپ */
+    .login-form-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f9fa;
+        direction: rtl; /* برگردوندن جهت محتوا به راست‌چین */
+    }
+
+    /* تصویر - همیشه در سمت راست */
+    .login-image-section {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .login-image-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .login-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .overlay-content {
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.45);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px;
+    }
+
+        .overlay-content h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .overlay-content p {
+            font-size: 20px;
+            max-width: 500px;
+            line-height: 2;
+        }
+
+    .login-wrapper {
+        width: 100%;
+        max-width: 500px;
+        padding: 30px;
+    }
+
+    .login-card {
+        background: white;
+        border-radius: 24px;
+        padding: 40px;
+    }
+
+    .login-btn {
+        height: 50px;
+        font-size: 16px;
+        border-radius: 12px !important;
+    }
+
+    /* موبایل: فرم در بالا، تصویر مخفی */
+    @@media (max-width: 991.98px) {
+        .login-page-container {
+            grid-template-columns: 1fr;
+        }
+
+        .login-image-section {
+            display: none;
+        }
+    }
+</style>
+
+@code {
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public string? ReturnUrl { get; set; }
+
+    public string SelectedMelliCode { get; set; } = string.Empty;
+
+    public string Password { get; set; } = string.Empty;
+
+    public bool IsLoading { get; set; }
+
+    public string ErrorMessage { get; set; } = string.Empty;
+
+    public string SuccessMessage { get; set; } = string.Empty;
+
+    public List<UserVm> UserPersonnelList { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var result =
+                await Http.GetFromJsonAsync<List<UserVm>>("api/auth/users");
+
+            if (result != null)
+            {
+                UserPersonnelList = result;
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorMessage = ex.Message;
+        }
+    }
+
+    private async Task LoginUser()
+    {
+        try
+        {
+            IsLoading = true;
+            ErrorMessage = "";
+
+            var response = await Http.PostAsJsonAsync(
+                "api/auth/login",
+                new
+                {
+                    UserName = SelectedMelliCode,
+                    Password = Password
+                });
+
+            if (response.IsSuccessStatusCode)
+            {
+                await ((SimpleAuthProvider)AuthStateProvider)
+                    .SetLoginAsync(true);
+
+                SuccessMessage = "ورود موفقیت آمیز بود";
+
+                // Nav.NavigateTo(ReturnUrl, true);
+
+                // Nav.NavigateTo("/", true);
+
+                if (string.IsNullOrWhiteSpace(ReturnUrl))
+{
+    Nav.NavigateTo("/", true);
+}
+else
+{
+    Nav.NavigateTo(ReturnUrl, true);
+}
+
+
+            }
+            else
+            {
+                ErrorMessage =
+                    await response.Content.ReadAsStringAsync();
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorMessage = ex.Message;
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+
+}
