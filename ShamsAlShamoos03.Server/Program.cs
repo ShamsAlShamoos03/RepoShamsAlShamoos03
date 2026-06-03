@@ -9,7 +9,8 @@ using ShamsAlShamoos03.Server.Services;
 using ShamsAlShamoos03.Shared.Entities;
 using Syncfusion.Licensing;
 using System.Globalization;
-
+using Microsoft.AspNetCore.DataProtection;
+using System.IO;
 // ========================================
 // فارسی سازی
 // ========================================
@@ -37,10 +38,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Controllers + Swagger
 builder.Services.AddControllers();
 
-builder.Services.AddEndpointsApiExplorer();
+ 
 
-builder.Services.AddSwaggerGen();
-
+ 
 // CORS
 builder.Services.AddCors(options =>
 {
@@ -51,6 +51,10 @@ builder.Services.AddCors(options =>
               .AllowAnyHeader();
     });
 });
+
+builder.Services.AddDataProtection()
+    .PersistKeysToFileSystem(new DirectoryInfo(@"C:\Keys"))
+    .SetApplicationName("ShamsAlShamoos");
 
 // Session
 builder.Services.AddDistributedMemoryCache();
@@ -115,21 +119,7 @@ if (!Directory.Exists(qrFilesPath))
 
 var personelImagePath = @"D:\upload\PersonelImage1";
 
-// ========================================
-// Middleware
-// ========================================
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-
-    app.UseSwaggerUI();
-}
-else
-{
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
+ 
 
 // Routing
 app.UseRouting();

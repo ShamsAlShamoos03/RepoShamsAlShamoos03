@@ -38,22 +38,44 @@ public class AuthController : ControllerBase
         return Ok(users);
     }
 
-[HttpPost("login")]
+    [HttpPost("login")]
     public async Task<IActionResult> Login(LoginModel model)
     {
-        var result = await _signInManager.PasswordSignInAsync(
-            model.UserName,
-            model.Password,
-            true,
-            false);
-
-        if (result.Succeeded)
+        try
         {
-            return Ok();
-        }
+            var result = await _signInManager.PasswordSignInAsync(
+                model.UserName,
+                model.Password,
+                true,
+                false);
 
-        return Unauthorized("نام کاربری یا رمز عبور اشتباه است");
+            if (result.Succeeded)
+                return Ok();
+
+            return Unauthorized("نام کاربری یا رمز عبور اشتباه است");
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ex.ToString());
+        }
     }
+
+    //[HttpPost("login")]
+    //    public async Task<IActionResult> Login(LoginModel model)
+    //    {
+    //        var result = await _signInManager.PasswordSignInAsync(
+    //            model.UserName,
+    //            model.Password,
+    //            true,
+    //            false);
+
+    //        if (result.Succeeded)
+    //        {
+    //            return Ok();
+    //        }
+
+    //        return Unauthorized("نام کاربری یا رمز عبور اشتباه است");
+    //    }
 }
 
 
@@ -63,30 +85,4 @@ public class LoginModel
 
     public string Password { get; set; } = "";
 }
-
-//                    var result = await _signInManager.PasswordSignInAsync(user.UserName, Password, isPersistent: false, lockoutOnFailure: false);
-
-//                    if (result.Succeeded && user.IsActive==1)
-//                    {
-//                        TempData["ShowWelcome"] = "true"; // 👈 این خط رو اضافه کن
-
-//                        //TempData["SuccessMessage"] = " کاربر گرامی " + user.FirstName + " " + user.LastName + " ورود شما با موفقیت انجام شد! ";
-
-//                        if (!string.IsNullOrEmpty(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
-//                        {
-//                            return LocalRedirect(ReturnUrl);  // ✅ برگرد به صفحه‌ای که کاربر اول می‌خواست بره
-//                        }
-//                        return Redirect("~/Landing");  // توجه کن Redirect نه RedirectToPage
-//                    }
-
-//                    if (result.Succeeded && user.IsActive == 1)
-//{
-//    //TempData["SuccessMessage"] = " کاربر گرامی " + user.FirstName + " " + user.LastName + " ورود شما با موفقیت انجام شد! ";
-
-//    return Redirect("~/Landing");  // توجه کن Redirect نه RedirectToPage
-
-//}
-//else
-//{
-//    ErrorMessage = "حساب کاربری غیرفعال است یا نام کاربری یا رمز عبور اشتباه وارد شده است.";
-//}
+ 
