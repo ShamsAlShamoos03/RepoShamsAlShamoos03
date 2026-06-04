@@ -49,7 +49,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ShamsAlShamoos03.Application\ShamsAlShamoos03.Application.csproj" />
     <ProjectReference Include="..\ShamsAlShamoos03.Infrastructure\ShamsAlShamoos03.Infrastructure.csproj" />
-	  <!--<ProjectReference Include="..\ShamsAlShamoos03.Client\Client\ShamsAlShamoos03.Client.Client.csproj" />-->
+	  <ProjectReference Include="..\ShamsAlShamoos03.Client\Client\ShamsAlShamoos03.Client.Client.csproj" />
 
   </ItemGroup>
 
