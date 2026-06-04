@@ -11,7 +11,7 @@ using ShamsAlShamoos03.Shared.Entities;
 using Syncfusion.Licensing;
 using System.Globalization;
 // ========================================
-// فارسی سازی
+// فارس ی سازی
 // ========================================
 var culture = new CultureInfo("fa-IR");
 
