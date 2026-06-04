@@ -12,7 +12,7 @@ using System.Globalization;
 using Microsoft.AspNetCore.DataProtection;
 using System.IO;
 // ========================================
-// فارسی سازیط
+// فارسی سازی
 // ========================================
 var culture = new CultureInfo("fa-IR");
 
