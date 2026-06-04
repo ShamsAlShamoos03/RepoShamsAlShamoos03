@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ShamsAlShamoos03.Shared\ShamsAlShamoos03.Shared.csproj" />
+    <PackageReference Include="AutoMapper" Version="16.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.1" />
 	 <PackageReference Include="Simple.K.QRCoders" Version="1.0.0" />
 	  <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
