@@ -1,10 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ShamsAlShamoos03.Infrastructure.Persistence.Contexts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Threading.Tasks;
 
 namespace ShamsAlShamoos03.Infrastructure.Persistence.Repositories
 {

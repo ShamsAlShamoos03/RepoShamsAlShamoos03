@@ -1,9 +1,5 @@
 ﻿using OpenCvSharp;
 using OpenCvSharp.Dnn;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 
 namespace ShamsAlShamoos03.Infrastructure.Services
 {

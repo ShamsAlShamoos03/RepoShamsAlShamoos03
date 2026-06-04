@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ShamsAlShamoos03.Shared.Models
+﻿namespace ShamsAlShamoos03.Shared.Models
 {
     public class ConfirmationStatus
     {

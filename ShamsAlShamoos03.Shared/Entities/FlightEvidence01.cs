@@ -1,43 +1,43 @@
-﻿ using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
- 
-    public class FlightEvidence01
-    {
 
-        [Key]
-        public string? FlightEvidence01ID  { get; set; }
+public class FlightEvidence01
+{
 
-        //public string Rate { get; set; }
+    [Key]
+    public string? FlightEvidence01ID { get; set; }
 
-        //public int Rate { get; set; }
-        //[ForeignKey("CategoryGeneralId")]
+    //public string Rate { get; set; }
 
-        //public virtual CategoryGeneral Sortable010 { get; set; }
-    
-        //CategoryGeneralSubId=25
-        public int? Rate { get; set; }
-        [ForeignKey("Rate")]
+    //public int Rate { get; set; }
+    //[ForeignKey("CategoryGeneralId")]
 
-        public virtual CategoryGeneral Rate_CategoryGeneral { get; set; }
+    //public virtual CategoryGeneral Sortable010 { get; set; }
 
+    //CategoryGeneralSubId=25
+    public int? Rate { get; set; }
+    [ForeignKey("Rate")]
 
-        //CategoryGeneralSubId=24
-        public int? TypeAC { get; set; }
-        [ForeignKey("TypeAC")]
-
-        public virtual CategoryGeneral TypeAC_CategoryGeneral { get; set; }
-
-        public int? EvidenceFlightTitle { get; set; }
-        [ForeignKey("EvidenceFlightTitle")]
-
-        public virtual CategoryGeneral EvidenceFlightTitle_CategoryGeneral { get; set; }
+    public virtual CategoryGeneral Rate_CategoryGeneral { get; set; }
 
 
+    //CategoryGeneralSubId=24
+    public int? TypeAC { get; set; }
+    [ForeignKey("TypeAC")]
 
-        //public string? EvidenceFlightTitle { get; set; }
+    public virtual CategoryGeneral TypeAC_CategoryGeneral { get; set; }
+
+    public int? EvidenceFlightTitle { get; set; }
+    [ForeignKey("EvidenceFlightTitle")]
+
+    public virtual CategoryGeneral EvidenceFlightTitle_CategoryGeneral { get; set; }
+
+
+
+    //public string? EvidenceFlightTitle { get; set; }
     public string? DateSrartEvidenceFlightTitle { get; set; }
     public string? DateEndEvidenceFlightTitle { get; set; }
-    
+
     public string? MelliCode { get; set; }
     [ForeignKey("MelliCode")]
     public virtual TblMaster MelliCodeList0AA { get; set; }
@@ -84,4 +84,3 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 
 }
- 

@@ -1,16 +1,14 @@
-﻿ using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
- 
-    public  class TblLookupsData
-    {
-        [Key]
+﻿using System.ComponentModel.DataAnnotations;
 
-        public string  ID { get; set; }
-        //[Key]
+public class TblLookupsData
+{
+    [Key]
 
-        public string? type { get; set; }
-        public string? title { get; set; }
-        public int? AlphabeticSort { get; set; }
-        public string? Cod_h { get; set; }
-    }
- 
+    public string ID { get; set; }
+    //[Key]
+
+    public string? type { get; set; }
+    public string? title { get; set; }
+    public int? AlphabeticSort { get; set; }
+    public string? Cod_h { get; set; }
+}

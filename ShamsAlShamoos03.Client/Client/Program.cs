@@ -2,17 +2,12 @@ using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
- using ShamsAlShamoos03.Client.Client;
+using ShamsAlShamoos03.Client.Client;
 //using ShamsAlShamoos03.Client.Client.Services;
 using ShamsAlShamoos03.Client.Services;
 using Syncfusion.Blazor;
 using Syncfusion.Licensing;
 using System.Globalization;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Text.RegularExpressions;
-using Blazored.LocalStorage;
-using Microsoft.AspNetCore.Components.Authorization;
 
 //فارسی کردن
 var culture = new CultureInfo("fa-IR");
@@ -24,22 +19,22 @@ var licenseKey = "MTU4NUAzMjM3MkUzMTJFMzluT08wbzRnYm4zUlFDOVRzWVpYbUtuSEl0aUhTZm
 
 SyncfusionLicenseProvider.RegisterLicense(licenseKey);
 
- 
+
 
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
- 
+
 
 
 // HttpClient
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
- 
+
 // سایر سرویس‌های پروژه
- 
+
 
 // رجیستر سرویس‌های خودت
 builder.Services.AddScoped<HistoryRegisterService>();

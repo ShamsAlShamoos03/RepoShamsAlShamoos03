@@ -1,266 +1,265 @@
-﻿ using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
- 
-    public class TblHoghog01
-    {
-        /// <summary>
-        /// یگان
-        ///// </summary>
-        //[ForeignKey("DeliverTypeCode")]
-        //public virtual TblLuLookup? ooDeliverTypeCode { get; set; }
-        /// <summary>
-        ///  فعال غیر فعال
-        /// </summary>
-        public bool? IsHaveJob { get; set; }
 
- 
-
-
-        //public int? UitID01 { get; set; }
-        [Key]
-
-        public string? Hoghog01ID { get; set; }
-        public string? Year01 { get; set; }
-        public string? Month01 { get; set; }
-
-        public string? S2P { get; set; }
-        public string? N { get; set; }
-        public string? NK2 { get; set; }
-        public string? NP { get; set; }
-        public string? M_ezafe { get; set; }
-        public string? FMR { get; set; }
-        public string? CYK2 { get; set; }
-        public string? CDI { get; set; }
-        public string? CDYR { get; set; }
-        public string? CND { get; set; }
-        public string? CBPH { get; set; }
-        public string? CNHBPH { get; set; }
-        public string? S2H { get; set; }
-        public string? CHK2 { get; set; }
-        public string? CVLK2 { get; set; }
-        public string? TT { get; set; }
-        public string? TES { get; set; }
-        public string? SK2 { get; set; }
-        public string? TNDYR { get; set; }
-        public string? TNDYRB { get; set; }
-        public string? CNK2S { get; set; }
-        public string? CPM { get; set; }
-        public string? CJ { get; set; }
-        public string? CVT { get; set; }
-        public string? THD { get; set; }
-        public string? TKOZ { get; set; }
-        public string? TKOO { get; set; }
-        public string? TATT { get; set; }
-        public string? TFMBBJ { get; set; }
-        public string? TFGMBBJ { get; set; }
-        public string? CNBDS2 { get; set; }
-        public string? TBS2 { get; set; }
-        public string? TBS2KKF4 { get; set; }
-        public string? ARH { get; set; }
-        public string? ARHJAN { get; set; }
-        public string? CODXRAY { get; set; }
-        public string? DARJAN { get; set; }
-        public string? TARJAN { get; set; }
-        public string? MMTB { get; set; }
-        public string? TEVF { get; set; }
-        public string? THE { get; set; }
-        public string? TET { get; set; }
-        public string? TEDM { get; set; }
-        public string? CM6 { get; set; }
-        public string? TET1M6 { get; set; }
-        public string? TET2M6 { get; set; }
-        public string? CDYRMS { get; set; }
-        public string? CNS2 { get; set; }
-        public string? CTMS { get; set; }
-        public string? S2SERY { get; set; }
-        public string? S2MBS { get; set; }
-        public string? S2SMS { get; set; }
-        public string? S2J6MS { get; set; }
-        public string? CM42 { get; set; }
-        public string? S2S { get; set; }
-        //public string? CML1 { get; set; }
-    
-
-        public string? CML1 { get; set; }
-        [ForeignKey("CML1")]
-        public virtual TblMaster oo_MelicodeID { get; set; }
-
-        //public string? MelliCodeID { get; set; }
-        //[ForeignKey("MelliCodeID")]
-        //public virtual TblMaster tblMelicodeID { get; set; }
-
-        public string? FIL99 { get; set; }
-        public string? HSA { get; set; }
-        public string? FMO { get; set; }
-        public string? FME { get; set; }
-        public string? HSO { get; set; }
-        public string? TTH { get; set; }
-        public string? TTG { get; set; }
-        public string? TG2 { get; set; }
-        public string? KHK { get; set; }
-        public string? T99 { get; set; }
-        public string? T01 { get; set; }
-        public string? HS2 { get; set; }
-        public string? HS3 { get; set; }
-        public string? HS4 { get; set; }
-        public string? HS5 { get; set; }
-        public string? FMT { get; set; }
-        public string? FVK { get; set; }
-        public string? FEJ { get; set; }
-        public string? FND { get; set; }
-        public string? FSM { get; set; }
-        public string? T97 { get; set; }
-        public string? FM1 { get; set; }
-        public string? FM2 { get; set; }
-        public string? FM3 { get; set; }
-        public string? FM4 { get; set; }
-        public string? FM5 { get; set; }
-        public string? FBA { get; set; }
-        public string? FBK { get; set; }
-        public string? FMA { get; set; }
-        public string? FEN { get; set; }
-        public string? SFS { get; set; }
-        public string? TSV { get; set; }
-        public string? FS2 { get; set; }
-        public string? FS3 { get; set; }
-        public string? FS4 { get; set; }
-        public string? FS5 { get; set; }
-        public string? FS6 { get; set; }
-        public string? HAO { get; set; }
-        public string? KHM { get; set; }
-        public string? HNJ { get; set; }
-        public string? KHF { get; set; }
-        public string? HEZ { get; set; }
-        public string? KHS { get; set; }
-        public string? HTO { get; set; }
-        public string? EZF { get; set; }
-        public string? BPB { get; set; }
-        public string? BPI { get; set; }
-        public string? BPD { get; set; }
-        public string? KHR { get; set; }
-        public string? TWN { get; set; }
-        public string? HTF { get; set; }
-        public string? MLK { get; set; }
-        public string? KR4 { get; set; }
-        public string? KR5 { get; set; }
-        public string? KR6 { get; set; }
-        public string? KR7 { get; set; }
-        public string? KR8 { get; set; }
-        public string? SWP { get; set; }
-        public string? THM { get; set; }
-        public string? TKD { get; set; }
-        public string? TMD { get; set; }
-        public string? TTT { get; set; }
-        public string? PPK { get; set; }
-        public string? MEN { get; set; }
-        public string? BPS { get; set; }
-        public string? BPM { get; set; }
-        public string? BKM { get; set; }
-        public string? TBI { get; set; }
-        public string? TBK { get; set; }
-        public string? TTF { get; set; }
-        public string? TML { get; set; }
-        public string? TTS { get; set; }
-        public string? SD6 { get; set; }
-        public string? SD7 { get; set; }
-        public string? SD8 { get; set; }
-        public string? SD9 { get; set; }
-        public string? SDA { get; set; }
-        public string? MBA { get; set; }
-        public string? MBI { get; set; }
-        public string? BKD { get; set; }
-        public string? BMD { get; set; }
-        public string? KKD { get; set; }
-        public string? KMD { get; set; }
-        public string? KTT { get; set; }
-        public string? MHG { get; set; }
-        public string? SKG { get; set; }
-        public string? KG1 { get; set; }
-        public string? KG2 { get; set; }
-        public string? KG3 { get; set; }
-        public string? KG4 { get; set; }
-        public string? HOM { get; set; }
-        public string? BHS { get; set; }
-        public string? BOS { get; set; }
-        public string? MPS { get; set; }
-        public string? MPM { get; set; }
-        public string? KKS { get; set; }
-        public string? SHR { get; set; }
-        public string? JKS { get; set; }
-        public string? TZH { get; set; }
-        public string? EJB { get; set; }
-        public string? BBK { get; set; }
-        public string? KE3 { get; set; }
-        public string? KE4 { get; set; }
-        public string? KE5 { get; set; }
-        public string? KE6 { get; set; }
-        public string? BHM { get; set; }
-        public string? BFM { get; set; }
-        public string? BPK { get; set; }
-        public string? KPK { get; set; }
-        public string? BME { get; set; }
-        public string? KME { get; set; }
-        public string? KAM { get; set; }
-        public string? MHM { get; set; }
-        public string? MKD { get; set; }
-        public string? MMD { get; set; }
-        public string? MTT { get; set; }
-        public string? MFM { get; set; }
-        public string? MPK { get; set; }
-        public string? MME { get; set; }
-        public string? KLB { get; set; }
-        public string? KBM { get; set; }
-        public string? SKM { get; set; }
-        public string? BBI { get; set; }
-        public string? BTS { get; set; }
-        public string? BTF { get; set; }
-        public string? BML { get; set; }
-        public string? MTS { get; set; }
-        public string? MTF { get; set; }
-        public string? MML { get; set; }
-        public string? KO7 { get; set; }
-        public string? KO8 { get; set; }
-        public string? KO9 { get; set; }
-        public string? KOA { get; set; }
-        public string? KOB { get; set; }
-        public string? KOC { get; set; }
-        public string? KM1 { get; set; }
-        public string? KM2 { get; set; }
-        public string? KM3 { get; set; }
-        public string? KM4 { get; set; }
-        public string? JKG { get; set; }
-        public string? JVP { get; set; }
-        public string? JKK { get; set; }
-        public string? HMK { get; set; }
-        public string? GGK { get; set; }
-        public string? JHM { get; set; }
-        public string? K2P { get; set; }
-        public string? SNK { get; set; }
-        public string? NK1 { get; set; }
-        public string? NK22 { get; set; }
-        public string? NK3 { get; set; }
-        public string? CMO { get; set; }
-        public string? TMO { get; set; }
-        public string? S2HBPH { get; set; }
-        public string? FIL1 { get; set; }
-        public string? SWR { get; set; }
-        public string? PPS { get; set; }
-        public string? PLB { get; set; }
-        public string? SDD { get; set; }
-        public string? BHT { get; set; }
-        public string? OKD { get; set; }
-        public string? TSY { get; set; }
-        public string? MAE { get; set; }
-        public string? SP8 { get; set; }
-        public string? SP9 { get; set; }
-        public string? SPA { get; set; }
-        public string? SPB { get; set; }
-        public string? SPC { get; set; }
-        public string? SPD { get; set; }
+public class TblHoghog01
+{
+    /// <summary>
+    /// یگان
+    ///// </summary>
+    //[ForeignKey("DeliverTypeCode")]
+    //public virtual TblLuLookup? ooDeliverTypeCode { get; set; }
+    /// <summary>
+    ///  فعال غیر فعال
+    /// </summary>
+    public bool? IsHaveJob { get; set; }
 
 
 
 
-    }
- 
+    //public int? UitID01 { get; set; }
+    [Key]
+
+    public string? Hoghog01ID { get; set; }
+    public string? Year01 { get; set; }
+    public string? Month01 { get; set; }
+
+    public string? S2P { get; set; }
+    public string? N { get; set; }
+    public string? NK2 { get; set; }
+    public string? NP { get; set; }
+    public string? M_ezafe { get; set; }
+    public string? FMR { get; set; }
+    public string? CYK2 { get; set; }
+    public string? CDI { get; set; }
+    public string? CDYR { get; set; }
+    public string? CND { get; set; }
+    public string? CBPH { get; set; }
+    public string? CNHBPH { get; set; }
+    public string? S2H { get; set; }
+    public string? CHK2 { get; set; }
+    public string? CVLK2 { get; set; }
+    public string? TT { get; set; }
+    public string? TES { get; set; }
+    public string? SK2 { get; set; }
+    public string? TNDYR { get; set; }
+    public string? TNDYRB { get; set; }
+    public string? CNK2S { get; set; }
+    public string? CPM { get; set; }
+    public string? CJ { get; set; }
+    public string? CVT { get; set; }
+    public string? THD { get; set; }
+    public string? TKOZ { get; set; }
+    public string? TKOO { get; set; }
+    public string? TATT { get; set; }
+    public string? TFMBBJ { get; set; }
+    public string? TFGMBBJ { get; set; }
+    public string? CNBDS2 { get; set; }
+    public string? TBS2 { get; set; }
+    public string? TBS2KKF4 { get; set; }
+    public string? ARH { get; set; }
+    public string? ARHJAN { get; set; }
+    public string? CODXRAY { get; set; }
+    public string? DARJAN { get; set; }
+    public string? TARJAN { get; set; }
+    public string? MMTB { get; set; }
+    public string? TEVF { get; set; }
+    public string? THE { get; set; }
+    public string? TET { get; set; }
+    public string? TEDM { get; set; }
+    public string? CM6 { get; set; }
+    public string? TET1M6 { get; set; }
+    public string? TET2M6 { get; set; }
+    public string? CDYRMS { get; set; }
+    public string? CNS2 { get; set; }
+    public string? CTMS { get; set; }
+    public string? S2SERY { get; set; }
+    public string? S2MBS { get; set; }
+    public string? S2SMS { get; set; }
+    public string? S2J6MS { get; set; }
+    public string? CM42 { get; set; }
+    public string? S2S { get; set; }
+    //public string? CML1 { get; set; }
+
+
+    public string? CML1 { get; set; }
+    [ForeignKey("CML1")]
+    public virtual TblMaster oo_MelicodeID { get; set; }
+
+    //public string? MelliCodeID { get; set; }
+    //[ForeignKey("MelliCodeID")]
+    //public virtual TblMaster tblMelicodeID { get; set; }
+
+    public string? FIL99 { get; set; }
+    public string? HSA { get; set; }
+    public string? FMO { get; set; }
+    public string? FME { get; set; }
+    public string? HSO { get; set; }
+    public string? TTH { get; set; }
+    public string? TTG { get; set; }
+    public string? TG2 { get; set; }
+    public string? KHK { get; set; }
+    public string? T99 { get; set; }
+    public string? T01 { get; set; }
+    public string? HS2 { get; set; }
+    public string? HS3 { get; set; }
+    public string? HS4 { get; set; }
+    public string? HS5 { get; set; }
+    public string? FMT { get; set; }
+    public string? FVK { get; set; }
+    public string? FEJ { get; set; }
+    public string? FND { get; set; }
+    public string? FSM { get; set; }
+    public string? T97 { get; set; }
+    public string? FM1 { get; set; }
+    public string? FM2 { get; set; }
+    public string? FM3 { get; set; }
+    public string? FM4 { get; set; }
+    public string? FM5 { get; set; }
+    public string? FBA { get; set; }
+    public string? FBK { get; set; }
+    public string? FMA { get; set; }
+    public string? FEN { get; set; }
+    public string? SFS { get; set; }
+    public string? TSV { get; set; }
+    public string? FS2 { get; set; }
+    public string? FS3 { get; set; }
+    public string? FS4 { get; set; }
+    public string? FS5 { get; set; }
+    public string? FS6 { get; set; }
+    public string? HAO { get; set; }
+    public string? KHM { get; set; }
+    public string? HNJ { get; set; }
+    public string? KHF { get; set; }
+    public string? HEZ { get; set; }
+    public string? KHS { get; set; }
+    public string? HTO { get; set; }
+    public string? EZF { get; set; }
+    public string? BPB { get; set; }
+    public string? BPI { get; set; }
+    public string? BPD { get; set; }
+    public string? KHR { get; set; }
+    public string? TWN { get; set; }
+    public string? HTF { get; set; }
+    public string? MLK { get; set; }
+    public string? KR4 { get; set; }
+    public string? KR5 { get; set; }
+    public string? KR6 { get; set; }
+    public string? KR7 { get; set; }
+    public string? KR8 { get; set; }
+    public string? SWP { get; set; }
+    public string? THM { get; set; }
+    public string? TKD { get; set; }
+    public string? TMD { get; set; }
+    public string? TTT { get; set; }
+    public string? PPK { get; set; }
+    public string? MEN { get; set; }
+    public string? BPS { get; set; }
+    public string? BPM { get; set; }
+    public string? BKM { get; set; }
+    public string? TBI { get; set; }
+    public string? TBK { get; set; }
+    public string? TTF { get; set; }
+    public string? TML { get; set; }
+    public string? TTS { get; set; }
+    public string? SD6 { get; set; }
+    public string? SD7 { get; set; }
+    public string? SD8 { get; set; }
+    public string? SD9 { get; set; }
+    public string? SDA { get; set; }
+    public string? MBA { get; set; }
+    public string? MBI { get; set; }
+    public string? BKD { get; set; }
+    public string? BMD { get; set; }
+    public string? KKD { get; set; }
+    public string? KMD { get; set; }
+    public string? KTT { get; set; }
+    public string? MHG { get; set; }
+    public string? SKG { get; set; }
+    public string? KG1 { get; set; }
+    public string? KG2 { get; set; }
+    public string? KG3 { get; set; }
+    public string? KG4 { get; set; }
+    public string? HOM { get; set; }
+    public string? BHS { get; set; }
+    public string? BOS { get; set; }
+    public string? MPS { get; set; }
+    public string? MPM { get; set; }
+    public string? KKS { get; set; }
+    public string? SHR { get; set; }
+    public string? JKS { get; set; }
+    public string? TZH { get; set; }
+    public string? EJB { get; set; }
+    public string? BBK { get; set; }
+    public string? KE3 { get; set; }
+    public string? KE4 { get; set; }
+    public string? KE5 { get; set; }
+    public string? KE6 { get; set; }
+    public string? BHM { get; set; }
+    public string? BFM { get; set; }
+    public string? BPK { get; set; }
+    public string? KPK { get; set; }
+    public string? BME { get; set; }
+    public string? KME { get; set; }
+    public string? KAM { get; set; }
+    public string? MHM { get; set; }
+    public string? MKD { get; set; }
+    public string? MMD { get; set; }
+    public string? MTT { get; set; }
+    public string? MFM { get; set; }
+    public string? MPK { get; set; }
+    public string? MME { get; set; }
+    public string? KLB { get; set; }
+    public string? KBM { get; set; }
+    public string? SKM { get; set; }
+    public string? BBI { get; set; }
+    public string? BTS { get; set; }
+    public string? BTF { get; set; }
+    public string? BML { get; set; }
+    public string? MTS { get; set; }
+    public string? MTF { get; set; }
+    public string? MML { get; set; }
+    public string? KO7 { get; set; }
+    public string? KO8 { get; set; }
+    public string? KO9 { get; set; }
+    public string? KOA { get; set; }
+    public string? KOB { get; set; }
+    public string? KOC { get; set; }
+    public string? KM1 { get; set; }
+    public string? KM2 { get; set; }
+    public string? KM3 { get; set; }
+    public string? KM4 { get; set; }
+    public string? JKG { get; set; }
+    public string? JVP { get; set; }
+    public string? JKK { get; set; }
+    public string? HMK { get; set; }
+    public string? GGK { get; set; }
+    public string? JHM { get; set; }
+    public string? K2P { get; set; }
+    public string? SNK { get; set; }
+    public string? NK1 { get; set; }
+    public string? NK22 { get; set; }
+    public string? NK3 { get; set; }
+    public string? CMO { get; set; }
+    public string? TMO { get; set; }
+    public string? S2HBPH { get; set; }
+    public string? FIL1 { get; set; }
+    public string? SWR { get; set; }
+    public string? PPS { get; set; }
+    public string? PLB { get; set; }
+    public string? SDD { get; set; }
+    public string? BHT { get; set; }
+    public string? OKD { get; set; }
+    public string? TSY { get; set; }
+    public string? MAE { get; set; }
+    public string? SP8 { get; set; }
+    public string? SP9 { get; set; }
+    public string? SPA { get; set; }
+    public string? SPB { get; set; }
+    public string? SPC { get; set; }
+    public string? SPD { get; set; }
+
+
+
+
+}

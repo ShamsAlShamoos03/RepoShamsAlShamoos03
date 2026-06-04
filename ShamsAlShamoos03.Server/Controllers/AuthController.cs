@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using ShamsAlShamoos03.Shared.Entities;
 using ShamsAlShamoos03.Shared.Models;
 
 namespace ShamsAlShamoos03.Server.Controllers;
@@ -29,7 +28,7 @@ public class AuthController : ControllerBase
             .Select(x => new UserVm
             {
                 ID = x.UserName!,
-                Title = x.FirstName! + " " + x.LastName! + " " + x.tblMelicodeID.ooDRJCOD.Title! + " " + x.tblMelicodeID.FST_NAM! + " " +  x.tblMelicodeID.LST_NAM!,
+                Title = x.FirstName! + " " + x.LastName! + " " + x.tblMelicodeID.ooDRJCOD.Title! + " " + x.tblMelicodeID.FST_NAM! + " " + x.tblMelicodeID.LST_NAM!,
                 TitleEn1 = "/PersonelImage1/" + x.tblMelicodeID.MelliCode + ".png"
             })
             .OrderBy(x => x.Title)
@@ -85,4 +84,3 @@ public class LoginModel
 
     public string Password { get; set; } = "";
 }
- 

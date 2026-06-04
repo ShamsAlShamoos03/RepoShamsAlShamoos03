@@ -1,6 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System.IO;
-using static System.Net.WebRequestMethods;
 
 namespace ShamsAlShamoos03.Server.Controllers
 {
@@ -38,7 +36,7 @@ namespace ShamsAlShamoos03.Server.Controllers
                 string relativePath = $"{Request.Scheme}://{Request.Host}/uploads/{fileName}";
 
 
-                
+
 
                 return Ok(new { ImagePath = relativePath });
             }

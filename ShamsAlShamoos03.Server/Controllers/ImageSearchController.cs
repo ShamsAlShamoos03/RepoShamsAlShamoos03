@@ -1,9 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using ShamsAlShamoos03.Infrastructure.Services;
-using System;
-using System.IO;
-using System.Threading.Tasks;
 
 namespace ShamsAlShamoos03.Server.Controllers
 {

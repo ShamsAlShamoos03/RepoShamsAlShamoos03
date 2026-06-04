@@ -1,9 +1,6 @@
 ﻿using ShamsAlShamoos03.Infrastructure.Persistence.Contexts;
 using ShamsAlShamoos03.Infrastructure.Persistence.Repositories;
-using ShamsAlShamoos03.Shared.Entities;
-using System;
 using System.Collections.Concurrent;
-using System.Threading.Tasks;
 
 namespace ShamsAlShamoos03.Infrastructure.Persistence.UnitOfWork
 {

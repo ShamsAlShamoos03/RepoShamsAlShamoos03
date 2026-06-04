@@ -1,11 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using ShamsAlShamoos03.Infrastructure.Persistence.Contexts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Threading.Tasks;
 
 namespace ShamsAlShamoos03.Infrastructure.Persistence.Repositories
 {
@@ -35,10 +31,10 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Repositories
         public async Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>> filter)
         {
             if (filter == null)
-            {     
+            {
                 return await GetAllAsync();
             }
-        
+
             return await _table.Where(filter).ToListAsync();
         }
         public async Task<IEnumerable<T>> GetAllAsync(

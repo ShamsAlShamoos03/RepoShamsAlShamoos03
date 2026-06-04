@@ -1,6 +1,4 @@
 ﻿using ShamsAlShamoos03.Shared.Models;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace ShamsAlShamoos03.Infrastructure.Persistence.Repositories
 {

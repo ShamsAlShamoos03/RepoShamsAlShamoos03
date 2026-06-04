@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Hosting;
-using QRCoder;
 using ShamsAlShamoos03.Shared.Models;
 
 namespace ShamsAlShamoos03.Infrastructure.Services;
 
 public class QrBatchService
 {
-    private readonly IWebHostEnvironment _env; 
+    private readonly IWebHostEnvironment _env;
     private readonly QrCodeService _qrCodeService;
 
     // حداکثر کاراکتر در هر QR
@@ -47,7 +46,7 @@ public class QrBatchService
             Directory.CreateDirectory(baseFolderPath);
 
         // ذخیره متن کامل در یک فایل txt
-        string textFilePath = Path.Combine(baseFolderPath, folderName+".txt");
+        string textFilePath = Path.Combine(baseFolderPath, folderName + ".txt");
         File.WriteAllText(textFilePath, longText);
 
         // تقسیم متن برای QR

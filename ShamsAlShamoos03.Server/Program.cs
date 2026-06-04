@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
@@ -9,8 +10,6 @@ using ShamsAlShamoos03.Server.Services;
 using ShamsAlShamoos03.Shared.Entities;
 using Syncfusion.Licensing;
 using System.Globalization;
-using Microsoft.AspNetCore.DataProtection;
-using System.IO;
 // ========================================
 // فارسی سازی
 // ========================================
@@ -38,9 +37,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Controllers + Swagger
 builder.Services.AddControllers();
 
- 
 
- 
+
+
 // CORS
 builder.Services.AddCors(options =>
 {
@@ -119,7 +118,7 @@ if (!Directory.Exists(qrFilesPath))
 
 var personelImagePath = @"D:\upload\PersonelImage1";
 
- 
+
 
 // Routing
 app.UseRouting();
@@ -138,7 +137,7 @@ app.UseStaticFiles(new StaticFileOptions
 });
 
 
- 
+
 if (!Directory.Exists(personelImagePath))
 {
     Directory.CreateDirectory(personelImagePath);

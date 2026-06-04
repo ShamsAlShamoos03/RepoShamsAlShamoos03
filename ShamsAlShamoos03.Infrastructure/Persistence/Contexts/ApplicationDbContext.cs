@@ -2,11 +2,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
-
-using Microsoft.EntityFrameworkCore;
 using ShamsAlShamoos03.Shared.Entities;
- 
+
 namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
 {
 
@@ -757,7 +754,8 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
 
 
             //UjobPesronel01
-            builder.Entity<UjobPesronel01>().HasKey(sc => new {
+            builder.Entity<UjobPesronel01>().HasKey(sc => new
+            {
                 sc.UjobPesronel01ID
             });
 

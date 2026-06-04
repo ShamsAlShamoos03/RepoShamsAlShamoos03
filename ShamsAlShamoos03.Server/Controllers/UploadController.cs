@@ -1,6 +1,4 @@
-using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
-using QRCoder;
 using ShamsAlShamoos03.Infrastructure.Services;
 
 namespace ShamsAlShamoos03.Server.Controllers

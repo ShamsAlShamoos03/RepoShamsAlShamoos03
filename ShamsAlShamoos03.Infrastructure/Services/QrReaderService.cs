@@ -2,8 +2,6 @@
 using QRCoder;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
-using ZXing;
-using ZXing.ImageSharp;
 
 namespace ShamsAlShamoos03.Infrastructure.Services
 {
@@ -105,7 +103,7 @@ namespace ShamsAlShamoos03.Infrastructure.Services
         {
             if (!System.IO.File.Exists(filePath))
             {
-                return null; 
+                return null;
             }
 
             using var image = Image.Load<Rgba32>(filePath);
