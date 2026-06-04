@@ -1,51 +1,53 @@
- 
 .breadcrumb-line {
-    bottom: 40px; /* مقدار را بر اساس ارتفاع تبلیغ تنظیم کنید */
+  bottom: 40px; /* مقدار را بر اساس ارتفاع تبلیغ تنظیم کنید */
 }
 
 /* نوار تبلیغات چسبیده به پایین سایت */
 .advertise-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 84%;
-    background: #000000;
-    padding: 10px 0;
-    color: white;
-    text-align: center;
-    overflow: hidden;
-    z-index: 9999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 84%;
+  background: #000000;
+  padding: 10px 0;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  z-index: 9999;
 }
 
 /* کانتینر برای تبلیغات */
 .marquee-container {
-    white-space: nowrap;
-    overflow: hidden;
-    display: flex;
-    justify-content: flex-start; /* متن از چپ شروع شود */
-    direction:ltr ; /* حرکت متن از چپ  rtl به  ltr راست */
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start; /* متن از چپ شروع شود */
+  direction: ltr; /* حرکت متن از چپ  rtl به  ltr راست */
 }
 /* محتوای تبلیغاتی که باید حرکت کند */
 .marquee-content {
-    display: inline-block;
-    white-space: nowrap;
-    will-change: transform;
-    padding-right: 0; /* فاصله ثابت از سمت راست */
-    animation-delay: 1s; /* مقدار این را تغییر دهید تا تأخیر را کم یا زیاد کنید */
-
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  padding-right: 0; /* فاصله ثابت از سمت راست */
+  animation-delay: 1s; /* مقدار این را تغییر دهید تا تأخیر را کم یا زیاد کنید */
 }
 /* تبلیغات متن */
 .marquee-text {
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    padding: 0 15px;
-    padding-left: 20px;
-    display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 0 15px;
+  padding-left: 20px;
+  display: inline-block;
 }
 
 /* انیمیشن حرکت تبلیغات از چپ به راست */
 @keyframes marquee-scroll {
-    from { transform: translateX(-100%); } /* شروع از سمت راست */
-    to { transform: translateX(100%); } /* حرکت به سمت چپ */
+  from {
+    transform: translateX(-100%);
+  } /* شروع از سمت راست */
+  to {
+    transform: translateX(100%);
+  } /* حرکت به سمت چپ */
 }

@@ -97,8 +97,8 @@ builder.Services.AddScoped<APIDataService01>();
 builder.Services.AddInfrastructure(builder.Configuration);
 
 // AutoMapper
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
+builder.Services.AddAutoMapper(cfg => { },
+    AppDomain.CurrentDomain.GetAssemblies());
 // ========================================
 // Build App
 // ========================================
