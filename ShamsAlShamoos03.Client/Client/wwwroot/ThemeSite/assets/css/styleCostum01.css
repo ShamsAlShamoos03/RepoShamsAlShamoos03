@@ -8,7 +8,7 @@
   bottom: 0;
   left: 0;
   width: 84%;
-  background: #000000;
+  background: #000;
   padding: 10px 0;
   color: white;
   text-align: center;
@@ -24,6 +24,7 @@
   justify-content: flex-start; /* متن از چپ شروع شود */
   direction: ltr; /* حرکت متن از چپ  rtl به  ltr راست */
 }
+
 /* محتوای تبلیغاتی که باید حرکت کند */
 .marquee-content {
   display: inline-block;
@@ -32,6 +33,7 @@
   padding-right: 0; /* فاصله ثابت از سمت راست */
   animation-delay: 1s; /* مقدار این را تغییر دهید تا تأخیر را کم یا زیاد کنید */
 }
+
 /* تبلیغات متن */
 .marquee-text {
   font-size: 18px;

@@ -2,7 +2,7 @@
 Flaticon icon font: Flaticon
 */
 @font-face {
-  font-family: 'Flaticon';
+  font-family: Flaticon;
   src: url('../fonts/Flaticon.eot');
   src:
     url('../fonts/Flaticond41d.eot?#iefix') format('embedded-opentype'),
@@ -13,113 +13,146 @@ Flaticon icon font: Flaticon
   font-weight: normal;
   font-style: normal;
 }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+@media screen and (min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: 'Flaticon';
+    font-family: Flaticon;
     src: url('../fonts/Flaticon.svg#Flaticon') format('svg');
   }
 }
-[class^='flaticon-']:before,
-[class*=' flaticon-']:before,
-[class^='flaticon-']:after,
-[class*=' flaticon-']:after {
+
+[class^='flaticon-']::before,
+[class*=' flaticon-']::before,
+[class^='flaticon-']::after,
+[class*=' flaticon-']::after {
   font-family: Flaticon;
   font-style: normal;
 }
 
-.flaticon-arrows:before {
+.flaticon-arrows::before {
   content: '\f100';
 }
-.flaticon-diet:before {
+
+.flaticon-diet::before {
   content: '\f101';
 }
-.flaticon-right-arrow:before {
+
+.flaticon-right-arrow::before {
   content: '\f102';
 }
-.flaticon-vitamin-c:before {
+
+.flaticon-vitamin-c::before {
   content: '\f103';
 }
-.flaticon-heart-rate-monitor:before {
+
+.flaticon-heart-rate-monitor::before {
   content: '\f104';
 }
-.flaticon-yoga:before {
+
+.flaticon-yoga::before {
   content: '\f105';
 }
-.flaticon-yoga-1:before {
+
+.flaticon-yoga-1::before {
   content: '\f106';
 }
-.flaticon-lotus:before {
+
+.flaticon-lotus::before {
   content: '\f107';
 }
-.flaticon-yoga-2:before {
+
+.flaticon-yoga-2::before {
   content: '\f108';
 }
-.flaticon-strawberry:before {
+
+.flaticon-strawberry::before {
   content: '\f109';
 }
-.flaticon-tomato:before {
+
+.flaticon-tomato::before {
   content: '\f10a';
 }
-.flaticon-check:before {
+
+.flaticon-check::before {
   content: '\f10b';
 }
-.flaticon-healthy-food:before {
+
+.flaticon-healthy-food::before {
   content: '\f10c';
 }
-.flaticon-pineapple:before {
+
+.flaticon-pineapple::before {
   content: '\f10d';
 }
-.flaticon-right-quote:before {
+
+.flaticon-right-quote::before {
   content: '\f10e';
 }
-.flaticon-analytics:before {
+
+.flaticon-analytics::before {
   content: '\f10f';
 }
-.flaticon-anywhere:before {
+
+.flaticon-anywhere::before {
   content: '\f110';
 }
-.flaticon-graduated:before {
+
+.flaticon-graduated::before {
   content: '\f111';
 }
-.flaticon-self-improvement:before {
+
+.flaticon-self-improvement::before {
   content: '\f112';
 }
-.flaticon-launch:before {
+
+.flaticon-launch::before {
   content: '\f113';
 }
-.flaticon-padlock:before {
+
+.flaticon-padlock::before {
   content: '\f114';
 }
-.flaticon-self-growth:before {
+
+.flaticon-self-growth::before {
   content: '\f115';
 }
-.flaticon-clock:before {
+
+.flaticon-clock::before {
   content: '\f116';
 }
-.flaticon-ebook:before {
+
+.flaticon-ebook::before {
   content: '\f117';
 }
-.flaticon-factory:before {
+
+.flaticon-factory::before {
   content: '\f118';
 }
-.flaticon-lcd:before {
+
+.flaticon-lcd::before {
   content: '\f119';
 }
-.flaticon-shield:before {
+
+.flaticon-shield::before {
   content: '\f11a';
 }
-.flaticon-worldwide:before {
+
+.flaticon-worldwide::before {
   content: '\f11b';
 }
-.flaticon-checkmark:before {
+
+.flaticon-checkmark::before {
   content: '\f11c';
 }
-.flaticon-login:before {
+
+.flaticon-login::before {
   content: '\f11d';
 }
-.flaticon-credit-card:before {
+
+.flaticon-credit-card::before {
   content: '\f11e';
 }
-.flaticon-verify:before {
+
+.flaticon-verify::before {
   content: '\f11f';
 }

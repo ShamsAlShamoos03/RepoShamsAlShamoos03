@@ -42,11 +42,11 @@ body {
 .logo {
   font-weight: bold;
   font-size: 22px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .nav-link {
-  color: #ffffff;
+  color: #fff;
   margin: 0 12px;
   text-decoration: none;
 }
@@ -57,7 +57,7 @@ body {
 .hero {
   height: 90vh;
   background:
-    linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.92)),
+    linear-gradient(rgb(15 23 42 / 92%), rgb(15 23 42 / 92%)),
     url('/images/corporate-bg.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -68,7 +68,7 @@ body {
 .hero-title {
   font-size: 3rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff;
 }
 
 .hero-subtitle {
@@ -88,11 +88,11 @@ body {
    FEATURES
 --------------------------------------------- */
 .feature-card {
-  background: #ffffff;
+  background: #fff;
   padding: 40px;
   border-radius: 10px;
   border-top: 4px solid #c9a227;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 20px rgb(0 0 0 / 5%);
   transition: 0.3s;
 }
 
@@ -104,10 +104,10 @@ body {
    SERVICES (قبلاً Pricing)
 --------------------------------------------- */
 .pricing-card {
-  background: #ffffff;
+  background: #fff;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 25px rgb(0 0 0 / 5%);
 }
 
 .pricing-card.featured {

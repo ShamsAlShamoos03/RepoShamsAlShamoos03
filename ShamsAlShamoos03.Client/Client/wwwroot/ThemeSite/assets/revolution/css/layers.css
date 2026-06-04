@@ -1,4 +1,4 @@
-/*-----------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------
 
 -	Revolution Slider 5.0 Layer Style Settings -
 
@@ -9,11 +9,11 @@ date:      	18/03/15
 author:		themepunch
 email:     	info@themepunch.com
 website:   	http://www.themepunch.com
------------------------------------------------------------------------------*/
+----------------------------------------------------------------------------- */
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -40,7 +40,7 @@ website:   	http://www.themepunch.com
   margin: 0;
   padding: 2px 4px;
   position: absolute;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 5px rgb(0 0 0 / 50%);
   white-space: nowrap;
 }
 
@@ -55,7 +55,7 @@ website:   	http://www.themepunch.com
   line-height: 20px;
   margin: 0;
   position: absolute;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 5px rgb(0 0 0 / 50%);
   white-space: nowrap;
 }
 
@@ -70,7 +70,7 @@ website:   	http://www.themepunch.com
   line-height: 20px;
   margin: 0;
   position: absolute;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 5px rgb(0 0 0 / 50%);
   white-space: nowrap;
 }
 
@@ -85,7 +85,7 @@ website:   	http://www.themepunch.com
   line-height: 40px;
   margin: 0;
   position: absolute;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 5px rgb(0 0 0 / 50%);
   white-space: nowrap;
 }
 
@@ -101,7 +101,7 @@ website:   	http://www.themepunch.com
   line-height: 60px;
   margin: 0;
   position: absolute;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 5px rgb(0 0 0 / 50%);
   white-space: nowrap;
 }
 
@@ -234,7 +234,7 @@ website:   	http://www.themepunch.com
 
 .tp-caption.boxshadow,
 .boxshadow {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgb(0 0 0 / 50%);
 }
 
 .tp-caption.black,
@@ -251,7 +251,7 @@ website:   	http://www.themepunch.com
 .tp-caption.thinheadline_dark,
 .thinheadline_dark {
   background-color: transparent;
-  color: rgba(0, 0, 0, 0.85);
+  color: rgb(0 0 0 / 85%);
   font-family: 'Open Sans';
   font-size: 30px;
   font-weight: 300;
@@ -263,7 +263,7 @@ website:   	http://www.themepunch.com
 .tp-caption.thintext_dark,
 .thintext_dark {
   background-color: transparent;
-  color: rgba(0, 0, 0, 0.85);
+  color: rgb(0 0 0 / 85%);
   font-family: 'Open Sans';
   font-size: 16px;
   font-weight: 300;
@@ -330,7 +330,7 @@ website:   	http://www.themepunch.com
 
 .tp-caption.excerpt,
 .excerpt {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgb(0 0 0 / 100%);
   border-color: #fff;
   border-style: none;
   border-width: 0;
@@ -402,7 +402,7 @@ website:   	http://www.themepunch.com
 
 .tp-caption.lightgrey_divider,
 .lightgrey_divider {
-  background-color: rgba(235, 235, 235, 1);
+  background-color: rgb(235 235 235 / 100%);
   background-position: initial;
   background-repeat: initial;
   border-color: #222;
@@ -518,7 +518,7 @@ website:   	http://www.themepunch.com
 
 .tp-caption.grassfloor,
 .grassfloor {
-  background-color: rgba(160, 179, 151, 1);
+  background-color: rgb(160 179 151 / 100%);
   border-color: #222;
   border-style: none;
   border-width: 0;
@@ -736,7 +736,7 @@ website:   	http://www.themepunch.com
   border-color: #000;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgb(255 255 255 / 65%);
   font-family: 'Source Sans Pro';
   font-size: 17px;
   font-weight: 400;
@@ -749,7 +749,6 @@ website:   	http://www.themepunch.com
 .tp-caption.divideline30px,
 .divideline30px {
   background: #fff;
-  background-color: #fff;
   border-color: #222;
   border-style: none;
   border-width: 0;
@@ -826,9 +825,9 @@ website:   	http://www.themepunch.com
 
 .tp-caption.ellipse70px,
 .ellipse70px {
-  background-color: rgba(0, 0, 0, 0.14902);
+  background-color: rgb(0 0 0 / 14.9%);
   border-color: #222;
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 50px;
   border-style: none;
   border-width: 0;
   cursor: pointer;
@@ -850,7 +849,7 @@ website:   	http://www.themepunch.com
 .MarkerDisplay {
   background-color: transparent;
   border-color: #000;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
   font-family: 'Permanent Marker';
@@ -864,7 +863,7 @@ website:   	http://www.themepunch.com
 .Restaurant-Display {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
   color: #fff;
@@ -881,7 +880,7 @@ website:   	http://www.themepunch.com
 .Restaurant-Cursive {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
   color: #fff;
@@ -899,7 +898,7 @@ website:   	http://www.themepunch.com
 .Restaurant-ScrollDownText {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
   color: #fff;
@@ -917,7 +916,7 @@ website:   	http://www.themepunch.com
 .Restaurant-Description {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
   color: #fff;
@@ -935,7 +934,7 @@ website:   	http://www.themepunch.com
 .Restaurant-Price {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
   color: #fff;
@@ -951,12 +950,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Restaurant-Menuitem,
 .Restaurant-Menuitem {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgb(0 0 0 / 100%);
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Roboto;
   font-size: 17px;
   font-style: normal;
@@ -972,10 +971,10 @@ website:   	http://www.themepunch.com
 .Furniture-LogoText {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(230, 207, 163, 1);
+  color: rgb(230 207 163 / 100%);
   font-family: Raleway;
   font-size: 160px;
   font-style: normal;
@@ -988,13 +987,13 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Furniture-Plus,
 .Furniture-Plus {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(255 255 255 / 100%);
   border-color: transparent;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   border-style: none;
   border-width: 0;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
-  color: rgba(230, 207, 163, 1);
+  box-shadow: rgb(0 0 0 / 10%) 0 1px 3px;
+  color: rgb(230 207 163 / 100%);
   font-family: Raleway;
   font-size: 20px;
   font-style: normal;
@@ -1009,10 +1008,10 @@ website:   	http://www.themepunch.com
 .Furniture-Title {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-family: Raleway;
   font-size: 20px;
   font-style: normal;
@@ -1028,10 +1027,10 @@ website:   	http://www.themepunch.com
 .Furniture-Subtitle {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-family: Raleway;
   font-size: 17px;
   font-style: normal;
@@ -1046,10 +1045,10 @@ website:   	http://www.themepunch.com
 .Gym-Display {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 80px;
   font-style: normal;
@@ -1063,10 +1062,10 @@ website:   	http://www.themepunch.com
 .Gym-Subline {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 30px;
   font-style: normal;
@@ -1081,10 +1080,10 @@ website:   	http://www.themepunch.com
 .Gym-SmallText {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 17px;
   font-style: normal;
@@ -1099,10 +1098,10 @@ website:   	http://www.themepunch.com
 .Fashion-SmallText {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 12px;
   font-style: normal;
@@ -1117,10 +1116,10 @@ website:   	http://www.themepunch.com
 .Fashion-BigDisplay {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-family: Raleway;
   font-size: 60px;
   font-style: normal;
@@ -1135,10 +1134,10 @@ website:   	http://www.themepunch.com
 .Fashion-TextBlock {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-family: Raleway;
   font-size: 20px;
   font-style: normal;
@@ -1153,10 +1152,10 @@ website:   	http://www.themepunch.com
 .Sports-Display {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 130px;
   font-style: normal;
@@ -1171,10 +1170,10 @@ website:   	http://www.themepunch.com
 .Sports-DisplayFat {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 130px;
   font-style: normal;
@@ -1188,10 +1187,10 @@ website:   	http://www.themepunch.com
 .Sports-Subline {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-family: Raleway;
   font-size: 32px;
   font-style: normal;
@@ -1206,10 +1205,10 @@ website:   	http://www.themepunch.com
 .Instagram-Caption {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Roboto;
   font-size: 20px;
   font-style: normal;
@@ -1223,10 +1222,10 @@ website:   	http://www.themepunch.com
 .News-Title {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: 'Roboto Slab';
   font-size: 70px;
   font-style: normal;
@@ -1238,12 +1237,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.News-Subtitle,
 .News-Subtitle {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgb(255 255 255 / 0%);
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: 'Roboto Slab';
   font-size: 15px;
   font-style: normal;
@@ -1255,12 +1254,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.News-Subtitle:hover,
 .News-Subtitle:hover {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgb(255 255 255 / 0%);
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: solid;
   border-width: 0;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgb(255 255 255 / 65%);
   text-decoration: none;
 }
 
@@ -1268,10 +1267,10 @@ website:   	http://www.themepunch.com
 .Photography-Display {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 80px;
   font-style: normal;
@@ -1286,10 +1285,10 @@ website:   	http://www.themepunch.com
 .Photography-Subline {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(119, 119, 119, 1);
+  color: rgb(119 119 119 / 100%);
   font-family: Raleway;
   font-size: 20px;
   font-style: normal;
@@ -1303,11 +1302,11 @@ website:   	http://www.themepunch.com
 .tp-caption.Photography-ImageHover,
 .Photography-ImageHover {
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 0);
-  border-radius: 0 0 0 0;
+  border-color: rgb(255 255 255 / 0%);
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -1320,21 +1319,21 @@ website:   	http://www.themepunch.com
 .Photography-ImageHover:hover {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.Photography-Menuitem,
 .Photography-Menuitem {
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgb(0 0 0 / 65%);
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 20px;
   font-style: normal;
@@ -1347,12 +1346,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Photography-Menuitem:hover,
 .Photography-Menuitem:hover {
-  background-color: rgba(0, 255, 222, 0.65);
+  background-color: rgb(0 255 222 / 65%);
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
@@ -1360,10 +1359,10 @@ website:   	http://www.themepunch.com
 .Photography-Textblock {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 17px;
   font-style: normal;
@@ -1378,10 +1377,10 @@ website:   	http://www.themepunch.com
 .Photography-Subline-2 {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgb(255 255 255 / 35%);
   font-family: Raleway;
   font-size: 20px;
   font-style: normal;
@@ -1395,11 +1394,11 @@ website:   	http://www.themepunch.com
 .tp-caption.Photography-ImageHover2,
 .Photography-ImageHover2 {
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 0);
-  border-radius: 0 0 0 0;
+  border-color: rgb(255 255 255 / 0%);
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Arial;
   font-size: 20px;
   font-style: normal;
@@ -1413,10 +1412,10 @@ website:   	http://www.themepunch.com
 .Photography-ImageHover2:hover {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
@@ -1424,10 +1423,10 @@ website:   	http://www.themepunch.com
 .WebProduct-Title {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-family: Raleway;
   font-size: 90px;
   font-style: normal;
@@ -1441,10 +1440,10 @@ website:   	http://www.themepunch.com
 .WebProduct-SubTitle {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(153, 153, 153, 1);
+  color: rgb(153 153 153 / 100%);
   font-family: Raleway;
   font-size: 15px;
   font-style: normal;
@@ -1458,10 +1457,10 @@ website:   	http://www.themepunch.com
 .WebProduct-Content {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(153, 153, 153, 1);
+  color: rgb(153 153 153 / 100%);
   font-family: Raleway;
   font-size: 16px;
   font-style: normal;
@@ -1473,12 +1472,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.WebProduct-Menuitem,
 .WebProduct-Menuitem {
-  background-color: rgba(51, 51, 51, 1);
+  background-color: rgb(51 51 51 / 100%);
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 15px;
   font-style: normal;
@@ -1492,12 +1491,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.WebProduct-Menuitem:hover,
 .WebProduct-Menuitem:hover {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(255 255 255 / 100%);
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(153, 153, 153, 1);
+  color: rgb(153 153 153 / 100%);
   text-decoration: none;
 }
 
@@ -1505,10 +1504,10 @@ website:   	http://www.themepunch.com
 .WebProduct-Title-Light {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 90px;
   font-style: normal;
@@ -1523,10 +1522,10 @@ website:   	http://www.themepunch.com
 .WebProduct-SubTitle-Light {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgb(255 255 255 / 35%);
   font-family: Raleway;
   font-size: 15px;
   font-style: normal;
@@ -1541,10 +1540,10 @@ website:   	http://www.themepunch.com
 .WebProduct-Content-Light {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgb(255 255 255 / 65%);
   font-family: Raleway;
   font-size: 16px;
   font-style: normal;
@@ -1557,12 +1556,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.FatRounded,
 .FatRounded {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-color: rgba(211, 211, 211, 1);
-  border-radius: 50px 50px 50px 50px;
+  background-color: rgb(0 0 0 / 50%);
+  border-color: rgb(211 211 211 / 100%);
+  border-radius: 50px;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 30px;
   font-style: normal;
@@ -1576,12 +1575,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.FatRounded:hover,
 .FatRounded:hover {
-  background-color: rgba(0, 0, 0, 1);
-  border-color: rgba(211, 211, 211, 1);
-  border-radius: 50px 50px 50px 50px;
+  background-color: rgb(0 0 0 / 100%);
+  border-color: rgb(211 211 211 / 100%);
+  border-radius: 50px;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
@@ -1589,10 +1588,10 @@ website:   	http://www.themepunch.com
 .NotGeneric-Title {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 70px;
   font-style: normal;
@@ -1606,10 +1605,10 @@ website:   	http://www.themepunch.com
 .NotGeneric-SubTitle {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 13px;
   font-style: normal;
@@ -1623,12 +1622,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.NotGeneric-CallToAction,
 .NotGeneric-CallToAction {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 0.5);
-  border-radius: 0 0 0 0;
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 50%);
+  border-radius: 0;
   border-style: solid;
   border-width: 1px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 14px;
   font-style: normal;
@@ -1643,22 +1642,22 @@ website:   	http://www.themepunch.com
 .tp-caption.NotGeneric-CallToAction:hover,
 .NotGeneric-CallToAction:hover {
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 1);
-  border-radius: 0 0 0 0;
+  border-color: rgb(255 255 255 / 100%);
+  border-radius: 0;
   border-style: solid;
   border-width: 1px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.NotGeneric-Icon,
 .NotGeneric-Icon {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 0);
-  border-radius: 0 0 0 0;
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 0%);
+  border-radius: 0;
   border-style: solid;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 30px;
   font-style: normal;
@@ -1672,12 +1671,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.NotGeneric-Menuitem,
 .NotGeneric-Menuitem {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 0.15);
-  border-radius: 0 0 0 0;
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 15%);
+  border-radius: 0;
   border-style: solid;
   border-width: 1px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 14px;
   font-style: normal;
@@ -1691,12 +1690,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.NotGeneric-Menuitem:hover,
 .NotGeneric-Menuitem:hover {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 1);
-  border-radius: 0 0 0 0;
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 100%);
+  border-radius: 0;
   border-style: solid;
   border-width: 1px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
@@ -1704,10 +1703,10 @@ website:   	http://www.themepunch.com
 .MarkerStyle {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: 'Permanent Marker';
   font-size: 17px;
   font-style: normal;
@@ -1720,12 +1719,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Gym-Menuitem,
 .Gym-Menuitem {
-  background-color: rgba(0, 0, 0, 1);
-  border-color: rgba(255, 255, 255, 0);
-  border-radius: 3px 3px 3px 3px;
+  background-color: rgb(0 0 0 / 100%);
+  border-color: rgb(255 255 255 / 0%);
+  border-radius: 3px;
   border-style: solid;
   border-width: 2px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 20px;
   font-style: normal;
@@ -1739,23 +1738,23 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Gym-Menuitem:hover,
 .Gym-Menuitem:hover {
-  background-color: rgba(0, 0, 0, 1);
-  border-color: rgba(255, 255, 255, 0.25);
-  border-radius: 3px 3px 3px 3px;
+  background-color: rgb(0 0 0 / 100%);
+  border-color: rgb(255 255 255 / 25%);
+  border-radius: 3px;
   border-style: solid;
   border-width: 2px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.Newspaper-Button,
 .Newspaper-Button {
-  background-color: rgba(255, 255, 255, 0);
-  border-color: rgba(255, 255, 255, 0.25);
-  border-radius: 0 0 0 0;
+  background-color: rgb(255 255 255 / 0%);
+  border-color: rgb(255 255 255 / 25%);
+  border-radius: 0;
   border-style: solid;
   border-width: 1px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Roboto;
   font-size: 13px;
   font-style: normal;
@@ -1769,12 +1768,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Newspaper-Button:hover,
 .Newspaper-Button:hover {
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(255, 255, 255, 1);
-  border-radius: 0 0 0 0;
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(255 255 255 / 100%);
+  border-radius: 0;
   border-style: solid;
   border-width: 1px;
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   text-decoration: none;
 }
 
@@ -1782,10 +1781,10 @@ website:   	http://www.themepunch.com
 .Newspaper-Subtitle {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(168, 216, 238, 1);
+  color: rgb(168 216 238 / 100%);
   font-family: Roboto;
   font-size: 15px;
   font-style: normal;
@@ -1800,10 +1799,10 @@ website:   	http://www.themepunch.com
 .Newspaper-Title {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: 'Roboto Slab';
   font-size: 50px;
   font-style: normal;
@@ -1818,10 +1817,10 @@ website:   	http://www.themepunch.com
 .Newspaper-Title-Centered {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: 'Roboto Slab';
   font-size: 50px;
   font-style: normal;
@@ -1834,12 +1833,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Hero-Button,
 .Hero-Button {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 0.5);
-  border-radius: 0 0 0 0;
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 50%);
+  border-radius: 0;
   border-style: solid;
   border-width: 1px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 14px;
   font-style: normal;
@@ -1853,23 +1852,23 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Hero-Button:hover,
 .Hero-Button:hover {
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(255, 255, 255, 1);
-  border-radius: 0 0 0 0;
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(255 255 255 / 100%);
+  border-radius: 0;
   border-style: solid;
   border-width: 1px;
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.Video-Title,
 .Video-Title {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgb(0 0 0 / 100%);
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 30px;
   font-style: normal;
@@ -1882,12 +1881,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Video-SubTitle,
 .Video-SubTitle {
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgb(0 0 0 / 35%);
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 12px;
   font-style: normal;
@@ -1901,12 +1900,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.NotGeneric-Button,
 .NotGeneric-Button {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 0.5);
-  border-radius: 0 0 0 0;
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 50%);
+  border-radius: 0;
   border-style: solid;
   border-width: 1px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 14px;
   font-style: normal;
@@ -1921,22 +1920,22 @@ website:   	http://www.themepunch.com
 .tp-caption.NotGeneric-Button:hover,
 .NotGeneric-Button:hover {
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 1);
-  border-radius: 0 0 0 0;
+  border-color: rgb(255 255 255 / 100%);
+  border-radius: 0;
   border-style: solid;
   border-width: 1px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.NotGeneric-BigButton,
 .NotGeneric-BigButton {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 0.15);
-  border-radius: 0 0 0 0;
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 15%);
+  border-radius: 0;
   border-style: solid;
   border-width: 1px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 14px;
   font-style: normal;
@@ -1950,23 +1949,23 @@ website:   	http://www.themepunch.com
 
 .tp-caption.NotGeneric-BigButton:hover,
 .NotGeneric-BigButton:hover {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 1);
-  border-radius: 0 0 0 0;
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 100%);
+  border-radius: 0;
   border-style: solid;
   border-width: 1px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.WebProduct-Button,
 .WebProduct-Button {
-  background-color: rgba(51, 51, 51, 1);
-  border-color: rgba(0, 0, 0, 1);
-  border-radius: 0 0 0 0;
+  background-color: rgb(51 51 51 / 100%);
+  border-color: rgb(0 0 0 / 100%);
+  border-radius: 0;
   border-style: none;
   border-width: 2px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 16px;
   font-style: normal;
@@ -1980,23 +1979,23 @@ website:   	http://www.themepunch.com
 
 .tp-caption.WebProduct-Button:hover,
 .WebProduct-Button:hover {
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(0, 0, 0, 1);
-  border-radius: 0 0 0 0;
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(0 0 0 / 100%);
+  border-radius: 0;
   border-style: none;
   border-width: 2px;
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.Restaurant-Button,
 .Restaurant-Button {
-  background-color: rgba(10, 10, 10, 0);
-  border-color: rgba(255, 255, 255, 0.5);
-  border-radius: 0 0 0 0;
+  background-color: rgb(10 10 10 / 0%);
+  border-color: rgb(255 255 255 / 50%);
+  border-radius: 0;
   border-style: solid;
   border-width: 2px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Roboto;
   font-size: 17px;
   font-style: normal;
@@ -2010,23 +2009,23 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Restaurant-Button:hover,
 .Restaurant-Button:hover {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 224, 129, 1);
-  border-radius: 0 0 0 0;
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 224 129 / 100%);
+  border-radius: 0;
   border-style: solid;
   border-width: 2px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.Gym-Button,
 .Gym-Button {
-  background-color: rgba(139, 192, 39, 1);
-  border-color: rgba(0, 0, 0, 0);
-  border-radius: 30px 30px 30px 30px;
+  background-color: rgb(139 192 39 / 100%);
+  border-color: rgb(0 0 0 / 0%);
+  border-radius: 30px;
   border-style: solid;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 15px;
   font-style: normal;
@@ -2040,23 +2039,23 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Gym-Button:hover,
 .Gym-Button:hover {
-  background-color: rgba(114, 168, 0, 1);
-  border-color: rgba(0, 0, 0, 0);
-  border-radius: 30px 30px 30px 30px;
+  background-color: rgb(114 168 0 / 100%);
+  border-color: rgb(0 0 0 / 0%);
+  border-radius: 30px;
   border-style: solid;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.Gym-Button-Light,
 .Gym-Button-Light {
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 0.25);
-  border-radius: 30px 30px 30px 30px;
+  border-color: rgb(255 255 255 / 25%);
+  border-radius: 30px;
   border-style: solid;
   border-width: 2px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 15px;
   font-style: normal;
@@ -2069,23 +2068,23 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Gym-Button-Light:hover,
 .Gym-Button-Light:hover {
-  background-color: rgba(114, 168, 0, 0);
-  border-color: rgba(139, 192, 39, 1);
-  border-radius: 30px 30px 30px 30px;
+  background-color: rgb(114 168 0 / 0%);
+  border-color: rgb(139 192 39 / 100%);
+  border-radius: 30px;
   border-style: solid;
   border-width: 2px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.Sports-Button-Light,
 .Sports-Button-Light {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 0.5);
-  border-radius: 0 0 0 0;
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 50%);
+  border-radius: 0;
   border-style: solid;
   border-width: 2px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 17px;
   font-style: normal;
@@ -2099,23 +2098,23 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Sports-Button-Light:hover,
 .Sports-Button-Light:hover {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 1);
-  border-radius: 0 0 0 0;
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 100%);
+  border-radius: 0;
   border-style: solid;
   border-width: 2px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.Sports-Button-Red,
 .Sports-Button-Red {
-  background-color: rgba(219, 28, 34, 1);
-  border-color: rgba(219, 28, 34, 0);
-  border-radius: 0 0 0 0;
+  background-color: rgb(219 28 34 / 100%);
+  border-color: rgb(219 28 34 / 0%);
+  border-radius: 0;
   border-style: solid;
   border-width: 2px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 17px;
   font-style: normal;
@@ -2129,23 +2128,23 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Sports-Button-Red:hover,
 .Sports-Button-Red:hover {
-  background-color: rgba(0, 0, 0, 1);
-  border-color: rgba(0, 0, 0, 1);
-  border-radius: 0 0 0 0;
+  background-color: rgb(0 0 0 / 100%);
+  border-color: rgb(0 0 0 / 100%);
+  border-radius: 0;
   border-style: solid;
   border-width: 2px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.Photography-Button,
 .Photography-Button {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 0.25);
-  border-radius: 30px 30px 30px 30px;
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 25%);
+  border-radius: 30px;
   border-style: solid;
   border-width: 1px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Raleway;
   font-size: 15px;
   font-style: normal;
@@ -2159,23 +2158,23 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Photography-Button:hover,
 .Photography-Button:hover {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 1);
-  border-radius: 30px 30px 30px 30px;
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 100%);
+  border-radius: 30px;
   border-style: solid;
   border-width: 1px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.Newspaper-Button-2,
 .Newspaper-Button-2 {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 0.5);
-  border-radius: 3px 3px 3px 3px;
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 50%);
+  border-radius: 3px;
   border-style: solid;
   border-width: 2px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Roboto;
   font-size: 15px;
   font-style: normal;
@@ -2188,23 +2187,23 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Newspaper-Button-2:hover,
 .Newspaper-Button-2:hover {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 1);
-  border-radius: 3px 3px 3px 3px;
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 100%);
+  border-radius: 3px;
   border-style: solid;
   border-width: 2px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.Feature-Tour,
 .Feature-Tour {
-  background-color: rgba(139, 192, 39, 1);
-  border-color: rgba(0, 0, 0, 0);
-  border-radius: 30px 30px 30px 30px;
+  background-color: rgb(139 192 39 / 100%);
+  border-color: rgb(0 0 0 / 0%);
+  border-radius: 30px;
   border-style: solid;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Roboto;
   font-size: 17px;
   font-style: normal;
@@ -2217,23 +2216,23 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Feature-Tour:hover,
 .Feature-Tour:hover {
-  background-color: rgba(114, 168, 0, 1);
-  border-color: rgba(0, 0, 0, 0);
-  border-radius: 30px 30px 30px 30px;
+  background-color: rgb(114 168 0 / 100%);
+  border-color: rgb(0 0 0 / 0%);
+  border-radius: 30px;
   border-style: solid;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.Feature-Examples,
 .Feature-Examples {
   background-color: transparent;
-  border-color: rgba(33, 42, 64, 0.15);
-  border-radius: 30px 30px 30px 30px;
+  border-color: rgb(33 42 64 / 15%);
+  border-radius: 30px;
   border-style: solid;
   border-width: 2px;
-  color: rgba(33, 42, 64, 0.5);
+  color: rgb(33 42 64 / 50%);
   font-family: Roboto;
   font-size: 17px;
   font-style: normal;
@@ -2247,22 +2246,22 @@ website:   	http://www.themepunch.com
 .tp-caption.Feature-Examples:hover,
 .Feature-Examples:hover {
   background-color: transparent;
-  border-color: rgba(139, 192, 39, 1);
-  border-radius: 30px 30px 30px 30px;
+  border-color: rgb(139 192 39 / 100%);
+  border-radius: 30px;
   border-style: solid;
   border-width: 2px;
-  color: rgba(139, 192, 39, 1);
+  color: rgb(139 192 39 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.subcaption,
 .subcaption {
   background-color: transparent;
-  border-color: rgba(0, 0, 0, 1);
-  border-radius: 0 0 0 0;
+  border-color: rgb(0 0 0 / 100%);
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(111, 124, 130, 1);
+  color: rgb(111 124 130 / 100%);
   font-family: roboto;
   font-size: 19px;
   font-style: normal;
@@ -2277,11 +2276,11 @@ website:   	http://www.themepunch.com
 .tp-caption.menutab,
 .menutab {
   background-color: transparent;
-  border-color: rgba(0, 0, 0, 1);
-  border-radius: 0 0 0 0;
+  border-color: rgb(0 0 0 / 100%);
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(41, 46, 49, 1);
+  color: rgb(41 46 49 / 100%);
   font-family: roboto;
   font-size: 25px;
   font-style: normal;
@@ -2297,21 +2296,21 @@ website:   	http://www.themepunch.com
 .menutab:hover {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(213, 0, 0, 1);
+  color: rgb(213 0 0 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.maincontent,
 .maincontent {
   background-color: transparent;
-  border-color: rgba(0, 0, 0, 1);
-  border-radius: 0 0 0 0;
+  border-color: rgb(0 0 0 / 100%);
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(41, 46, 49, 1);
+  color: rgb(41 46 49 / 100%);
   font-family: roboto;
   font-size: 21px;
   font-style: normal;
@@ -2326,11 +2325,11 @@ website:   	http://www.themepunch.com
 .tp-caption.minitext,
 .minitext {
   background-color: transparent;
-  border-color: rgba(0, 0, 0, 1);
-  border-radius: 0 0 0 0;
+  border-color: rgb(0 0 0 / 100%);
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(185, 186, 187, 1);
+  color: rgb(185 186 187 / 100%);
   font-family: roboto;
   font-size: 15px;
   font-style: normal;
@@ -2344,12 +2343,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Feature-Buy,
 .Feature-Buy {
-  background-color: rgba(0, 154, 238, 1);
-  border-color: rgba(0, 0, 0, 0);
-  border-radius: 30px 30px 30px 30px;
+  background-color: rgb(0 154 238 / 100%);
+  border-color: rgb(0 0 0 / 0%);
+  border-radius: 30px;
   border-style: solid;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Roboto;
   font-size: 17px;
   font-style: normal;
@@ -2362,23 +2361,23 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Feature-Buy:hover,
 .Feature-Buy:hover {
-  background-color: rgba(0, 133, 214, 1);
-  border-color: rgba(0, 0, 0, 0);
-  border-radius: 30px 30px 30px 30px;
+  background-color: rgb(0 133 214 / 100%);
+  border-color: rgb(0 0 0 / 0%);
+  border-radius: 30px;
   border-style: solid;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.Feature-Examples-Light,
 .Feature-Examples-Light {
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 0.15);
-  border-radius: 30px 30px 30px 30px;
+  border-color: rgb(255 255 255 / 15%);
+  border-radius: 30px;
   border-style: solid;
   border-width: 2px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Roboto;
   font-size: 17px;
   font-style: normal;
@@ -2392,22 +2391,22 @@ website:   	http://www.themepunch.com
 .tp-caption.Feature-Examples-Light:hover,
 .Feature-Examples-Light:hover {
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 1);
-  border-radius: 30px 30px 30px 30px;
+  border-color: rgb(255 255 255 / 100%);
+  border-radius: 30px;
   border-style: solid;
   border-width: 2px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.Facebook-Likes,
 .Facebook-Likes {
-  background-color: rgba(59, 89, 153, 1);
+  background-color: rgb(59 89 153 / 100%);
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-family: Roboto;
   font-size: 15px;
   font-style: normal;
@@ -2420,12 +2419,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Twitter-Favorites,
 .Twitter-Favorites {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgb(255 255 255 / 0%);
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(136, 153, 166, 1);
+  color: rgb(136 153 166 / 100%);
   font-family: Roboto;
   font-size: 15px;
   font-style: normal;
@@ -2438,12 +2437,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Twitter-Link,
 .Twitter-Link {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(255 255 255 / 100%);
   border-color: transparent;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   border-style: none;
   border-width: 0;
-  color: rgba(135, 153, 165, 1);
+  color: rgb(135 153 165 / 100%);
   font-family: Roboto;
   font-size: 15px;
   font-style: normal;
@@ -2456,23 +2455,23 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Twitter-Link:hover,
 .Twitter-Link:hover {
-  background-color: rgba(0, 132, 180, 1);
+  background-color: rgb(0 132 180 / 100%);
   border-color: transparent;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   border-style: none;
   border-width: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
 }
 
 .tp-caption.Twitter-Retweet,
 .Twitter-Retweet {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgb(255 255 255 / 0%);
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(136, 153, 166, 1);
+  color: rgb(136 153 166 / 100%);
   font-family: Roboto;
   font-size: 15px;
   font-style: normal;
@@ -2485,12 +2484,12 @@ website:   	http://www.themepunch.com
 
 .tp-caption.Twitter-Content,
 .Twitter-Content {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(255 255 255 / 100%);
   border-color: transparent;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
   border-style: none;
   border-width: 0;
-  color: rgba(41, 47, 51, 1);
+  color: rgb(41 47 51 / 100%);
   font-family: Roboto;
   font-size: 20px;
   font-style: normal;
@@ -2505,7 +2504,7 @@ website:   	http://www.themepunch.com
 .revtp-searchform input[type='email'],
 .revtp-form input[type='text'],
 .revtp-form input[type='email'] {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 15px;
   color: #000;
   background-color: #fff;
@@ -2514,99 +2513,103 @@ website:   	http://www.themepunch.com
   cursor: text;
   border: 0;
   width: 400px;
-  margin-bottom: 0px;
-  -webkit-transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  -ms-transition: background-color 0.5s;
+  margin-bottom: 0;
   transition: background-color 0.5s;
-
-  border-radius: 0px;
+  transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  border-radius: 0;
 }
 
 .tp-caption.BigBold-Title,
 .BigBold-Title {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 110px;
   line-height: 100px;
   font-weight: 800;
   font-style: normal;
   font-family: Raleway;
-  padding: 10px 0px 10px 0;
+  padding: 10px 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.BigBold-SubTitle,
 .BigBold-SubTitle {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(255 255 255 / 50%);
   font-size: 15px;
   line-height: 24px;
   font-weight: 500;
   font-style: normal;
   font-family: Raleway;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
   letter-spacing: 1px;
 }
+
 .tp-caption.BigBold-Button,
 .BigBold-Button {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 13px;
   line-height: 13px;
   font-weight: 500;
   font-style: normal;
   font-family: Raleway;
-  padding: 15px 50px 15px 50px;
+  padding: 15px 50px;
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 50%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
   text-align: left;
   letter-spacing: 1px;
 }
+
 .tp-caption.BigBold-Button:hover,
 .BigBold-Button:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 1);
+  border-color: rgb(255 255 255 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
 }
+
 .tp-caption.FoodCarousel-Content,
 .FoodCarousel-Content {
-  color: rgba(41, 46, 49, 1);
+  color: rgb(41 46 49 / 100%);
   font-size: 17px;
   line-height: 28px;
   font-weight: 500;
   font-style: normal;
   font-family: Raleway;
-  padding: 30px 30px 30px 30px;
+  padding: 30px;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(41, 46, 49, 1);
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(41 46 49 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0 0 0 0px;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.FoodCarousel-Button,
 .FoodCarousel-Button {
-  color: rgba(41, 46, 49, 1);
+  color: rgb(41 46 49 / 100%);
   font-size: 13px;
   line-height: 13px;
   font-weight: 700;
@@ -2614,27 +2617,29 @@ website:   	http://www.themepunch.com
   font-family: Raleway;
   padding: 15px 70px 15px 50px;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(41, 46, 49, 1);
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(41 46 49 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
   text-align: left;
   letter-spacing: 1px;
 }
+
 .tp-caption.FoodCarousel-Button:hover,
 .FoodCarousel-Button:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
-  background-color: rgba(41, 46, 49, 1);
-  border-color: rgba(41, 46, 49, 1);
+  background-color: rgb(41 46 49 / 100%);
+  border-color: rgb(41 46 49 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
 }
+
 .tp-caption.FoodCarousel-CloseButton,
 .FoodCarousel-CloseButton {
-  color: rgba(41, 46, 49, 1);
+  color: rgb(41 46 49 / 100%);
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
@@ -2642,329 +2647,348 @@ website:   	http://www.themepunch.com
   font-family: Raleway;
   padding: 14px 14px 14px 16px;
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(41, 46, 49, 0);
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(41 46 49 / 0%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   text-align: left;
   letter-spacing: 1px;
 }
+
 .tp-caption.FoodCarousel-CloseButton:hover,
 .FoodCarousel-CloseButton:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
-  background-color: rgba(41, 46, 49, 1);
-  border-color: rgba(41, 46, 49, 0);
+  background-color: rgb(41 46 49 / 100%);
+  border-color: rgb(41 46 49 / 0%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
 }
+
 .tp-caption.Video-SubTitle,
 .Video-SubTitle {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 12px;
   line-height: 12px;
   font-weight: 600;
   font-style: normal;
   font-family: Raleway;
-  padding: 5px 5px 5px 5px;
+  padding: 5px;
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgb(0 0 0 / 35%);
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   letter-spacing: 2px;
   text-align: left;
 }
+
 .tp-caption.Video-Title,
 .Video-Title {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 30px;
   line-height: 30px;
   font-weight: 900;
   font-style: normal;
   font-family: Raleway;
-  padding: 5px 5px 5px 5px;
+  padding: 5px;
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgb(0 0 0 / 100%);
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.Travel-BigCaption,
 .Travel-BigCaption {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 50px;
   line-height: 50px;
   font-weight: 400;
   font-style: normal;
   font-family: Roboto;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.Travel-SmallCaption,
 .Travel-SmallCaption {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 25px;
   line-height: 30px;
   font-weight: 300;
   font-style: normal;
   font-family: Roboto;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.Travel-CallToAction,
 .Travel-CallToAction {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 25px;
   line-height: 25px;
   font-weight: 500;
   font-style: normal;
   font-family: Roboto;
-  padding: 12px 20px 12px 20px;
+  padding: 12px 20px;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 1);
+  background-color: rgb(255 255 255 / 5%);
+  border-color: rgb(255 255 255 / 100%);
   border-style: solid;
   border-width: 2px;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 5px;
   text-align: left;
   letter-spacing: 1px;
 }
+
 .tp-caption.Travel-CallToAction:hover,
 .Travel-CallToAction:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 1);
+  background-color: rgb(255 255 255 / 15%);
+  border-color: rgb(255 255 255 / 100%);
   border-style: solid;
   border-width: 2px;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 5px;
 }
 
 .tp-caption.RotatingWords-TitleWhite,
 .RotatingWords-TitleWhite {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 70px;
   line-height: 70px;
   font-weight: 800;
   font-style: normal;
   font-family: Raleway;
-  padding: 0px 0px 0px 0;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.RotatingWords-Button,
 .RotatingWords-Button {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
   font-style: normal;
   font-family: Raleway;
-  padding: 20px 50px 20px 50px;
+  padding: 20px 50px;
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 0.15);
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 15%);
   border-style: solid;
   border-width: 2px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
   text-align: left;
   letter-spacing: 3px;
 }
+
 .tp-caption.RotatingWords-Button:hover,
 .RotatingWords-Button:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 1);
+  border-color: rgb(255 255 255 / 100%);
   border-style: solid;
   border-width: 2px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
 }
+
 .tp-caption.RotatingWords-SmallText,
 .RotatingWords-SmallText {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   font-style: normal;
   font-family: Raleway;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
   text-shadow: none;
 }
 
 .tp-caption.ContentZoom-SmallTitle,
 .ContentZoom-SmallTitle {
-  color: rgba(41, 46, 49, 1);
+  color: rgb(41 46 49 / 100%);
   font-size: 33px;
   line-height: 45px;
   font-weight: 600;
   font-style: normal;
   font-family: Raleway;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.ContentZoom-SmallSubtitle,
 .ContentZoom-SmallSubtitle {
-  color: rgba(111, 124, 130, 1);
+  color: rgb(111 124 130 / 100%);
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   font-style: normal;
   font-family: Raleway;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.ContentZoom-SmallIcon,
 .ContentZoom-SmallIcon {
-  color: rgba(41, 46, 49, 1);
+  color: rgb(41 46 49 / 100%);
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
   font-style: normal;
   font-family: Raleway;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.ContentZoom-SmallIcon:hover,
 .ContentZoom-SmallIcon:hover {
-  color: rgba(111, 124, 130, 1);
+  color: rgb(111 124 130 / 100%);
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
 }
+
 .tp-caption.ContentZoom-DetailTitle,
 .ContentZoom-DetailTitle {
-  color: rgba(41, 46, 49, 1);
+  color: rgb(41 46 49 / 100%);
   font-size: 70px;
   line-height: 70px;
   font-weight: 500;
   font-style: normal;
   font-family: Raleway;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.ContentZoom-DetailSubTitle,
 .ContentZoom-DetailSubTitle {
-  color: rgba(111, 124, 130, 1);
+  color: rgb(111 124 130 / 100%);
   font-size: 25px;
   line-height: 25px;
   font-weight: 500;
   font-style: normal;
   font-family: Raleway;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.ContentZoom-DetailContent,
 .ContentZoom-DetailContent {
-  color: rgba(111, 124, 130, 1);
+  color: rgb(111 124 130 / 100%);
   font-size: 17px;
   line-height: 28px;
   font-weight: 500;
   font-style: normal;
   font-family: Raleway;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.ContentZoom-Button,
 .ContentZoom-Button {
-  color: rgba(41, 46, 49, 1);
+  color: rgb(41 46 49 / 100%);
   font-size: 13px;
   line-height: 13px;
   font-weight: 700;
   font-style: normal;
   font-family: Raleway;
-  padding: 15px 50px 15px 50px;
+  padding: 15px 50px;
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(41, 46, 49, 0.5);
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(41 46 49 / 50%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
   text-align: left;
   letter-spacing: 1px;
 }
+
 .tp-caption.ContentZoom-Button:hover,
 .ContentZoom-Button:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
-  background-color: rgba(41, 46, 49, 1);
-  border-color: rgba(41, 46, 49, 1);
+  background-color: rgb(41 46 49 / 100%);
+  border-color: rgb(41 46 49 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
 }
+
 .tp-caption.ContentZoom-ButtonClose,
 .ContentZoom-ButtonClose {
-  color: rgba(41, 46, 49, 1);
+  color: rgb(41 46 49 / 100%);
   font-size: 13px;
   line-height: 13px;
   font-weight: 700;
@@ -2972,100 +2996,106 @@ website:   	http://www.themepunch.com
   font-family: Raleway;
   padding: 14px 14px 14px 16px;
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(41, 46, 49, 0.5);
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(41 46 49 / 50%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   text-align: left;
   letter-spacing: 1px;
 }
+
 .tp-caption.ContentZoom-ButtonClose:hover,
 .ContentZoom-ButtonClose:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
-  background-color: rgba(41, 46, 49, 1);
-  border-color: rgba(41, 46, 49, 1);
+  background-color: rgb(41 46 49 / 100%);
+  border-color: rgb(41 46 49 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
 }
+
 .tp-caption.Newspaper-Title,
 .Newspaper-Title {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 50px;
   line-height: 55px;
   font-weight: 400;
   font-style: normal;
   font-family: 'Roboto Slab';
-  padding: 0 0 10px 0;
+  padding: 0 0 10px;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.Newspaper-Subtitle,
 .Newspaper-Subtitle {
-  color: rgba(168, 216, 238, 1);
+  color: rgb(168 216 238 / 100%);
   font-size: 15px;
   line-height: 20px;
   font-weight: 900;
   font-style: normal;
   font-family: Roboto;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.Newspaper-Button,
 .Newspaper-Button {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 13px;
   line-height: 17px;
   font-weight: 700;
   font-style: normal;
   font-family: Roboto;
-  padding: 12px 35px 12px 35px;
+  padding: 12px 35px;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0);
-  border-color: rgba(255, 255, 255, 0.25);
+  background-color: rgb(255 255 255 / 0%);
+  border-color: rgb(255 255 255 / 25%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
   letter-spacing: 2px;
   text-align: left;
 }
+
 .tp-caption.Newspaper-Button:hover,
 .Newspaper-Button:hover {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(255, 255, 255, 1);
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(255 255 255 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
 }
+
 .tp-caption.rtwhitemedium,
 .rtwhitemedium {
   font-size: 22px;
   line-height: 26px;
-  color: rgb(255, 255, 255);
+  color: rgb(255 255 255);
   text-decoration: none;
   background-color: transparent;
-  border-width: 0px;
-  border-color: rgb(0, 0, 0);
+  border-width: 0;
+  border-color: rgb(0 0 0);
   border-style: none;
   text-shadow: none;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (width <= 767px) {
   .revtp-searchform input[type='text'],
   .revtp-searchform input[type='email'],
   .revtp-form input[type='text'],
@@ -3076,7 +3106,7 @@ website:   	http://www.themepunch.com
 
 .revtp-searchform input[type='submit'],
 .revtp-form input[type='submit'] {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 46px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -3086,73 +3116,77 @@ website:   	http://www.themepunch.com
   border: 0;
   background: #009aee;
   color: #fff;
-
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .tp-caption.Twitter-Content a,
 .tp-caption.Twitter-Content a:visited {
   color: #0084b4 !important;
 }
+
 .tp-caption.Twitter-Content a:hover {
   color: #0084b4 !important;
   text-decoration: underline !important;
 }
+
 .tp-caption.Concept-Title,
 .Concept-Title {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 70px;
   line-height: 70px;
   font-weight: 700;
   font-style: normal;
   font-family: 'Roboto Condensed';
-  padding: 0px 0px 10px 0px;
+  padding: 0 0 10px;
   text-decoration: none;
   text-align: left;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
   letter-spacing: 5px;
 }
+
 .tp-caption.Concept-SubTitle,
 .Concept-SubTitle {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgb(255 255 255 / 65%);
   font-size: 25px;
   line-height: 25px;
   font-weight: 700;
   font-style: italic;
   font-family: '' Playfair Display '';
-  padding: 0px 0px 10px 0px;
+  padding: 0 0 10px;
   text-decoration: none;
   text-align: left;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
 }
+
 .tp-caption.Concept-Content,
 .Concept-Content {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
   font-style: normal;
   font-family: 'Roboto Condensed';
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   text-decoration: none;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 1);
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 100%);
   border-style: none;
   border-width: 2px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
 }
+
 .tp-caption.Concept-MoreBtn,
 .Concept-MoreBtn {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 30px;
   line-height: 30px;
   font-weight: 300;
@@ -3160,28 +3194,29 @@ website:   	http://www.themepunch.com
   font-family: Roboto;
   padding: 10px 8px 7px 10px;
   text-decoration: none;
-  text-align: left;
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 0);
+  border-color: rgb(255 255 255 / 0%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 50px 50px 50px 50px;
+  border-width: 0;
+  border-radius: 50px;
   letter-spacing: 1px;
   text-align: left;
 }
+
 .tp-caption.Concept-MoreBtn:hover,
 .Concept-MoreBtn:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0);
+  background-color: rgb(255 255 255 / 15%);
+  border-color: rgb(255 255 255 / 0%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 50px 50px 50px 50px;
+  border-width: 0;
+  border-radius: 50px;
 }
+
 .tp-caption.Concept-LessBtn,
 .Concept-LessBtn {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 30px;
   line-height: 30px;
   font-weight: 300;
@@ -3189,63 +3224,66 @@ website:   	http://www.themepunch.com
   font-family: Roboto;
   padding: 10px 8px 7px 10px;
   text-decoration: none;
-  text-align: left;
-  background-color: rgba(0, 0, 0, 1);
-  border-color: rgba(255, 255, 255, 0);
+  background-color: rgb(0 0 0 / 100%);
+  border-color: rgb(255 255 255 / 0%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 50px 50px 50px 50px;
+  border-width: 0;
+  border-radius: 50px;
   letter-spacing: 1px;
   text-align: left;
 }
+
 .tp-caption.Concept-LessBtn:hover,
 .Concept-LessBtn:hover {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(255, 255, 255, 0);
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(255 255 255 / 0%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 50px 50px 50px 50px;
+  border-width: 0;
+  border-radius: 50px;
 }
+
 .tp-caption.Concept-SubTitle-Dark,
 .Concept-SubTitle-Dark {
-  color: rgba(0, 0, 0, 0.65);
+  color: rgb(0 0 0 / 65%);
   font-size: 25px;
   line-height: 25px;
   font-weight: 700;
   font-style: italic;
   font-family: 'Playfair Display';
-  padding: 0px 0px 10px 0px;
+  padding: 0 0 10px;
   text-decoration: none;
   text-align: left;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
 }
+
 .tp-caption.Concept-Title-Dark,
 .Concept-Title-Dark {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 70px;
   line-height: 70px;
   font-weight: 700;
   font-style: normal;
   font-family: 'Roboto Condensed';
-  padding: 0px 0px 10px 0px;
+  padding: 0 0 10px;
   text-decoration: none;
   text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
   letter-spacing: 5px;
 }
+
 .tp-caption.Concept-MoreBtn-Dark,
 .Concept-MoreBtn-Dark {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 30px;
   line-height: 30px;
   font-weight: 300;
@@ -3253,75 +3291,81 @@ website:   	http://www.themepunch.com
   font-family: Roboto;
   padding: 10px 8px 7px 10px;
   text-decoration: none;
-  text-align: left;
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 0);
+  border-color: rgb(255 255 255 / 0%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 50px 50px 50px 50px;
+  border-width: 0;
+  border-radius: 50px;
   letter-spacing: 1px;
   text-align: left;
 }
+
 .tp-caption.Concept-MoreBtn-Dark:hover,
 .Concept-MoreBtn-Dark:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 1);
-  border-color: rgba(255, 255, 255, 0);
+  background-color: rgb(0 0 0 / 100%);
+  border-color: rgb(255 255 255 / 0%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 50px 50px 50px 50px;
+  border-width: 0;
+  border-radius: 50px;
 }
+
 .tp-caption.Concept-Content-Dark,
 .Concept-Content-Dark {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
   font-style: normal;
   font-family: 'Roboto Condensed';
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   text-decoration: none;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 1);
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 100%);
   border-style: none;
   border-width: 2px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
 }
+
 .tp-caption.Concept-Notice,
 .Concept-Notice {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 15px;
   line-height: 15px;
   font-weight: 400;
   font-style: normal;
   font-family: 'Roboto Condensed';
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   text-decoration: none;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 1);
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 100%);
   border-style: none;
   border-width: 2px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
   letter-spacing: 2px;
 }
+
 .tp-caption.Concept-Content a,
 .tp-caption.Concept-Content a:visited {
   color: #fff !important;
   border-bottom: 1px solid #fff !important;
   font-weight: 700 !important;
 }
+
 .tp-caption.Concept-Content a:hover {
   border-bottom: 1px solid transparent !important;
 }
+
 .tp-caption.Concept-Content-Dark a,
 .tp-caption.Concept-Content-Dark a:visited {
   color: #000 !important;
   border-bottom: 1px solid #000 !important;
   font-weight: 700 !important;
 }
+
 .tp-caption.Concept-Content-Dark a:hover {
   border-bottom: 1px solid transparent !important;
 }
@@ -3330,224 +3374,236 @@ website:   	http://www.themepunch.com
 .tp-caption.Twitter-Content a:visited {
   color: #0084b4 !important;
 }
+
 .tp-caption.Twitter-Content a:hover {
   color: #0084b4 !important;
   text-decoration: underline !important;
 }
+
 .tp-caption.Creative-Title,
 .Creative-Title {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 70px;
   line-height: 70px;
   font-weight: 400;
   font-style: normal;
   font-family: 'Playfair Display';
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   text-decoration: none;
   text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
 }
+
 .tp-caption.Creative-SubTitle,
 .Creative-SubTitle {
-  color: rgba(205, 176, 131, 1);
+  color: rgb(205 176 131 / 100%);
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
   font-style: normal;
   font-family: Lato;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   text-decoration: none;
   text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
   letter-spacing: 2px;
 }
+
 .tp-caption.Creative-Button,
 .Creative-Button {
-  color: rgba(205, 176, 131, 1);
+  color: rgb(205 176 131 / 100%);
   font-size: 13px;
   line-height: 13px;
   font-weight: 400;
   font-style: normal;
   font-family: Lato;
-  padding: 15px 50px 15px 50px;
+  padding: 15px 50px;
   text-decoration: none;
   text-align: left;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(205, 176, 131, 0.25);
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(205 176 131 / 25%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
   letter-spacing: 2px;
 }
+
 .tp-caption.Creative-Button:hover,
 .Creative-Button:hover {
-  color: rgba(205, 176, 131, 1);
+  color: rgb(205 176 131 / 100%);
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(205, 176, 131, 1);
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(205 176 131 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
 }
 
 .tp-caption.subcaption,
 .subcaption {
-  color: rgba(111, 124, 130, 1);
+  color: rgb(111 124 130 / 100%);
   font-size: 19px;
   line-height: 24px;
   font-weight: 400;
   font-style: normal;
   font-family: roboto;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
-  border-color: rgba(0, 0, 0, 1);
+  border-color: rgb(0 0 0 / 100%);
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-shadow: none;
   text-align: left;
 }
+
 .tp-caption.RedDot,
 .RedDot {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-weight: 400;
   font-style: normal;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   text-decoration: none;
   text-align: left;
-  background-color: rgba(213, 0, 0, 1);
-  border-color: rgba(255, 255, 255, 1);
+  background-color: rgb(213 0 0 / 100%);
+  border-color: rgb(255 255 255 / 100%);
   border-style: solid;
   border-width: 5px;
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 50px;
 }
+
 .tp-caption.RedDot:hover,
 .RedDot:hover {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.75);
-  border-color: rgba(213, 0, 0, 1);
+  background-color: rgb(255 255 255 / 75%);
+  border-color: rgb(213 0 0 / 100%);
   border-style: solid;
   border-width: 5px;
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 50px;
 }
 
 .tp-caption.SlidingOverlays-Title,
 .SlidingOverlays-Title {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 50px;
   line-height: 50px;
   font-weight: 400;
   font-style: normal;
   font-family: 'Playfair Display';
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   text-decoration: none;
   text-align: left;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
 }
+
 .tp-caption.SlidingOverlays-Title,
 .SlidingOverlays-Title {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 50px;
   line-height: 50px;
   font-weight: 400;
   font-style: normal;
   font-family: 'Playfair Display';
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   text-decoration: none;
   text-align: left;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
 }
 
 .tp-caption.Woo-TitleLarge,
 .Woo-TitleLarge {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
   font-style: normal;
   font-family: 'Playfair Display';
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.Woo-Rating,
 .Woo-Rating {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 14px;
   line-height: 30px;
   font-weight: 300;
   font-style: normal;
   font-family: Roboto;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.Woo-SubTitle,
 .Woo-SubTitle {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 18px;
   line-height: 18px;
   font-weight: 300;
   font-style: normal;
   font-family: Roboto;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
   letter-spacing: 2px;
 }
+
 .tp-caption.Woo-PriceLarge,
 .Woo-PriceLarge {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
   font-style: normal;
   font-family: Roboto;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.Woo-ProductInfo,
 .Woo-ProductInfo {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 15px;
   line-height: 15px;
   font-weight: 500;
@@ -3555,105 +3611,112 @@ website:   	http://www.themepunch.com
   font-family: Roboto;
   padding: 12px 75px 12px 50px;
   text-decoration: none;
-  background-color: rgba(254, 207, 114, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(254 207 114 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: 4px;
   text-align: left;
 }
+
 .tp-caption.Woo-ProductInfo:hover,
 .Woo-ProductInfo:hover {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   text-decoration: none;
-  background-color: rgba(243, 168, 71, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(243 168 71 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: 4px;
 }
+
 .tp-caption.Woo-AddToCart,
 .Woo-AddToCart {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 15px;
   line-height: 15px;
   font-weight: 500;
   font-style: normal;
   font-family: Roboto;
-  padding: 12px 35px 12px 35px;
+  padding: 12px 35px;
   text-decoration: none;
-  background-color: rgba(254, 207, 114, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(254 207 114 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: 4px;
   text-align: left;
 }
+
 .tp-caption.Woo-AddToCart:hover,
 .Woo-AddToCart:hover {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   text-decoration: none;
-  background-color: rgba(243, 168, 71, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(243 168 71 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: 4px;
 }
+
 .tp-caption.Woo-TitleLarge,
 .Woo-TitleLarge {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
   font-style: normal;
   font-family: 'Playfair Display';
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.Woo-SubTitle,
 .Woo-SubTitle {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 18px;
   line-height: 18px;
   font-weight: 300;
   font-style: normal;
   font-family: Roboto;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
   letter-spacing: 2px;
 }
+
 .tp-caption.Woo-PriceLarge,
 .Woo-PriceLarge {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
   font-style: normal;
   font-family: Roboto;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.Woo-ProductInfo,
 .Woo-ProductInfo {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 15px;
   line-height: 15px;
   font-weight: 500;
@@ -3661,54 +3724,57 @@ website:   	http://www.themepunch.com
   font-family: Roboto;
   padding: 12px 75px 12px 50px;
   text-decoration: none;
-  background-color: rgba(254, 207, 114, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(254 207 114 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: 4px;
   text-align: left;
 }
+
 .tp-caption.Woo-ProductInfo:hover,
 .Woo-ProductInfo:hover {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   text-decoration: none;
-  background-color: rgba(243, 168, 71, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(243 168 71 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: 4px;
 }
+
 .tp-caption.Woo-AddToCart,
 .Woo-AddToCart {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 15px;
   line-height: 15px;
   font-weight: 500;
   font-style: normal;
   font-family: Roboto;
-  padding: 12px 35px 12px 35px;
+  padding: 12px 35px;
   text-decoration: none;
-  background-color: rgba(254, 207, 114, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(254 207 114 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: 4px;
   text-align: left;
 }
+
 .tp-caption.Woo-AddToCart:hover,
 .Woo-AddToCart:hover {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   text-decoration: none;
-  background-color: rgba(243, 168, 71, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(243 168 71 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: 4px;
 }
 
 .tp-caption.FullScreen-Toggle,
 .FullScreen-Toggle {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
@@ -3716,202 +3782,212 @@ website:   	http://www.themepunch.com
   font-family: Raleway;
   padding: 11px 8px 11px 12px;
   text-decoration: none;
-  text-align: left;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-color: rgba(255, 255, 255, 0);
+  background-color: rgb(0 0 0 / 50%);
+  border-color: rgb(255 255 255 / 0%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
   letter-spacing: 3px;
   text-align: left;
 }
+
 .tp-caption.FullScreen-Toggle:hover,
 .FullScreen-Toggle:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 1);
-  border-color: rgba(255, 255, 255, 0);
+  background-color: rgb(0 0 0 / 100%);
+  border-color: rgb(255 255 255 / 0%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
 }
 
 .tp-caption.Agency-Title,
 .Agency-Title {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 70px;
   line-height: 70px;
   font-weight: 900;
   font-style: normal;
   font-family: lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
   letter-spacing: 10px;
 }
+
 .tp-caption.Agency-SubTitle,
 .Agency-SubTitle {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
   font-style: italic;
   font-family: Georgia, serif;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.Agency-PlayBtn,
 .Agency-PlayBtn {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 30px;
   line-height: 71px;
   font-weight: 500;
   font-style: normal;
   font-family: Roboto;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 1);
+  border-color: rgb(255 255 255 / 100%);
   border-style: solid;
   border-width: 2px;
-  border-radius: 100px 100px 100px 100px;
+  border-radius: 100px;
   text-align: center;
 }
+
 .tp-caption.Agency-PlayBtn:hover,
 .Agency-PlayBtn:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 1);
+  border-color: rgb(255 255 255 / 100%);
   border-style: solid;
   border-width: 2px;
-  border-radius: 100px 100px 100px 100px;
+  border-radius: 100px;
   cursor: pointer;
 }
+
 .tp-caption.Agency-SmallText,
 .Agency-SmallText {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 12px;
   line-height: 12px;
   font-weight: 900;
   font-style: normal;
   font-family: lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
   letter-spacing: 5px;
 }
+
 .tp-caption.Agency-Social,
 .Agency-Social {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 25px;
   line-height: 50px;
   font-weight: 400;
   font-style: normal;
   font-family: Georgia, serif;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
-  border-color: rgba(51, 51, 51, 1);
+  border-color: rgb(51 51 51 / 100%);
   border-style: solid;
   border-width: 2px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   text-align: center;
 }
+
 .tp-caption.Agency-Social:hover,
 .Agency-Social:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
-  background-color: rgba(51, 51, 51, 1);
-  border-color: rgba(51, 51, 51, 1);
+  background-color: rgb(51 51 51 / 100%);
+  border-color: rgb(51 51 51 / 100%);
   border-style: solid;
   border-width: 2px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   cursor: pointer;
 }
+
 .tp-caption.Agency-CloseBtn,
 .Agency-CloseBtn {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 50px;
   line-height: 50px;
   font-weight: 500;
   font-style: normal;
   font-family: Roboto;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 0);
+  border-color: rgb(255 255 255 / 0%);
   border-style: none;
-  border-width: 0px;
-  border-radius: 100px 100px 100px 100px;
+  border-width: 0;
+  border-radius: 100px;
   text-align: center;
 }
+
 .tp-caption.Agency-CloseBtn:hover,
 .Agency-CloseBtn:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 0);
+  border-color: rgb(255 255 255 / 0%);
   border-style: none;
-  border-width: 0px;
-  border-radius: 100px 100px 100px 100px;
+  border-width: 0;
+  border-radius: 100px;
   cursor: pointer;
 }
 
 .tp-caption.Dining-Title,
 .Dining-Title {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 70px;
   line-height: 70px;
   font-weight: 400;
   font-style: normal;
   font-family: Georgia, serif;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
   letter-spacing: 10px;
 }
+
 .tp-caption.Dining-SubTitle,
 .Dining-SubTitle {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
   font-style: normal;
   font-family: Georgia, serif;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.Dining-BtnLight,
 .Dining-BtnLight {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(255 255 255 / 50%);
   font-size: 15px;
   line-height: 15px;
   font-weight: 700;
@@ -3919,475 +3995,499 @@ website:   	http://www.themepunch.com
   font-family: Lato;
   padding: 17px 73px 17px 50px;
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 0.25);
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 25%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
   text-align: left;
   letter-spacing: 2px;
 }
+
 .tp-caption.Dining-BtnLight:hover,
 .Dining-BtnLight:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 1);
+  background-color: rgb(0 0 0 / 0%);
+  border-color: rgb(255 255 255 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
 }
+
 .tp-caption.Dining-Social,
 .Dining-Social {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 25px;
   line-height: 50px;
   font-weight: 400;
   font-style: normal;
   font-family: Georgia, serif;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 0.25);
+  border-color: rgb(255 255 255 / 25%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   text-align: center;
 }
+
 .tp-caption.Dining-Social:hover,
 .Dining-Social:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 1);
+  border-color: rgb(255 255 255 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   cursor: pointer;
 }
+
 tp-caption.Team-Thumb,
 .Team-Thumb {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 20px;
   line-height: 22px;
   font-weight: 400;
   font-style: normal;
   font-family: Arial;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.Team-Thumb:hover,
 .Team-Thumb:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 .tp-caption.Team-Name,
 .Team-Name {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 70px;
   line-height: 70px;
   font-weight: 900;
   font-style: normal;
   font-family: Roboto;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.Team-Position,
 .Team-Position {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
   font-style: normal;
   font-family: Georgia, serif;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.Team-Description,
 .Team-Description {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 18px;
   line-height: 28px;
   font-weight: 400;
   font-style: normal;
   font-family: Roboto;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.Team-Social,
 .Team-Social {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 50px;
   line-height: 50px;
   font-weight: 400;
   font-style: normal;
   font-family: Arial;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.Team-Social:hover,
 .Team-Social:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
 
 .tp-caption.VideoControls-Play,
 .VideoControls-Play {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 50px;
   line-height: 120px;
   font-weight: 500;
   font-style: normal;
   font-family: Roboto;
-  padding: 0px 0px 0px 7px;
+  padding: 0 0 0 7px;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 100px 100px 100px 100px;
+  border-width: 0;
+  border-radius: 100px;
   text-align: center;
 }
+
 .tp-caption.VideoControls-Play:hover,
 .VideoControls-Play:hover {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 100px 100px 100px 100px;
+  border-width: 0;
+  border-radius: 100px;
   cursor: pointer;
 }
+
 .tp-caption.VideoPlayer-Title,
 .VideoPlayer-Title {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 40px;
   line-height: 40px;
   font-weight: 900;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
   letter-spacing: 10px;
 }
+
 .tp-caption.VideoPlayer-SubTitle,
 .VideoPlayer-SubTitle {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
   font-style: italic;
   font-family: Georgia, serif;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.VideoPlayer-Social,
 .VideoPlayer-Social {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 50px;
   line-height: 50px;
   font-weight: 400;
   font-style: normal;
   font-family: Arial;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.VideoPlayer-Social:hover,
 .VideoPlayer-Social:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 .tp-caption.VideoControls-Mute,
 .VideoControls-Mute {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 20px;
   line-height: 50px;
   font-weight: 500;
   font-style: normal;
   font-family: Roboto;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 100px 100px 100px 100px;
+  border-width: 0;
+  border-radius: 100px;
   text-align: center;
 }
+
 .tp-caption.VideoControls-Mute:hover,
 .VideoControls-Mute:hover {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 100px 100px 100px 100px;
+  border-width: 0;
+  border-radius: 100px;
   cursor: pointer;
 }
+
 .tp-caption.VideoControls-Pause,
 .VideoControls-Pause {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 20px;
   line-height: 50px;
   font-weight: 500;
   font-style: normal;
   font-family: Roboto;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 100px 100px 100px 100px;
+  border-width: 0;
+  border-radius: 100px;
   text-align: center;
 }
+
 .tp-caption.VideoControls-Pause:hover,
 .VideoControls-Pause:hover {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 100px 100px 100px 100px;
+  border-width: 0;
+  border-radius: 100px;
   cursor: pointer;
 }
 
 .soundcloudwrapper iframe {
   width: 100% !important;
 }
+
 .tp-caption.SleekLanding-Title,
 .SleekLanding-Title {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 35px;
   line-height: 40px;
   font-weight: 400;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: left;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
   letter-spacing: 5px;
 }
+
 .tp-caption.SleekLanding-ButtonBG,
 .SleekLanding-ButtonBG {
-  color: rgba(0, 0, 0, 1);
-
+  color: rgb(0 0 0 / 100%);
   font-weight: 700;
   font-style: normal;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: left;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(0, 0, 0, 0);
+  background-color: rgb(255 255 255 / 10%);
+  border-color: rgb(0 0 0 / 0%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 5px 5px 5px 5px;
+  border-width: 0;
+  border-radius: 5px;
   text-align: left;
-  box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 2px 0 0 rgb(0 0 0 / 15%);
 }
+
 .tp-caption.SleekLanding-SmallTitle,
 .SleekLanding-SmallTitle {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 13px;
   line-height: 50px;
   font-weight: 900;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: left;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
   letter-spacing: 2px;
 }
+
 .tp-caption.SleekLanding-BottomText,
 .SleekLanding-BottomText {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: left;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.SleekLanding-Social,
 .SleekLanding-Social {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 22px;
   line-height: 30px;
   font-weight: 400;
   font-style: normal;
   font-family: Arial;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.SleekLanding-Social:hover,
 .SleekLanding-Social:hover {
-  color: rgba(0, 0, 0, 0.25);
+  color: rgb(0 0 0 / 25%);
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 #rev_slider_429_1_wrapper .tp-loader.spinner2 {
-  background-color: #555555 !important;
+  background-color: #555 !important;
 }
+
 .tp-fat {
   font-weight: 900 !important;
 }
 
 .tp-caption.PostSlider-Category,
 .PostSlider-Category {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 15px;
   line-height: 15px;
   font-weight: 300;
   font-style: normal;
   font-family: Roboto;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   letter-spacing: 3px;
   text-align: left;
 }
+
 .tp-caption.PostSlider-Title,
 .PostSlider-Title {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
   font-style: normal;
   font-family: 'Playfair Display';
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.PostSlider-Content,
 .PostSlider-Content {
-  color: rgba(119, 119, 119, 1);
+  color: rgb(119 119 119 / 100%);
   font-size: 15px;
   line-height: 23px;
   font-weight: 400;
   font-style: normal;
   font-family: Roboto;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.PostSlider-Button,
 .PostSlider-Button {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 15px;
   line-height: 40px;
   font-weight: 500;
@@ -4395,229 +4495,239 @@ tp-caption.Team-Thumb,
   font-family: Roboto;
   padding: 1px 56px 1px 32px;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.PostSlider-Button:hover,
 .PostSlider-Button:hover {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   text-decoration: none;
-  background-color: rgba(238, 238, 238, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(238 238 238 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0;
   cursor: pointer;
 }
 
 /* media queries */
 
-@media only screen and (max-width: 960px) {
+@media only screen and (width <= 960px) {
 }
-@media only screen and (max-width: 768px) {
+
+@media only screen and (width <= 768px) {
 }
+
 .tp-caption.LandingPage-Title,
 .LandingPage-Title {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 70px;
   line-height: 80px;
   font-weight: 900;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
   letter-spacing: 10px;
 }
+
 .tp-caption.LandingPage-SubTitle,
 .LandingPage-SubTitle {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
   font-style: italic;
   font-family: Georgia, serif;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.LandingPage-Button,
 .LandingPage-Button {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   font-size: 15px;
   line-height: 54px;
   font-weight: 500;
   font-style: normal;
   font-family: Roboto;
-  padding: 0px 35px 0px 35px;
+  padding: 0 35px;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
   letter-spacing: 3px;
 }
+
 .tp-caption.LandingPage-Button:hover,
 .LandingPage-Button:hover {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 .tp-caption.App-Content a,
 .tp-caption.App-Content a:visited {
   color: #89124e !important;
   border-bottom: 1px solid transparent !important;
   font-weight: bold !important;
 }
+
 .tp-caption.App-Content a:hover {
   border-bottom: 1px solid #89124e !important;
 }
+
 .tp-caption.RockBand-LogoText,
 .RockBand-LogoText {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
   font-style: normal;
   font-family: Oswald;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: left;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.Twitter-Content a,
 .tp-caption.Twitter-Content a:visited {
   color: #fff !important;
   text-decoration: underline !important;
 }
+
 .tp-caption.Twitter-Content a:hover {
   color: #fff !important;
   text-decoration: none !important;
 }
+
 .soundcloudwrapper iframe {
   width: 100% !important;
 }
 
 .tp-caption.Agency-LogoText,
 .Agency-LogoText {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 12px;
   line-height: 20px;
   font-weight: 400;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
   letter-spacing: 1px;
 }
+
 .tp-caption.ComingSoon-Highlight,
 .ComingSoon-Highlight {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 20px;
   line-height: 37px;
   font-weight: 400;
   font-style: normal;
   font-family: Lato;
-  padding: 0 20px 3px 20px;
+  padding: 0 20px 3px;
   text-decoration: none;
-  text-align: left;
-  background-color: rgba(0, 154, 238, 1);
+  background-color: rgb(0 154 238 / 100%);
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.ComingSoon-Count,
 .ComingSoon-Count {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 50px;
   line-height: 50px;
   font-weight: 900;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: left;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.ComingSoon-CountUnit,
 .ComingSoon-CountUnit {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.ComingSoon-NotifyMe,
 .ComingSoon-NotifyMe {
-  color: rgba(164, 157, 143, 1);
+  color: rgb(164 157 143 / 100%);
   font-size: 27px;
   line-height: 35px;
   font-weight: 600;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
 
 #mc_embed_signup input#mce-EMAIL {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-size: 15px;
   color: #000;
   background-color: #fff;
@@ -4626,23 +4736,24 @@ tp-caption.Team-Thumb,
   cursor: text;
   border: 1px solid #fff;
   width: 400px;
-  margin-bottom: 0px;
-  -webkit-transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  -ms-transition: background-color 0.5s;
+  margin-bottom: 0;
   transition: background-color 0.5s;
-
-  border-radius: 0px;
+  transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  border-radius: 0;
 }
+
 #mc_embed_signup input#mce-EMAIL[type='email']:focus {
   background-color: #fff;
   border: 1px solid #666;
   border-right: 0;
 }
+
 #mc_embed_signup input#mc-embedded-subscribe,
 #mc_embed_signup input#mc-embedded-subscribe:focus {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   line-height: 46px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -4652,405 +4763,428 @@ tp-caption.Team-Thumb,
   border: 1px solid #009aee;
   background: #009aee;
   color: #fff;
-
-  border-radius: 0px;
+  border-radius: 0;
 }
+
 #mc_embed_signup input#mc-embedded-subscribe:hover {
   background: #0083d4;
 }
-@media only screen and (max-width: 767px) {
+
+@media only screen and (width <= 767px) {
   #mc_embed_signup input#mce-EMAIL {
     width: 200px;
   }
 }
+
 .tp-caption.Agency-SmallTitle,
 .Agency-SmallTitle {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 15px;
   line-height: 22px;
   font-weight: 400;
   font-style: normal;
   font-family: lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
   letter-spacing: 6px;
 }
+
 .tp-caption.Agency-SmallContent,
 .Agency-SmallContent {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
   font-style: normal;
   font-family: lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.Agency-SmallLink,
 .Agency-SmallLink {
-  color: rgba(248, 124, 9, 1);
+  color: rgb(248 124 9 / 100%);
   font-size: 12px;
   line-height: 22px;
   font-weight: 700;
   font-style: normal;
   font-family: lato;
-  padding: 0 0 0px 0;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
   letter-spacing: 2px;
   border-bottom: 1px solid #f87c09 !important;
 }
+
 .tp-caption.Agency-SmallLink:hover,
 .Agency-SmallLink:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 .tp-caption.Agency-NavButton,
 .Agency-NavButton {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 17px;
   line-height: 50px;
   font-weight: 500;
   font-style: normal;
   font-family: Roboto;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.Agency-NavButton:hover,
 .Agency-NavButton:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
-  background-color: rgba(51, 51, 51, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(51 51 51 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 .tp-caption.Agency-SmallLinkGreen,
 .Agency-SmallLinkGreen {
-  color: rgba(109, 177, 155, 1);
+  color: rgb(109 177 155 / 100%);
   font-size: 12px;
   line-height: 22px;
   font-weight: 700;
   font-style: normal;
   font-family: lato;
-  padding: 0 0 0px 0;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
   letter-spacing: 2px;
   border-bottom: 1px solid #6db19b !important;
 }
+
 .tp-caption.Agency-SmallLinkGreen:hover,
 .Agency-SmallLinkGreen:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 .tp-caption.Agency-SmallLinkBlue,
 .Agency-SmallLinkBlue {
-  color: rgba(153, 153, 153, 1);
+  color: rgb(153 153 153 / 100%);
   font-size: 12px;
   line-height: 22px;
   font-weight: 700;
   font-style: normal;
   font-family: lato;
-  padding: 0 0 0px 0;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
   letter-spacing: 2px;
   border-bottom: 1px solid #999 !important;
 }
+
 .tp-caption.Agency-SmallLinkBlue:hover,
 .Agency-SmallLinkBlue:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 .tp-caption.Agency-LogoText,
 .Agency-LogoText {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 12px;
   line-height: 20px;
   font-weight: 400;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
   letter-spacing: 1px;
 }
+
 .tp-caption.Agency-ArrowTooltip,
 .Agency-ArrowTooltip {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
   font-style: normal;
   font-family: 'Permanent Marker';
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: left;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.Agency-SmallSocial,
 .Agency-SmallSocial {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
   font-style: normal;
   font-family: Arial;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.Agency-SmallSocial:hover,
 .Agency-SmallSocial:hover {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 .tp-caption.Twitter-Content a,
 .tp-caption.Twitter-Content a:visited {
   color: #0084b4 !important;
 }
+
 .tp-caption.Twitter-Content a:hover {
   color: #0084b4 !important;
   text-decoration: underline !important;
 }
+
 .tp-caption.CreativeFrontPage-Btn,
 .CreativeFrontPage-Btn {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 14px;
   line-height: 60px;
   font-weight: 900;
   font-style: normal;
   font-family: Roboto;
-  padding: 0px 50px 0px 50px;
+  padding: 0 50px;
   text-decoration: none;
   text-align: left;
-  background-color: rgba(0, 104, 92, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(0 104 92 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 4px 4px 4px 4px;
+  border-width: 0;
+  border-radius: 4px;
   letter-spacing: 2px;
 }
+
 .tp-caption.CreativeFrontPage-Btn:hover,
 .CreativeFrontPage-Btn:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.25);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(0 0 0 / 25%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 4px 4px 4px 4px;
+  border-width: 0;
+  border-radius: 4px;
   cursor: pointer;
 }
+
 .tp-caption.CreativeFrontPage-Menu,
 .CreativeFrontPage-Menu {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 14px;
   line-height: 14px;
   font-weight: 500;
   font-style: normal;
   font-family: roboto;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   text-align: left;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   letter-spacing: 2px;
 }
+
 .tp-flip-index {
   z-index: 1000 !important;
 }
+
 .tp-caption.Twitter-Content a,
 .tp-caption.Twitter-Content a:visited {
   color: #0084b4 !important;
 }
+
 .tp-caption.Twitter-Content a:hover {
   color: #0084b4 !important;
   text-decoration: underline !important;
 }
+
 .tp-caption.FullScreenMenu-Category,
 .FullScreenMenu-Category {
-  color: rgba(17, 17, 17, 1);
+  color: rgb(17 17 17 / 100%);
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
   font-style: normal;
   font-family: BenchNine;
-  padding: 21px 30px 16px 30px;
+  padding: 21px 30px 16px;
   text-decoration: none;
   text-align: left;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(255 255 255 / 90%);
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   letter-spacing: 3px;
 }
+
 .tp-caption.FullScreenMenu-Title,
 .FullScreenMenu-Title {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 65px;
   line-height: 70px;
   font-weight: 700;
   font-style: normal;
   font-family: BenchNine;
-  padding: 21px 30px 16px 30px;
+  padding: 21px 30px 16px;
   text-decoration: none;
   text-align: left;
-  background-color: rgba(17, 17, 17, 0.9);
+  background-color: rgb(17 17 17 / 90%);
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
 }
+
 .tp-caption.Twitter-Content a,
 .tp-caption.Twitter-Content a:visited {
   color: #0084b4 !important;
 }
+
 .tp-caption.Twitter-Content a:hover {
   color: #0084b4 !important;
   text-decoration: underline !important;
 }
+
 .tp-caption.TechJournal-Button,
 .TechJournal-Button {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 13px;
   line-height: 40px;
   font-weight: 900;
   font-style: normal;
   font-family: Raleway;
-  padding: 1px 30px 1px 30px;
+  padding: 1px 30px;
   text-decoration: none;
   text-align: left;
-  background-color: rgba(138, 0, 255, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(138 0 255 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
   letter-spacing: 3px;
 }
+
 .tp-caption.TechJournal-Button:hover,
 .TechJournal-Button:hover {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0 0 0 / 100%);
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: rgb(255 255 255 / 100%);
+  border-color: rgb(0 0 0 / 100%);
   border-style: solid;
-  border-width: 0px;
-  border-radius: 0px 0px 0px 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 .tp-caption.TechJournal-Big,
 .TechJournal-Big {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   font-size: 120px;
   line-height: 120px;
   font-weight: 900;
   font-style: normal;
   font-family: Raleway;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   text-align: left;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
-  letter-spacing: 0px;
+  border-width: 0;
+  border-radius: 0;
+  letter-spacing: 0;
 }
+
 .rev_slider {
   overflow: hidden;
 }
+
 .effect_layer {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -5059,545 +5193,564 @@ tp-caption.Team-Thumb,
 .tp-caption.Twitter-Content a:visited {
   color: #0084b4 !important;
 }
+
 .tp-caption.Twitter-Content a:hover {
   color: #0084b4 !important;
   text-decoration: underline !important;
 }
+
 #menu_forcefullwidth {
   z-index: 5000;
   position: fixed !important;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
 }
+
 .tp-caption.FullSiteBlock-Title,
 .FullSiteBlock-Title {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 55px;
   line-height: 65px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-SubTitle,
 .FullSiteBlock-SubTitle {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 25px;
   line-height: 34px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-Link,
 .FullSiteBlock-Link {
-  color: rgba(0, 150, 255, 1);
+  color: rgb(0 150 255 / 100%);
   font-size: 25px;
   line-height: 24px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-Link:hover,
 .FullSiteBlock-Link:hover {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 .tp-caption.FullSiteBlock-DownButton,
 .FullSiteBlock-DownButton {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 25px;
   line-height: 32px;
   font-weight: 500;
   font-style: normal;
   font-family: Roboto;
-  padding: 1px 1px 1px 1px;
+  padding: 1px;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
-  border-color: rgba(51, 51, 51, 1);
+  border-color: rgb(51 51 51 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-DownButton:hover,
 .FullSiteBlock-DownButton:hover {
-  color: rgba(0, 150, 255, 1);
+  color: rgb(0 150 255 / 100%);
   text-decoration: none;
   background-color: transparent;
-  border-color: rgba(0, 150, 255, 1);
+  border-color: rgb(0 150 255 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   cursor: pointer;
 }
+
 .tp-caption.FullSiteBlock-Title,
 .FullSiteBlock-Title {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 55px;
   line-height: 65px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-SubTitle,
 .FullSiteBlock-SubTitle {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 25px;
   line-height: 34px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-Link,
 .FullSiteBlock-Link {
-  color: rgba(0, 150, 255, 1);
+  color: rgb(0 150 255 / 100%);
   font-size: 25px;
   line-height: 24px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-Link:hover,
 .FullSiteBlock-Link:hover {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 .tp-caption.FullSiteBlock-DownButton,
 .FullSiteBlock-DownButton {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 25px;
   line-height: 32px;
   font-weight: 500;
   font-style: normal;
   font-family: Roboto;
-  padding: 1px 1px 1px 1px;
+  padding: 1px;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
-  border-color: rgba(51, 51, 51, 1);
+  border-color: rgb(51 51 51 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-DownButton:hover,
 .FullSiteBlock-DownButton:hover {
-  color: rgba(0, 150, 255, 1);
+  color: rgb(0 150 255 / 100%);
   text-decoration: none;
   background-color: transparent;
-  border-color: rgba(0, 150, 255, 1);
+  border-color: rgb(0 150 255 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   cursor: pointer;
 }
+
 .tp-caption.FullSiteBlock-Title,
 .FullSiteBlock-Title {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 55px;
   line-height: 65px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-SubTitle,
 .FullSiteBlock-SubTitle {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 25px;
   line-height: 34px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-DownButton,
 .FullSiteBlock-DownButton {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 25px;
   line-height: 32px;
   font-weight: 500;
   font-style: normal;
   font-family: Roboto;
-  padding: 1px 1px 1px 1px;
+  padding: 1px;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
-  border-color: rgba(51, 51, 51, 1);
+  border-color: rgb(51 51 51 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-DownButton:hover,
 .FullSiteBlock-DownButton:hover {
-  color: rgba(0, 150, 255, 1);
+  color: rgb(0 150 255 / 100%);
   text-decoration: none;
   background-color: transparent;
-  border-color: rgba(0, 150, 255, 1);
+  border-color: rgb(0 150 255 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   cursor: pointer;
 }
+
 .tp-caption.FullSiteBlock-Title,
 .FullSiteBlock-Title {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 55px;
   line-height: 65px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-SubTitle,
 .FullSiteBlock-SubTitle {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 25px;
   line-height: 34px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-Link,
 .FullSiteBlock-Link {
-  color: rgba(0, 150, 255, 1);
+  color: rgb(0 150 255 / 100%);
   font-size: 25px;
   line-height: 24px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-Link:hover,
 .FullSiteBlock-Link:hover {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 .tp-caption.FullSiteBlock-DownButton,
 .FullSiteBlock-DownButton {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 25px;
   line-height: 32px;
   font-weight: 500;
   font-style: normal;
   font-family: Roboto;
-  padding: 1px 1px 1px 1px;
+  padding: 1px;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
-  border-color: rgba(51, 51, 51, 1);
+  border-color: rgb(51 51 51 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-DownButton:hover,
 .FullSiteBlock-DownButton:hover {
-  color: rgba(0, 150, 255, 1);
+  color: rgb(0 150 255 / 100%);
   text-decoration: none;
   background-color: transparent;
-  border-color: rgba(0, 150, 255, 1);
+  border-color: rgb(0 150 255 / 100%);
   border-style: solid;
   border-width: 1px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   cursor: pointer;
 }
+
 .rev_slider {
   overflow: hidden;
 }
+
 .effect_layer {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
+
 .gyges .tp-thumb {
   opacity: 1;
 }
+
 .gyges .tp-thumb-img-wrap {
   padding: 3px;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgb(0 0 0 / 25%);
   display: inline-block;
   width: 100%;
   height: 100%;
   position: relative;
-  margin: 0px;
+  margin: 0;
   box-sizing: border-box;
   transition: all 0.3s;
-  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
+
 .gyges .tp-thumb-image {
   padding: 3px;
   display: block;
   box-sizing: border-box;
   position: relative;
-  -webkit-box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 5px 5px 10px 0 rgb(0 0 0 / 25%);
+  box-shadow: inset 5px 5px 10px 0 rgb(0 0 0 / 25%);
+  box-shadow: inset 5px 5px 10px 0 rgb(0 0 0 / 25%);
 }
+
 .gyges .tp-thumb:hover .tp-thumb-img-wrap,
 .gyges .tp-thumb.selected .tp-thumb-img-wrap {
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(top, rgb(255 255 255 / 100%) 0%, rgb(255 255 255 / 100%) 100%);
   background: -webkit-gradient(
     left top,
     left bottom,
-    color-stop(0%, rgba(255, 255, 255, 1)),
-    color-stop(100%, rgba(255, 255, 255, 1))
+    color-stop(0%, rgb(255 255 255 / 100%)),
+    color-stop(100%, rgb(255 255 255 / 100%))
   );
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(top, rgb(255 255 255 / 100%) 0%, rgb(255 255 255 / 100%) 100%);
+  background: linear-gradient(top, rgb(255 255 255 / 100%) 0%, rgb(255 255 255 / 100%) 100%);
+  background: linear-gradient(top, rgb(255 255 255 / 100%) 0%, rgb(255 255 255 / 100%) 100%);
+  background: linear-gradient(to bottom, rgb(255 255 255 / 100%) 0%, rgb(255 255 255 / 100%) 100%);
 }
+
 .tp-caption.FullSiteBlock-Title,
 .FullSiteBlock-Title {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 55px;
   line-height: 65px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-SubTitle,
 .FullSiteBlock-SubTitle {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 25px;
   line-height: 34px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-Link,
 .FullSiteBlock-Link {
-  color: rgba(0, 150, 255, 1);
+  color: rgb(0 150 255 / 100%);
   font-size: 25px;
   line-height: 24px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-Link:hover,
 .FullSiteBlock-Link:hover {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 .tp-caption.FullSiteBlock-SubTitle,
 .FullSiteBlock-SubTitle {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 25px;
   line-height: 34px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-SubTitle,
 .FullSiteBlock-SubTitle {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 25px;
   line-height: 34px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.FullSiteBlock-FooterLink,
 .FullSiteBlock-FooterLink {
-  color: rgba(85, 85, 85, 1);
+  color: rgb(85 85 85 / 100%);
   font-size: 15px;
   line-height: 20px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: left;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: left;
 }
+
 .tp-caption.FullSiteBlock-FooterLink:hover,
 .FullSiteBlock-FooterLink:hover {
-  color: rgba(0, 150, 255, 1);
+  color: rgb(0 150 255 / 100%);
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 .fb-share-button.fb_iframe_widget iframe {
   width: 115px !important;
 }
+
 #tp-socialwrapper {
   opacity: 0;
 }
@@ -5606,32 +5759,40 @@ tp-caption.Team-Thumb,
 .tp-caption.Twitter-Content a:visited {
   color: #0084b4 !important;
 }
+
 .tp-caption.Twitter-Content a:hover {
   color: #0084b4 !important;
   text-decoration: underline !important;
 }
+
 #menu_forcefullwidth {
   z-index: 5000;
   position: fixed !important;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
 }
+
 #tp-menubg {
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(top, rgb(0 0 0 / 75%) 0%, rgb(0 0 0 / 0%) 100%);
+
   /* FF3.6-15 */
 
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(top, rgb(0 0 0 / 75%) 0%, rgb(0 0 0 / 0%) 100%);
+
   /* Chrome10-25,Safari5.1-6 */
 
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to bottom, rgb(0 0 0 / 75%) 0%, rgb(0 0 0 / 0%) 100%);
+
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#00000000', GradientType=0);
+
   /* IE6-9 */
 }
+
 #mc_embed_signup input[type='email'] {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-size: 16px;
   font-weight: 400;
   background-color: #fff;
@@ -5641,32 +5802,37 @@ tp-caption.Team-Thumb,
   cursor: text;
   border: 0;
   width: 400px;
-  margin-bottom: 0px;
-  -webkit-transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  -ms-transition: background-color 0.5s;
+  margin-bottom: 0;
   transition: background-color 0.5s;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
+  transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  border-radius: 3px;
+  border-radius: 3px;
   border-radius: 3px;
 }
-#mc_embed_signup input[type='email']::-webkit-input-placeholder {
+
+#mc_embed_signup input[type='email']::input-placeholder {
   color: #888 !important;
 }
-#mc_embed_signup input[type='email']::-moz-placeholder {
+
+#mc_embed_signup input[type='email']::placeholder {
   color: #888 !important;
 }
-#mc_embed_signup input[type='email']:-ms-input-placeholder {
+
+#mc_embed_signup input[type='email']:input-placeholder {
   color: #888 !important;
 }
+
 #mc_embed_signup input[type='email']:focus {
   background-color: #f5f5f5;
   color: #454545;
 }
+
 #mc_embed_signup input#mc-embedded-subscribe,
 #mc_embed_signup input#mc-embedded-subscribe:focus {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   line-height: 46px;
   font-size: 16px;
   font-weight: 700;
@@ -5675,110 +5841,120 @@ tp-caption.Team-Thumb,
   background: #f04531;
   text-transform: none;
   color: #fff;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border-radius: 3px;
   border-radius: 3px;
 }
+
 #mc_embed_signup input#mc-embedded-subscribe:hover {
   background: #e03727;
 }
-@media only screen and (max-width: 767px) {
+
+@media only screen and (width <= 767px) {
   #mc_embed_signup input[type='email'] {
     width: 260px;
   }
 }
-@media only screen and (max-width: 480px) {
+
+@media only screen and (width <= 480px) {
   #mc_embed_signup input[type='email'] {
     width: 160px;
   }
 }
+
 #rev_slider_167_6 .uranus.tparrows {
   width: 50px;
   height: 50px;
-  background: rgba(255, 255, 255, 0);
+  background: rgb(255 255 255 / 0%);
 }
-#rev_slider_167_6 .uranus.tparrows:before {
+
+#rev_slider_167_6 .uranus.tparrows::before {
   width: 50px;
   height: 50px;
   line-height: 50px;
   font-size: 40px;
   transition: all 0.3s;
-  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
-#rev_slider_167_6 .uranus.tparrows:hover:before {
+
+#rev_slider_167_6 .uranus.tparrows:hover::before {
   opacity: 0.75;
 }
+
 .tp-caption.FullSiteBlock-SubTitle,
 .FullSiteBlock-SubTitle {
-  color: rgba(51, 51, 51, 1);
+  color: rgb(51 51 51 / 100%);
   font-size: 25px;
   line-height: 34px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }
+
 .tp-caption.ParallaxWebsite-FooterItem,
 .ParallaxWebsite-FooterItem {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(255 255 255 / 50%);
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
   text-align: left;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
 }
+
 .tp-caption.ParallaxWebsite-FooterItem:hover,
 .ParallaxWebsite-FooterItem:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 / 100%);
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   cursor: pointer;
 }
+
 .fb-share-button.fb_iframe_widget iframe {
   width: 115px !important;
 }
+
 iframe.twitter-share-button {
   display: none;
 }
+
 .fb-share-button.fb_iframe_widget iframe {
   display: none;
 }
 
 .tp-caption.FullSiteBlock-Link,
 .FullSiteBlock-Link {
-  color: rgba(0, 150, 255, 1);
+  color: rgb(0 150 255 / 100%);
   font-size: 25px;
   line-height: 24px;
   font-weight: 300;
   font-style: normal;
   font-family: Lato;
-  padding: 0 0 0 0px;
+  padding: 0;
   text-decoration: none;
-  text-align: center;
   background-color: transparent;
   border-color: transparent;
   border-style: none;
-  border-width: 0px;
-  border-radius: 0 0 0 0px;
+  border-width: 0;
+  border-radius: 0;
   text-align: center;
 }

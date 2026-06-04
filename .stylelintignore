@@ -1,0 +1,5 @@
+**/*.min.css
+**/wwwroot/ThemeSite/assets/**
+**/wwwroot/ThemeSite/assets/revolution/**
+**/wwwroot/css/open-iconic/**
+**/ThemeSite/Css/SweetAlert2.css
