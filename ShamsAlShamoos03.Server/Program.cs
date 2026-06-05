@@ -10,37 +10,20 @@ using ShamsAlShamoos03.Server.Services;
 using ShamsAlShamoos03.Shared.Entities;
 using Syncfusion.Licensing;
 using System.Globalization;
-// ========================================
-// فارس ی سازی
-// ========================================
+
 var culture = new CultureInfo("fa-IR");
 
 CultureInfo.DefaultThreadCurrentCulture = culture;
 CultureInfo.DefaultThreadCurrentUICulture = culture;
 
-// ========================================
-// Syncfusion License
-// ========================================
 var licenseKey = "MTU4NUAzMjM3MkUzMTJFMzluT08wbzRnYm4zUlFDOVRzWVpYbUtuSEl0aUhTZmNMYjQxekhrV0NVRnlzPQ==";
 
 SyncfusionLicenseProvider.RegisterLicense(licenseKey);
 
-// ========================================
-// Builder
-// ========================================
 var builder = WebApplication.CreateBuilder(args);
 
-// ========================================
-// Services
-// ========================================
-
-// Controllers + Swagger
 builder.Services.AddControllers();
 
-
-
-
-// CORS
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
@@ -55,7 +38,6 @@ builder.Services.AddDataProtection()
     .PersistKeysToFileSystem(new DirectoryInfo(@"C:\Keys"))
     .SetApplicationName("ShamsAlShamoos");
 
-// Session
 builder.Services.AddDistributedMemoryCache();
 
 builder.Services.AddSession(options =>
@@ -65,14 +47,12 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-// DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-// Identity
 builder.Services
     .AddIdentity<ApplicationUsers, ApplicationRoles>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -83,30 +63,21 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.LoginPath = "/login";
 });
 
-// Authorization
 builder.Services.AddAuthorization();
 
-// Repository + UnitOfWork
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddScoped<IDapperGenericRepository, DapperGenericRepository>();
 
 builder.Services.AddScoped<APIDataService01>();
 
-// Infrastructure
 builder.Services.AddInfrastructure(builder.Configuration);
 
-// AutoMapper
 builder.Services.AddAutoMapper(cfg => { },
     AppDomain.CurrentDomain.GetAssemblies());
-// ========================================
-// Build App
-// ========================================
+
 var app = builder.Build();
 
-// ========================================
-// Create Folders
-// ========================================
 var qrFilesPath = Path.Combine(
     Directory.GetCurrentDirectory(),
     "QrFiles");
@@ -118,25 +89,17 @@ if (!Directory.Exists(qrFilesPath))
 
 var personelImagePath = @"D:\upload\PersonelImage1";
 
-
-
-// Routing
 app.UseRouting();
 
-// Blazor Files
 app.UseBlazorFrameworkFiles();
 
-// wwwroot
 app.UseStaticFiles();
 
-// QrFiles
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(qrFilesPath),
     RequestPath = "/QrFiles"
 });
-
-
 
 if (!Directory.Exists(personelImagePath))
 {
@@ -149,31 +112,16 @@ app.UseStaticFiles(new StaticFileOptions
     RequestPath = "/PersonelImage1"
 });
 
-//// Personel Images
-//app.UseStaticFiles(new StaticFileOptions
-//{
-//    FileProvider = new PhysicalFileProvider(personelImagePath),
-//    RequestPath = "/PersonelImage1"
-//});
-
-// CORS
 app.UseCors();
 
-// Session
 app.UseSession();
 
-// Auth
 app.UseAuthentication();
 
 app.UseAuthorization();
 
-// Controllers
 app.MapControllers();
 
-// Blazor Fallback
 app.MapFallbackToFile("index.html");
 
-// ========================================
-// Run
-// ========================================
 app.Run();
