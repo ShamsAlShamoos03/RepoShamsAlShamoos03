@@ -9,7 +9,6 @@
     public virtual ICollection<PollOption> pollOption { get; set; }
 }
 
-
 public class PollOption
 {
     public int PolloptionID { get; set; }

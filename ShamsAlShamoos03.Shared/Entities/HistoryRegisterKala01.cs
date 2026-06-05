@@ -3,7 +3,6 @@ public class HistoryRegisterKala01
     public string HistoryRegisterKala01ID { get; set; }
     public string? DocumentNO01 { get; set; }
 
-    // Vartext01 تا Vartext20
     public string? Vartext01 { get; set; }
     public string? Vartext02 { get; set; }
     public string? Vartext03 { get; set; }

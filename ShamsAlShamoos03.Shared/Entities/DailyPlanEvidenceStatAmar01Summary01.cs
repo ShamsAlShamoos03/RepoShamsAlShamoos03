@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 public class DailyPlanEvidenceStatAmar01Summary01
 {
     /// <summary>
@@ -21,6 +20,7 @@ public class DailyPlanEvidenceStatAmar01Summary01
     /// کد ملی
     /// </summary>
     public string? MelliCode { get; set; }
+
     /// <summary>
     /// وضعیت آماز
     /// </summary>
@@ -51,7 +51,6 @@ public class DailyPlanEvidenceStatAmar01Summary01
     /// </summary>
     public string? MaxContinuityHolidayDays { get; set; }
 
-
     /// <summary>
     /// تعداد روز تشویقی
     /// </summary>
@@ -67,9 +66,7 @@ public class DailyPlanEvidenceStatAmar01Summary01
     /// </summary>
     public string? TotalVacationDaysCount { get; set; }
 
-
     public int? Sortable01Id { get; set; }
     [ForeignKey("Sortable01Id")]
     public virtual Sortable01 Sortable01 { get; set; }
-
 }

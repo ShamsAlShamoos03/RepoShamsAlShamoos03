@@ -1,4 +1,3 @@
-
 using Microsoft.AspNetCore.Identity;
 
 namespace ShamsAlShamoos03.Shared.Entities

@@ -20,12 +20,11 @@ public class StandCheckWritten01
     [ForeignKey("MelliCodeExamer")]
     public virtual TblMaster ooMelliCodeList_4 { get; set; }
 
-
-
     /// <summary>
     ///  تاریخ اخذ آزمون کتبی
     /// </summary>
     public string? DateExamWritten { get; set; }
+
     /// <summary>
     ///  گرید کتبی
     /// </summary>
@@ -36,21 +35,23 @@ public class StandCheckWritten01
     /// </summary>
     public string? WrittenTPGrade { get; set; }
 
-
     /// <summary>
     ///  گرید اضطراری
     /// </summary>
     public string? EmargencylimitationGrade { get; set; }
+
     /// <summary>
     ///  گرید مقررات محلی پروازی
     /// </summary>
     public string? SOPLOPGrade { get; set; }
+
     /// <summary>
     ///  
     /// </summary>
     public int? Sortable01Id { get; set; }
     [ForeignKey("Sortable01Id")]
     public virtual Sortable01 Sortable01 { get; set; }
+
     /// <summary>
     ///  قبول مردود
     /// </summary>
@@ -67,7 +68,6 @@ public class StandCheckWritten01
     ///  ISSUE Revalidate
     ///  آزمون اولیه تمدید اعتبار
     /// </summary>
-
     public int? ISSUERevalidateID { get; set; }
     [ForeignKey("ISSUERevalidateID")]
     public virtual CategoryGeneral ISSUE_Revalidate { get; set; }
@@ -75,13 +75,10 @@ public class StandCheckWritten01
     /// <summary>
     ///  آزمون عادی یا تست
     /// </summary>
-
     public int? TPorNormalID { get; set; }
     [ForeignKey("TPorNormalID")]
     public virtual CategoryGeneral TP_or_Normal { get; set; }
 
-
-    ///////استندچک عملی/////استندچک عملی//////////استندچک عملی
     /// <summary>
     ///  نام استاد
     /// </summary>
@@ -93,7 +90,6 @@ public class StandCheckWritten01
     ///  تاریخ استندچک
     /// </summary>
     public string? DateStandCheck { get; set; }
-
 
     /// <summary>
     /// گرید پروازی
@@ -111,6 +107,7 @@ public class StandCheckWritten01
     ///  تاریخ استندچک آزمایشی
     /// </summary>
     public string? DateStandCheckTP { get; set; }
+
     /// <summary>
     /// گرید خلبان آزمایشی
     /// </summary>
@@ -123,7 +120,6 @@ public class StandCheckWritten01
     [ForeignKey("Status01StandCheckTP")]
     public virtual CategoryGeneral oo_Status01StandCheckTP { get; set; }
 
-
     /// <summary>
     /// وضعیت نتیجه استند چک
     /// </summary>
@@ -135,9 +131,4 @@ public class StandCheckWritten01
     /// متن نتیجه استند چک
     /// </summary>
     public string? ResaultStandCheck { get; set; }
-
-
-    ///////استندچک عملی/////استندچک عملی//////////استندچک عملی
-
-
 }

@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-
 public class Advertise
 {
     [Key]
@@ -11,5 +10,4 @@ public class Advertise
     public string Link { get; set; }
     public byte flag { get; set; }
     public byte Advlocation { get; set; }
-
 }
