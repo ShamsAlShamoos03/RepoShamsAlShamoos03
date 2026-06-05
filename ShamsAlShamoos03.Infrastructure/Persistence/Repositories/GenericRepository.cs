@@ -9,7 +9,7 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Repositories
     {
         private readonly ApplicationDbContext _context;
         private readonly DbSet<T> _table;
-        private IDbContextTransaction _transaction;
+        private IDbContextTransaction? _transaction;
 
         public GenericClass(ApplicationDbContext context)
         {
@@ -18,30 +18,66 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Repositories
         }
 
         #region CRUD
-        public async Task AddAsync(T entity) => await _table.AddAsync(entity);
-        public async Task AddRangeAsync(IEnumerable<T> entities) => await _table.AddRangeAsync(entities);
-        public void Update(T entity) => _table.Update(entity);
-        public void Remove(T entity) => _table.Remove(entity);
-        public void RemoveRange(IEnumerable<T> entities) => _table.RemoveRange(entities);
-        public async Task<T> GetByIdAsync(object id) => await _table.FindAsync(id);
+
+        public async Task AddAsync(T entity)
+        {
+            await _table.AddAsync(entity);
+        }
+
+        public async Task AddRangeAsync(IEnumerable<T> entities)
+        {
+            await _table.AddRangeAsync(entities);
+        }
+
+        public void Update(T entity)
+        {
+            _table.Update(entity);
+        }
+
+        public void Remove(T entity)
+        {
+            _table.Remove(entity);
+        }
+
+        public void RemoveRange(IEnumerable<T> entities)
+        {
+            _table.RemoveRange(entities);
+        }
+
+        public async Task<T?> GetByIdAsync(object id)
+        {
+            return await _table.FindAsync(id);
+        }
+
         #endregion
 
-        #region GetAll Overloads
-        public async Task<IEnumerable<T>> GetAllAsync() => await _table.ToListAsync();
-        public async Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>> filter)
+        #region Query
+
+        public async Task<IEnumerable<T>> GetAllAsync()
         {
-            if (filter == null)
+            return await _table
+                .AsNoTracking()
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<T>> GetAllAsync(
+            Expression<Func<T, bool>> filter)
+        {
+            IQueryable<T> query = _table.AsNoTracking();
+
+            if (filter != null)
             {
-                return await GetAllAsync();
+                query = query.Where(filter);
             }
 
-            return await _table.Where(filter).ToListAsync();
+            return await query.ToListAsync();
         }
+
         public async Task<IEnumerable<T>> GetAllAsync(
             Expression<Func<T, bool>> filter,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy)
         {
-            IQueryable<T> query = _table;
+            IQueryable<T> query = _table.AsNoTracking();
 
             if (filter != null)
             {
@@ -62,7 +98,7 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Repositories
             int skip,
             int take)
         {
-            IQueryable<T> query = _table;
+            IQueryable<T> query = _table.AsNoTracking();
 
             if (filter != null)
             {
@@ -82,9 +118,35 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Repositories
         #endregion
 
         #region Transaction
-        public async Task BeginTransactionAsync() => _transaction = await _context.Database.BeginTransactionAsync();
-        public async Task CommitAsync() => await _transaction?.CommitAsync();
-        public async Task RollbackAsync() => await _transaction?.RollbackAsync();
+
+        public async Task BeginTransactionAsync()
+        {
+            if (_transaction == null)
+            {
+                _transaction = await _context.Database.BeginTransactionAsync();
+            }
+        }
+
+        public async Task CommitAsync()
+        {
+            if (_transaction != null)
+            {
+                await _transaction.CommitAsync();
+                await _transaction.DisposeAsync();
+                _transaction = null;
+            }
+        }
+
+        public async Task RollbackAsync()
+        {
+            if (_transaction != null)
+            {
+                await _transaction.RollbackAsync();
+                await _transaction.DisposeAsync();
+                _transaction = null;
+            }
+        }
+
         #endregion
     }
 }

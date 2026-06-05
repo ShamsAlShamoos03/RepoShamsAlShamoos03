@@ -111,8 +111,6 @@ namespace ShamsAlShamoos03.Server.Controllers
                 var parametersGet = new DynamicParameters();
                 parametersGet.Add("@StartDate", dateDoc01);
 
-                var allRecords = await _context.Dapper.ListAsync<HistoryRegisterKala01>(
-                    "Get_HistoryRegisterKala01_ByStartDate", parametersGet, 1300);
 
                 var viewModel = model.CrudModel.Value;
 

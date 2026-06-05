@@ -1,50 +1,51 @@
 ﻿using ShamsAlShamoos03.Infrastructure.Persistence.Contexts;
 using ShamsAlShamoos03.Infrastructure.Persistence.Repositories;
-using System.Collections.Concurrent;
 
 namespace ShamsAlShamoos03.Infrastructure.Persistence.UnitOfWork
 {
-    public class UnitOfWork : IUnitOfWork, IAsyncDisposable
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _context;
-        private readonly ConcurrentDictionary<Type, Lazy<object>> _repositories = new();
 
-        public UnitOfWork(ApplicationDbContext context, IDapperGenericRepository dapper)
-        {
-            _context = context ?? throw new ArgumentNullException(nameof(context));
-            Dapper = dapper ?? throw new ArgumentNullException(nameof(dapper));
-        }
+        private readonly Dictionary<Type, object> _repositories = new();
 
-        public IBaseRepository<T> Repository<T>() where T : class
+        public UnitOfWork(
+            ApplicationDbContext context,
+            IDapperGenericRepository dapper)
         {
-            var repo = _repositories.GetOrAdd(
-                typeof(T),
-                t => new Lazy<object>(() => new GenericClass<T>(_context))
-            );
-            return (IBaseRepository<T>)repo.Value;
+            _context = context;
+            Dapper = dapper;
         }
 
         public IDapperGenericRepository Dapper { get; }
 
-        public IBaseRepository<HistoryRegisterKala01> HistoryRegisterKala01UW => Repository<HistoryRegisterKala01>();
-
-        public async Task<int> SaveChangesAsync() => await _context.SaveChangesAsync();
-
-        public void Dispose()
+        public IBaseRepository<T> Repository<T>() where T : class
         {
-            _repositories.Clear();
-            _context.Dispose();
+            var type = typeof(T);
+
+            if (!_repositories.ContainsKey(type))
+            {
+                _repositories[type] =
+                    new GenericClass<T>(_context);
+            }
+
+            return (IBaseRepository<T>)_repositories[type];
         }
 
-        public async ValueTask DisposeAsync()
+        public IBaseRepository<HistoryRegisterKala01>
+            HistoryRegisterKala01UW =>
+            Repository<HistoryRegisterKala01>();
+
+        public async Task<int> SaveChangesAsync()
         {
-            _repositories.Clear();
-            await _context.DisposeAsync();
+            return await _context.SaveChangesAsync();
         }
 
-        public async Task InsertAsync<T>(T entity) where T : class
+        public async Task InsertAsync<T>(T entity)
+            where T : class
         {
             await Repository<T>().AddAsync(entity);
+
             await SaveChangesAsync();
         }
     }

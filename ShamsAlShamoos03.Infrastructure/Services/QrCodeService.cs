@@ -59,10 +59,24 @@ public class QrCodeService
         var pngQr = new PngByteQRCode(qrData);
         byte[] pngBytes = pngQr.GetGraphic(20);
 
+        // Sanitize folderName and fileName to prevent path traversal attacks
+        string safeFolderName = Path.GetFileName(folderName);
+        string safeFileName = Path.GetFileNameWithoutExtension(fileName);
+
+        if (string.IsNullOrWhiteSpace(safeFolderName))
+        {
+            safeFolderName = "default";
+        }
+
+        if (string.IsNullOrWhiteSpace(safeFileName))
+        {
+            safeFileName = Guid.NewGuid().ToString();
+        }
+
         string basePath = Path.Combine(
             Directory.GetCurrentDirectory(),
             "QrFiles",
-            folderName
+            safeFolderName
         );
 
         if (!Directory.Exists(basePath))
@@ -70,11 +84,11 @@ public class QrCodeService
             Directory.CreateDirectory(basePath);
         }
 
-        string filePath = Path.Combine(basePath, $"{fileName}.png");
+        string filePath = Path.Combine(basePath, $"{safeFileName}.png");
         File.WriteAllBytes(filePath, pngBytes);
 
         // مسیر نسبی برای دیتابیس
-        return Path.Combine(folderName, $"{fileName}.png");
+        return Path.Combine(safeFolderName, $"{safeFileName}.png");
     }
 
     public string GenerateQrToFile111(string text, string fileName)
