@@ -90,7 +90,9 @@ namespace ShamsAlShamoos03.Infrastructure.Services
                 using var image = Image.Load<Rgba32>(file);
                 var result = reader.Decode(image);
                 if (result != null)
+                {
                     combinedBase64 += result.Text;
+                }
             }
 
             byte[] imageBytes = Convert.FromBase64String(combinedBase64);

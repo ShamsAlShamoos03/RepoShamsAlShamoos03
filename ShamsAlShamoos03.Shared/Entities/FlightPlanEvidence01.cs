@@ -145,7 +145,6 @@ public static class CreateSerialNOPlan01
 
     public static String CreateNewSerialNOPlan01(string date)
     {
-        String dfd = Guid.NewGuid().ToString().Substring(0, 3).ToUpper() + "#Q";
         return date.ToString();
     }
 

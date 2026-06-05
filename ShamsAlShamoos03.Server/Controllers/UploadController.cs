@@ -25,7 +25,9 @@ namespace ShamsAlShamoos03.Server.Controllers
         public async Task<IActionResult> UploadImage(IFormFile file)
         {
             if (file == null || file.Length == 0)
+            {
                 return BadRequest("No file");
+            }
 
             string extractedText;
             using (var ms = new MemoryStream())
@@ -38,7 +40,6 @@ namespace ShamsAlShamoos03.Server.Controllers
             var generatedFiles = _qrBatch.GenerateMultipleQrs(extractedText);
             // برگرداندن نام فایل‌ها به کلاینت
             return Ok(generatedFiles);
-
         }
 
 

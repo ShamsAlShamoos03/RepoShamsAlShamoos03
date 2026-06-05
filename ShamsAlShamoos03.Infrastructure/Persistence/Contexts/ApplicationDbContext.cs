@@ -196,8 +196,6 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                 .WithMany(q => q.Answers)
                 .HasForeignKey(a => a.QuestionId);
 
-            var hasher = new PasswordHasher<ApplicationUsers>();
-
             builder.Entity<ApplicationUsers>()
                 .Property(p => p.BirthDayDate)
                 .HasDefaultValueSql("GETDATE()");

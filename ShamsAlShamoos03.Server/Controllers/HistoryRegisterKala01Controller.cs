@@ -114,11 +114,6 @@ namespace ShamsAlShamoos03.Server.Controllers
                 var allRecords = await _context.Dapper.ListAsync<HistoryRegisterKala01>(
                     "Get_HistoryRegisterKala01_ByStartDate", parametersGet, 1300);
 
-                var lastDocNo = allRecords
-                    .OrderByDescending(d => d.DocumentNO01)
-                    .Select(u => u.DocumentNO01)
-                    .FirstOrDefault();
-
                 var viewModel = model.CrudModel.Value;
 
                 viewModel.StatusConfirmation01 = 320;
@@ -145,7 +140,6 @@ namespace ShamsAlShamoos03.Server.Controllers
                 return StatusCode(500, "خطایی در سرور رخ داده است");
             }
         }
-
         public class CombinedRequestModel
         {
             public DataManagerRequest DataRequest { get; set; }
