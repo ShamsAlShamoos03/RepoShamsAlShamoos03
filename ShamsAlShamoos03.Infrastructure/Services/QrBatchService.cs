@@ -21,13 +21,17 @@ public class QrBatchService
     public List<string> GenerateMultipleQrs(string longText)
     {
         if (string.IsNullOrWhiteSpace(longText))
+        {
             return new List<string>();
+        }
 
         string folderName = $"qr_batch_{DateTime.Now:yyyyMMdd_HHmmss}";
         string baseFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "QrFiles", folderName);
 
         if (!Directory.Exists(baseFolderPath))
+        {
             Directory.CreateDirectory(baseFolderPath);
+        }
 
         string textFilePath = Path.Combine(baseFolderPath, folderName + ".txt");
         File.WriteAllText(textFilePath, longText);
@@ -64,7 +68,9 @@ public class QrBatchService
     public List<string> GenerateQrsFromImage(string imagePath)
     {
         if (!File.Exists(imagePath))
+        {
             return new List<string>();
+        }
 
         byte[] imageBytes = File.ReadAllBytes(imagePath);
         string base64String = Convert.ToBase64String(imageBytes);
@@ -77,7 +83,9 @@ public class QrBatchService
         var result = new List<QrFileDto>();
 
         if (!Directory.Exists(QrBasePath))
+        {
             return result;
+        }
 
         foreach (var folder in Directory.GetDirectories(QrBasePath))
         {
@@ -104,7 +112,9 @@ public class QrBatchService
         string fullPath = Path.Combine(QrBasePath, relativePath);
 
         if (!File.Exists(fullPath))
+        {
             throw new FileNotFoundException("QR file not found");
+        }
 
         var reader = new QrReaderService();
         return reader.ReadQrFromFile(fullPath);

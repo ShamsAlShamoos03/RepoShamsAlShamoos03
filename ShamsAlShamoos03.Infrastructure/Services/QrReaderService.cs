@@ -39,15 +39,16 @@ namespace ShamsAlShamoos03.Infrastructure.Services
 
             string qrFilesPath = Path.Combine(_env.ContentRootPath, "QrFiles");
             if (!Directory.Exists(qrFilesPath))
+            {
                 Directory.CreateDirectory(qrFilesPath);
+            }
 
             foreach (var chunk in chunks)
             {
-                string fileName = $"qr_{DateTime.Now.Ticks}_{partNumber}.png";
+                string fileName = $"qr_{Guid.NewGuid()}_{partNumber}.png";
                 GenerateQrToFile(chunk, Path.Combine(qrFilesPath, fileName));
                 fileNames.Add(fileName);
                 partNumber++;
-                Thread.Sleep(5); // جلوگیری از Tick یکسان
             }
 
             return fileNames;
@@ -85,10 +86,13 @@ namespace ShamsAlShamoos03.Infrastructure.Services
                 Options = new ZXing.Common.DecodingOptions { TryHarder = true }
             };
 
-
             foreach (var file in qrFiles)
             {
-                if (!File.Exists(file)) continue;
+                if (!File.Exists(file))
+                {
+                    continue;
+                }
+
                 using var image = Image.Load<Rgba32>(file);
                 var result = reader.Decode(image);
                 if (result != null)
@@ -101,6 +105,7 @@ namespace ShamsAlShamoos03.Infrastructure.Services
             File.WriteAllBytes(outputPath, imageBytes);
         }
     }
+
     public class QrReaderService
     {
         public string ReadQrFromFile(string filePath)

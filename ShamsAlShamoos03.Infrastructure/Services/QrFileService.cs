@@ -16,7 +16,9 @@ namespace ShamsAlShamoos03.Infrastructure.Services
             // مسیر ذخیره در wwwroot/uploads
             string folder = Path.Combine(_env.WebRootPath, "uploads");
             if (!Directory.Exists(folder))
+            {
                 Directory.CreateDirectory(folder);
+            }
 
             string fileName = $"qr_{DateTime.Now:yyyyMMdd_HHmmss}.jpg";
             string outputPath = Path.Combine(folder, fileName);

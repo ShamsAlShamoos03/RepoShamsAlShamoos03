@@ -66,7 +66,9 @@ public class QrCodeService
         );
 
         if (!Directory.Exists(basePath))
+        {
             Directory.CreateDirectory(basePath);
+        }
 
         string filePath = Path.Combine(basePath, $"{fileName}.png");
         File.WriteAllBytes(filePath, pngBytes);

@@ -1,0 +1,12 @@
+root = true
+
+# تنظیمات عمومی برای C#
+[*.cs]
+
+# فاصله و فرمت‌بندی
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+
+# اضافه کردن براکت‌های { } برای if، else، for، foreach، while
+csharp_prefer_braces = true:error

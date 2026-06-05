@@ -17,14 +17,18 @@ namespace ShamsAlShamoos03.Server.Controllers
         public IActionResult Upload([FromBody] Base64UploadRequest request)
         {
             if (string.IsNullOrWhiteSpace(request.Base64String))
+            {
                 return BadRequest("Base64 string is empty");
+            }
 
             try
             {
                 // مسیر ذخیره در wwwroot/uploads
                 string folder = Path.Combine(_env.WebRootPath, "uploads");
                 if (!Directory.Exists(folder))
+                {
                     Directory.CreateDirectory(folder);
+                }
 
                 string fileName = $"qr_{DateTime.Now:yyyyMMdd_HHmmss}.jpg";
                 string outputPath = Path.Combine(folder, fileName);

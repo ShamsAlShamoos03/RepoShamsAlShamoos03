@@ -126,9 +126,20 @@ public class TblMaster
         int month = int.Parse(shamsiDate.Substring(4, 2));
         int day = int.Parse(shamsiDate.Substring(6, 2));
 
-        if (year < 1300 || year > 1500) return false;
-        if (month < 1 || month > 12) return false;
-        if (day < 1 || day > 31) return false;
+        if (year < 1300 || year > 1500)
+        {
+            return false;
+        }
+
+        if (month < 1 || month > 12)
+        {
+            return false;
+        }
+
+        if (day < 1 || day > 31)
+        {
+            return false;
+        }
 
         return true;
     }

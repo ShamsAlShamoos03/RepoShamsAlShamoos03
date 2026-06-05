@@ -49,7 +49,9 @@ public class AuthController : ControllerBase
                 false);
 
             if (result.Succeeded)
+            {
                 return Ok();
+            }
 
             return Unauthorized("نام کاربری یا رمز عبور اشتباه است");
         }
