@@ -1,15 +1,10 @@
-﻿
-using MD.PersianDateTime.Core;
+﻿using MD.PersianDateTime.Core;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Globalization;
 
 public class TblMaster333
 {
-
-
-
-
     public string? EMP_NUM { get; set; }
     /// <summary>
     /// نام
@@ -20,10 +15,7 @@ public class TblMaster333
     /// </summary>
     public string? LST_NAM { get; set; }
     public string? BRT_COD { get; set; }
-    //[Key]
     public string? MelliCode { get; set; }
-
-
 
     /// <summary>
     //متن نامه
@@ -49,40 +41,15 @@ public class TblMaster333
     //متن نامه
     /// </summary>
     public string? Vartext06 { get; set; }
-
-
-
-    //[ForeignKey("BRT_COD")]
-
-    //public virtual CityType? _BRT_COD { get; set; }
 }
 
 public class TblMaster
 {
-
-    // <summary>
-    //متن نامه
-    /// </summary>
     public string? Tabaghe { get; set; }
-    // <summary>
-    //متن نامه
-    /// </summary>
     public string? ReasTabaghe { get; set; }
-    // <summary>
-    //متن نامه
-    /// </summary>
     public string? Benefits { get; set; }
-    // <summary>
-    //متن نامه
-    /// </summary>
     public string? Percenta { get; set; }
 
-
-
-
-    // <summary>
-    //متن نامه
-    /// </summary>
     public string? Vartext01 { get; set; }
     /// <summary>
     //متن نامه
@@ -104,15 +71,6 @@ public class TblMaster
     //متن نامه
     /// </summary>
     public string? Vartext06 { get; set; }
-
-    //[NotMapped]
-    //public string DisplayName
-    //{
-    //    get
-    //    {
-    //        return $"{FST_NAM} {LST_NAM} {EMP_NUM} {MelliCode}";
-    //    }
-    //}
 
     #region "ستون مجازی محاسبه سن و سنوات خدمتی"
 
@@ -122,21 +80,16 @@ public class TblMaster
         get
         {
             int yearsOfWork = 0;
-            // بررسی طول، خالی نبودن و عددی بودن تاریخ
             if (!string.IsNullOrEmpty(EMP_DAT) && EMP_DAT.Length == 8 && IsNumeric(EMP_DAT))
             {
-                // بررسی معتبر بودن تاریخ شمسی
                 string shamsiDate = $"{EMP_DAT.Substring(0, 4)}/{EMP_DAT.Substring(4, 2)}/{EMP_DAT.Substring(6, 2)}";
 
                 if (IsDateShamsi(shamsiDate) && IsShamsiDateValid(EMP_DAT))
                 {
-                    // تبدیل تاریخ شمسی به میلادی
                     DateTime employmentDate = ConvertDateTime.ConvertShamsiToMiladi(shamsiDate);
 
-                    // محاسبه تفاوت سال‌های کارکرد
                     yearsOfWork = DateTime.Now.Year - employmentDate.Year;
 
-                    // بررسی ماه و روز برای کاهش یک سال در صورت نرسیدن تاریخ کامل
                     if (DateTime.Now.Month < employmentDate.Month ||
                         (DateTime.Now.Month == employmentDate.Month && DateTime.Now.Day < employmentDate.Day))
                     {
@@ -151,69 +104,50 @@ public class TblMaster
 
     private bool IsDateShamsi(string dateShamsi)
     {
-
-
-
-
         try
         {
-            // بررسی می‌کنیم که تاریخ به درستی به تاریخ میلادی تبدیل شود
             ConvertDateTime.ConvertShamsiToMiladi(dateShamsi);
             return true;
         }
         catch (Exception wf)
         {
-            // در صورت بروز خطا، تاریخ نامعتبر است
             return false;
         }
-
-
-
-
-
-        //throw new NotImplementedException();
     }
-    // تابع بررسی عددی بودن رشته
+
     private bool IsNumeric(string input)
     {
         return input.All(char.IsDigit);
     }
-    // تابعی برای بررسی معتبر بودن تاریخ شمسی از نظر محدوده سال، ماه و روز
+
     private bool IsShamsiDateValid(string shamsiDate)
     {
         int year = int.Parse(shamsiDate.Substring(0, 4));
         int month = int.Parse(shamsiDate.Substring(4, 2));
         int day = int.Parse(shamsiDate.Substring(6, 2));
 
-        // کنترل محدوده‌های متداول سال، ماه و روز
-        if (year < 1300 || year > 1500) return false; // بررسی محدوده متداول سال
-        if (month < 1 || month > 12) return false;    // بررسی ماه
-        if (day < 1 || day > 31) return false;        // بررسی روز (به صورت پایه، بدون توجه به ماه‌های شمسی)
+        if (year < 1300 || year > 1500) return false;
+        if (month < 1 || month > 12) return false;
+        if (day < 1 || day > 31) return false;
 
-        // ماه‌های با روز کمتر را می‌توان در اینجا نیز تنظیم کرد.
         return true;
     }
+
     [NotMapped]
     public int? YearsOFOld
     {
-
         get
         {
             int yearsOfOld = 0;
-            // بررسی طول، خالی نبودن و عددی بودن تاریخ
             if (!string.IsNullOrEmpty(BRT_DAT) && BRT_DAT.Length == 8 && IsNumeric(BRT_DAT))
             {
-                // بررسی معتبر بودن تاریخ شمسی
                 string shamsiDate = $"{BRT_DAT.Substring(0, 4)}/{BRT_DAT.Substring(4, 2)}/{BRT_DAT.Substring(6, 2)}";
                 if (IsDateShamsi(shamsiDate) && IsShamsiDateValid(BRT_DAT))
                 {
-                    // تبدیل تاریخ شمسی به میلادی
                     DateTime employmentDate = ConvertDateTime.ConvertShamsiToMiladi(shamsiDate);
 
-                    // محاسبه تفاوت سال‌های کارکرد
                     yearsOfOld = DateTime.Now.Year - employmentDate.Year;
 
-                    // بررسی ماه و روز برای کاهش یک سال در صورت نرسیدن تاریخ کامل
                     if (DateTime.Now.Month < employmentDate.Month ||
                         (DateTime.Now.Month == employmentDate.Month && DateTime.Now.Day < employmentDate.Day))
                     {
@@ -224,7 +158,6 @@ public class TblMaster
             return yearsOfOld;
         }
     }
-
 
     #endregion
 
@@ -248,14 +181,12 @@ public class TblMaster
     [ForeignKey("ISFatmandeYeganGhesmat01")]
     public virtual CategoryGeneral? oo_ISFatmandeYeganGhesmat01l { get; set; }
 
-
     /// <summary>
     /// یگان
     /// </summary>
     public int? UitID01 { get; set; }
     [ForeignKey("UitID01")]
     public virtual CategoryGeneral? oo_tblCategoryGeneralUit { get; set; }
-
 
     /// <summary>
     /// ریت لول
@@ -271,14 +202,12 @@ public class TblMaster
     [ForeignKey("TakhasosFaniKhalabanMoshtarak")]
     public virtual CategoryGeneral? oo_TakhasosFaniKhalabanMoshtarak { get; set; }
 
-
     /// <summary>
     /// مدل تخصص بالگرد
     /// </summary>
     public int? TypeAc { get; set; }
     [ForeignKey("TypeAc")]
     public virtual CategoryGeneral? oo_TypeAc { get; set; }
-
 
     /// <summary>
     /// شماره پرونده بایگانی 01
@@ -302,27 +231,6 @@ public class TblMaster
     [ForeignKey("UitIDGaurd01")]
     public virtual CategoryGeneral? oo_tblCategoryGeneralUitGaurd { get; set; }
 
-
-    //public string? MAR_COD11 { get; set; }
-    //[ForeignKey("MAR_COD11")]
-
-    //public virtual TblLuLookup? ooMARCOD11 { get; set; }
-
-    //BRT_COD = "-100";
-    //                    ISS_COD = "-100";
-    //                    YEG_COD2 = "30";
-    //                    OMD_YEG = "30";
-    //                    COD_GHA = "2540";
-    //                    COD_TAC = "1550";
-    //                    COD_TAA = "1550";
-    //                    COD_C12 = "1600";
-    //                    BLG_COD = "470";
-    //                    COD_C78 = "1570";
-    //                    REL_COD = "990";
-    //                    REL_COD2 = "990";
-    //                    DRJ_CODJ = "158-100";
-    //[Key]
-    //public string? PersonID { get; set; }
     /// <summary>
     /// شماره پرسنلي
     /// </summary>
@@ -355,17 +263,11 @@ public class TblMaster
     /// محل تولد
     /// </summary>
     public string? BRT_COD { get; set; }
-    //[ForeignKey("BRT_COD")]
-
-    //public virtual CityType _BRTCOD { get; set; }
-
-    //builder.Entity<TblMaster>().HasOne(a => a._BRT_COD).WithOne().HasForeignKey<TblMaster>(v => v.BRT_COD);
 
     /// <summary>
     /// تاريخ تولد
     /// </summary>
     public string? MAR_DAT { get; set; }
-
 
     /// <summary>
     /// تاريخ تولد
@@ -375,13 +277,6 @@ public class TblMaster
     /// محل صدور
     /// </summary>
     public string? ISS_COD { get; set; }
-    //[ForeignKey("ISS_COD")]
-
-    //public virtual CityType? _ISSCOD { get; set; }
-
-
-
-
 
     /// <summary>
     /// تاريخ صدور
@@ -389,41 +284,31 @@ public class TblMaster
     public string? ISS_DAT { get; set; }
     /// <summary>
     /// گروه خون
-    /// </summary>  type=47
+    /// </summary>
     public string? BLG_COD { get; set; }
-    //[ForeignKey("BLG_COD")]
-    //public virtual TblLuLookup? ooBLGCOD { get; set; }
 
     /// <summary>
     /// دين مذهب
-    /// </summary> type=99
+    /// </summary>
     public string? REL_COD { get; set; }
-    //[ForeignKey("REL_COD")]
-
-    //public virtual TblLuLookup? ooRELCOD { get; set; }
     /// <summary>
     /// كد دين و مذهب قبلي
-    /// </summary> type=99
+    /// </summary>
     public string? REL_COD2 { get; set; }
-    /// </summary> 
-    //[ForeignKey("REL_COD2")]
-    //public virtual TblLuLookup? ooRELCOD2 { get; set; }
     /// <summary>
     /// جنسيت
-    /// </summary>  type=32
+    /// </summary>
     public string? SEX_COD { get; set; }
     [ForeignKey("SEX_COD")]
-
     public virtual TblLuLookup? ooSEXCOD { get; set; }
     /// <summary>
     /// وضعيت تاهل
-    /// </summary>type=23
+    /// </summary>
     public string? MAR_COD { get; set; }
     [ForeignKey("MAR_COD")]
-
     public virtual TblLuLookup? ooMARCOD { get; set; }
 
-    /// <summary> 
+    /// <summary>
     /// تعداد همسر
     /// </summary>
     public string? WIF_QTY { get; set; }
@@ -441,10 +326,9 @@ public class TblMaster
     public string? DOT_QTY { get; set; }
     /// </summary>
     /// وضعيت سكونت - خانه سازماني يا كانتينر
-    /// </summary> type=80
+    /// </summary>
     public string? MAS_COD { get; set; }
     [ForeignKey("MAS_COD")]
-
     public virtual TblLuLookup? ooMASCOD { get; set; }
     /// <summary>
     ///  تاريخ شروع وضعيت مسكوني
@@ -456,54 +340,47 @@ public class TblMaster
     public string? EMP_DAT { get; set; }
     /// <summary>
     /// نوع استخدام
-    /// </summary>type=123
+    /// </summary>
     public string? TYP_EMP { get; set; }
     [ForeignKey("TYP_EMP")]
-
     public virtual TblLuLookup? ooTYPEMP { get; set; }
     /// </summary>
     /// /// مدرك يا ماده دستور استخدام
     /// </summary>
     public string? EMP_ORD { get; set; }
-    //public virtual TblLuLookup? yEmpOrd { get; set; }
 
     /// <summary>
     /// كد يگان صاحب دستور استخدام
     /// </summary>
     public string? EMP_YEG { get; set; }
-    //public virtual TblLuLookup? y { get; set; }
 
     /// <summary>
     /// فرمان يا دستور استخدام رده بالاتر
     /// </summary>
     public string? EMP_ORD2 { get; set; }
-    //public virtual TblLuLookup? yEmpOrd2 { get; set; }
 
     /// <summary>
     /// كد مدرك تحصيلي بدو استخدام
     /// </summary>
     public string? EDF_COD { get; set; }
-    //public virtual TblLuLookup? yEdfCod { get; set; }
 
     /// <summary>
     /// كد هويت خدمتي
-    /// </summary>  type=151
+    /// </summary>
     public string? EMS_COD { get; set; }
     [ForeignKey("EMS_COD")]
-
     public virtual TblLuLookup? ooEMSCOD { get; set; }
 
     /// <summary>
     /// كد نوع تغيير وضعيت
-    /// </summary> type=251
+    /// </summary>
     public string? CHG_COD { get; set; }
     [ForeignKey("CHG_COD")]
-
     public virtual TblLuLookup? ooCHGCOD { get; set; }
 
     /// <summary>
     /// كد آخرين مدرك تحصيلي
-    /// </summary> type=11
+    /// </summary>
     public string? EDE_COD { get; set; }
     [ForeignKey("EDE_COD")]
     public virtual TblLuLookup? ooEDECOD { get; set; }
@@ -512,24 +389,22 @@ public class TblMaster
     /// كد رشته مدرك تحصيلي
     /// </summary>
     public string? SUB_COD { get; set; }
-    //public virtual TblLuLookup? ySubCod { get; set; }
 
     /// <summary>
     /// تاريخ آخرين مدرك تحصيلي
     /// </summary>
     public string? EDE_DAT { get; set; }
-    //public virtual TblLuLookup? yEdeDat { get; set; }
 
     /// <summary>
     /// كد آخرين دوره طولي نظامي
-    /// </summary> type=90  TBL_LOOKUPS_DATA
+    /// </summary>
     public string? LDOR_NEZ { get; set; }
     [ForeignKey("LDOR_NEZ")]
     public virtual TblLookupsData? ooLDORNEZ { get; set; }
 
     /// <summary>
     /// كد وضعيت از لحاظ خدمت
-    /// </summary> type=9
+    /// </summary>
     public string? DUS_COD { get; set; }
     [ForeignKey("DUS_COD")]
     public virtual TblLuLookup? ooDUSCOD { get; set; }
@@ -544,7 +419,7 @@ public class TblMaster
     public string? HAZ_COD { get; set; }
     /// <summary>
     /// كد درجه / رتبه
-    /// </summary> type=10
+    /// </summary>
     public string? DRJ_COD { get; set; }
     [ForeignKey("DRJ_COD")]
     public virtual TblLuLookup? ooDRJCOD { get; set; }
@@ -553,18 +428,17 @@ public class TblMaster
     /// كد درجه اصلي
     /// </summary>
     public string? DRJ_CODA { get; set; }
-    //public virtual TblLuLookup? yDrjCoda { get; set; }
 
     /// <summary>
     /// نوع درجه - 0=دائم-1=موقت-2=مجازي
-    /// </summary> type=36
+    /// </summary>
     public string? DRJ_STT { get; set; }
     [ForeignKey("DRJ_STT")]
     public virtual TblLuLookup? ooDRJSTT { get; set; }
 
     /// <summary>
     /// كد رسته
-    /// </summary> type=30
+    /// </summary>
     public string? RST_COD { get; set; }
     [ForeignKey("RST_COD")]
     public virtual TblLuLookup? ooRSTCOD { get; set; }
@@ -573,64 +447,51 @@ public class TblMaster
     /// كد رسته قبلي
     /// </summary>
     public string? RST_COD2 { get; set; }
-    //public virtual TblLuLookup? yRstCod2 { get; set; }
 
     /// <summary>
     /// تاريخ تغيير رسته
     /// </summary>
     public string? DAT_RST2 { get; set; }
-    ////public virtual TblLuLookup? yDatRst2 { get; set; }
 
     /// <summary>
     /// كد علت تغيير رسته
     /// </summary>
     public string? ELL_RST { get; set; }
-    ////public virtual TblLuLookup? yEllRst { get; set; }
 
     /// <summary>
     /// گروه كارمندان تجربي
     /// </summary>
     public string? EMP_GRH { get; set; }
-    //public virtual TblLuLookup? yEmpGrh { get; set; }
 
     /// <summary>
     /// رده كارمندان تجربي
     /// </summary>
     public string? EMP_RAD { get; set; }
-    //public virtual TblLuLookup? yEmpRad { get; set; }
 
     /// <summary>
     /// كد تخصص اصلي
-    /// </summary> type=155 TBL_LOOKUPS_DATA
+    /// </summary>
     public string? COD_TAA { get; set; }
-    //[ForeignKey("COD_TAA")]
-    //public virtual TblLookupsData? ooCODTAA { get; set; }
 
     /// <summary>
     /// كد تخصص فرعي
     /// </summary>
     public string? COD_TAF { get; set; }
-    //public virtual TblLuLookup? yCodTaf { get; set; }
 
     /// <summary>
     /// كد تخصص خدمتي
-    /// </summary> type=155  TBL_LOOKUPS_DATA
+    /// </summary>
     public string? COD_TAC { get; set; }
-    //[ForeignKey("COD_TAC")]
-    //public virtual TblLookupsData? ooCODTAC { get; set; }
 
     /// <summary>
     /// شماره جدول سازماني
     /// </summary>
     public string? SHO_JGH { get; set; }
-    //public virtual TblLuLookup? yShoJgh { get; set; }
 
     /// <summary>
     /// كد يگان سازماني يا شغلي
-    /// </summary> type=254
+    /// </summary>
     public string? COD_GHA { get; set; }
-    //[ForeignKey("COD_GHA")]
-    //public virtual TblLuLookup? ooCODGHA { get; set; }
 
     /// <summary>
     /// ش بند
@@ -642,18 +503,8 @@ public class TblMaster
     public string? STR_NUM { get; set; }
     /// <summary>
     /// كد حداكثر درجه شغل
-    /// </summary> type=158 TBL_LOOKUPS_DATA
+    /// </summary>
     public string? DRJ_CODJ { get; set; }
-    //[ForeignKey("DRJ_CODJ")]
-    //public virtual TblLookupsData? ooDRJCODJ { get; set; }
-
-    /// </summary> type=10
-    //public string? DRJ_CODJ { get; set; }
-    //[ForeignKey("DRJ_CODJ")]
-    //public virtual TblLuLookup? ooDRJCODJ { get; set; }
-
-
-
 
     /// <summary>
     /// تاريخ انتصاب
@@ -663,7 +514,6 @@ public class TblMaster
     /// علت بدون شغل شدن
     /// </summary>
     public string? VAZ_ENT { get; set; }
-    //public virtual TblLuLookup? yVazEnt { get; set; }
 
     /// <summary>
     /// تاريخ خروج از انتصاب
@@ -671,24 +521,20 @@ public class TblMaster
     public string? END_ENT { get; set; }
     /// <summary>
     /// در حال انتقال/انتساب بودن
-    /// </summary> type=45
+    /// </summary>
     public string? VAZ_NGH { get; set; }
     [ForeignKey("VAZ_NGH")]
     public virtual TblLuLookup? ooVAZNGH { get; set; }
 
     /// <summary>
     /// كد يگان مادر
-    /// </summary> type=254  [TBL_UnitsInfo]
+    /// </summary>
     public string? OMD_YEG { get; set; }
-    //[ForeignKey("OMD_YEG")]
-    //public virtual TblUnitsInfo? ooOMDYEG { get; set; }
 
     /// <summary>
     /// كد يگان خدمتي  
-    /// </summary>  [TBL_UnitsInfo]
+    /// </summary>
     public string? YEG_COD2 { get; set; }
-    //[ForeignKey("YEG_COD2")]
-    //public virtual TblUnitsInfo? _YEGCOD2 { get; set; }
 
     /// <summary>
     /// تاريخ حضور در يگان خدمتي
@@ -698,7 +544,6 @@ public class TblMaster
     /// منطقه محل خدمتي
     /// </summary>
     public string? TYP_MNT { get; set; }
-    //public virtual TblLuLookup? yTypMnt { get; set; }
 
     /// <summary>
     /// تاريخ شروع خدمت در منطقه خدمتي
@@ -706,9 +551,8 @@ public class TblMaster
     public string? MNT_DAT { get; set; }
     /// <summary>
     /// كد يگان حقوقي
-    /// </summary> type=80
+    /// </summary>
     public string? YEG_COD { get; set; }
-    //public virtual TblLuLookup? yYegCod { get; set; }
 
     /// <summary>
     /// تارخ آخرين ترفيع
@@ -772,7 +616,7 @@ public class TblMaster
     public string? TOT_AML2 { get; set; }
     /// <summary>
     /// كد زبان مادري يا محلي
-    /// </summary> type=48
+    /// </summary>
     public string? ZAB_MAH { get; set; }
     [ForeignKey("ZAB_MAH")]
     public virtual TblLuLookup? ooZABMAH { get; set; }
@@ -847,7 +691,7 @@ public class TblMaster
     public string? FER_YEG { get; set; }
     /// <summary>
     /// ( اعاده/ابقا (يك = ابقا - دو= اعاده 
-    /// </summary> type=147
+    /// </summary>
     public string? RET_COD { get; set; }
     [ForeignKey("RET_COD")]
     public virtual TblLuLookup? ooRETCOD { get; set; }
@@ -878,11 +722,11 @@ public class TblMaster
     public string? CORS_T { get; set; }
     /// <summary>
     /// كد رشد تخصصي فرد
-    /// </summary> type=160 TBL_LOOKUPS_DATA
+    /// </summary>
     public string? ROSH_P { get; set; }
     [ForeignKey("ROSH_P")]
     public virtual TblLookupsData? ooROSHP { get; set; }
-    //type=80
+
     public string? GHE_SHR { get; set; }
 
     /// <summary>
@@ -903,17 +747,13 @@ public class TblMaster
     public string? COD_C4 { get; set; }
     /// <summary>
     /// كد رشد تخصصي شغل
-    /// </summary> type=160  TBL_LOOKUPS_DATA
+    /// </summary>
     public string? COD_C12 { get; set; }
-    //[ForeignKey("COD_C12")]
-    //public virtual TblLookupsData? ooCODC12 { get; set; }
 
     /// <summary>
     /// كد رسته شغل
-    /// </summary> type=157 TBL_LOOKUPS_DATA
+    /// </summary>
     public string? COD_C78 { get; set; }
-    //[ForeignKey("COD_C78")]
-    //public virtual TblLookupsData? ooCODC78 { get; set; }
 
     /// <summary>
     /// عنوان شغل
@@ -939,7 +779,7 @@ public class TblMaster
     public string? DAT_OMD { get; set; }
     /// <summary>
     /// نوع قشر
-    /// </summary> type=112
+    /// </summary>
     public string? GHESHR { get; set; }
     [ForeignKey("GHESHR")]
     public virtual TblLuLookup? ooGHESHR { get; set; }
@@ -957,9 +797,8 @@ public class TblMaster
     public string? PeopleCode { get; set; }
     /// <summary>
     /// تنزيل درجه
-    /// </summary> type=80
+    /// </summary>
     public string? DiscountStatus { get; set; }
-    //public virtual TblLuLookup? yDiscountStatus { get; set; }
 
     public string? CHG_TAR { get; set; }
     /// <summary>
@@ -983,7 +822,7 @@ public class TblMaster
     public string? MAK_SR { get; set; }
     [Key]
     public string? MelliCode { get; set; }
-    //type=26
+
     public string? DeliverTypeCode { get; set; }
     [ForeignKey("DeliverTypeCode")]
     public virtual TblLuLookup? ooDeliverTypeCode { get; set; }
@@ -1005,10 +844,6 @@ public class TblMaster
     /// نام خانوادگي لاتین
     /// </summary>
     public string? LstNamEN { get; set; }
-    ///// <summary>
-    ///// ریت پروازی
-    ///// </summary>
-    //public string? RateFlight { get; set; }
 
     public string? FlightEvidence01ID { get; set; }
     [ForeignKey("FlightEvidence01ID")]
@@ -1021,8 +856,6 @@ public class TblMaster
     public string? Hoghog01ID { get; set; }
     [ForeignKey("Hoghog01ID")]
     public virtual TblHoghog01? oo_Hoghog01ID { get; set; }
-
-
 
     public string? HealthEvidence01ID { get; set; }
     [ForeignKey("HealthEvidence01ID")]
@@ -1060,7 +893,6 @@ public class TblMaster
     /// <summary>
     ///روز اعتبار تا لغو مجوز پرواز
     /// </summary>
-
     public string? DayValidFlight { get; set; }
 
     public string? SUMSPd { get; set; }
@@ -1112,9 +944,7 @@ public class TblMaster
     public string? SUMPHOODNew01 { get; set; }
     public string? SUMIPHOODNew01 { get; set; }
     public string? SUMSIPHOODNew01 { get; set; }
-
 }
-
 
 public static class ConvertDateTime
 {
@@ -1129,21 +959,13 @@ public static class ConvertDateTime
         PersianDateTime persianDateTime = new PersianDateTime(date);
         return persianDateTime.ToString(format);
     }
+
     public static string GetShamsiDate(this DateTime date, string format)
     {
-        // 0000/00/00
-
         PersianCalendar pc = new PersianCalendar();
 
         return pc.GetYear(date).ToString("0000") + "/" +
                pc.GetMonth(date).ToString("00") + "/" +
                pc.GetDayOfMonth(date).ToString("00");
     }
-    //public static string ConvertMiladiToShamsiDay(this DateTime? date, string format)
-    //{
-    //    PersianDateTime persianDateTime = new PersianDateTime(date);
-    //    return persianDateTime.ToString(format);
-    //}
-
-
 }

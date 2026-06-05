@@ -9,6 +9,4 @@ public class CategorySubImagesList
     public DateTime NewsTime { get; set; }
     public string NewsDateSham { get; set; }
     public string DateTimestring { get; set; }
-
-
 }

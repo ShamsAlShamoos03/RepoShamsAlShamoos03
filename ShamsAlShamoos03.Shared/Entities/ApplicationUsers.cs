@@ -10,13 +10,10 @@ public class ApplicationUsers : IdentityUser
     public byte gender { get; set; }
     public override string PhoneNumber { get; set; }
     public string ImagePath { get; set; }
-    //public DateTime BirthDayDate { get; set; } = DateTime.Now;
-    //public DateTime? LastPasswordChangeDate { get; set; } = DateTime.Now;
     public DateTime BirthDayDate { get; set; }
     public DateTime? LastPasswordChangeDate { get; set; }
 
     public byte IsActive { get; set; }
-    //public bool IsActive { get; set; }
 
     public string Melicode { get; set; } = "";
     public string PersonalCode { get; set; }
@@ -32,16 +29,9 @@ public class ApplicationUsers : IdentityUser
     [ForeignKey("MelliCodeID")]
     public virtual TblMaster tblMelicodeID { get; set; }
 
-
-
-
     public string? Sortable013d { get; set; }
     [ForeignKey("Sortable013d")]
-
     public virtual Sortable03 Sortable03 { get; set; }
-
-
-
 
     public int? YeganID { get; set; }
     [ForeignKey("YeganID")]
@@ -60,6 +50,4 @@ public class ApplicationUsers : IdentityUser
     public virtual CategoryGeneral tblRateID { get; set; }
 
     public virtual IList<UjobPesronel01> UjobPesronel01s { get; set; }
-
-
 }

@@ -1,4 +1,3 @@
-
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -6,12 +5,10 @@ using ShamsAlShamoos03.Shared.Entities;
 
 namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
 {
-
     public class ApplicationDbContext : IdentityDbContext<ApplicationUsers, ApplicationRoles, string>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-
             Database.SetCommandTimeout(15001100);
         }
 
@@ -20,7 +17,6 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
         public virtual DbSet<Question02> Questions02 { get; set; }
         public virtual DbSet<Quiz> Quizs { get; set; }
         public virtual DbSet<User02> Users02 { get; set; }
-
 
         public DbSet<Question> Questions { get; set; }
         public DbSet<Option> Options { get; set; }
@@ -34,16 +30,13 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
 
         public DbSet<JsTree01> JsTree01 { get; set; }
 
-
         public DbSet<Category> Categories_Tbl { get; set; }
-
 
         public DbSet<GaurdPost> GaurdPost_Tbl { get; set; }
         public DbSet<PropertyDay> PropertyDay_Tbl { get; set; }
 
         public DbSet<EvidencelImage> EvidencelImage_Tbl { get; set; }
         public DbSet<EvidencelImageV> EvidencelImageV_Tbl { get; set; }
-
 
         public DbSet<CategoryGeneral> CategoriesGeneral_Tbl { get; set; }
 
@@ -54,7 +47,6 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
         public DbSet<News> News_Tbl { get; set; }
 
         public DbSet<PersonnelVazife01> PersonnelVazife01_Tbl { get; set; }
-
 
         public DbSet<Comment> Comments_Tbl { get; set; }
         public DbSet<Advertise> Advertis_Tbl { get; set; }
@@ -68,11 +60,7 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
 
         public DbSet<ImagesListCategoryImagesList> ImagesListCategoryImagesLists { get; set; }
 
-
         public DbSet<GuardboardVPG> Tbl_GuardboardVPGs { get; set; }
-        //.OnDelete(DeleteBehavior.Restrict);
-        //.OnDelete(DeleteBehavior.Cascade);
-
 
         public DbSet<Student> Students { get; set; }
         public DbSet<Course> Courses { get; set; }
@@ -89,18 +77,14 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
         public DbSet<CategoryImagesList> CategoryImagesList_Tbl { get; set; }
         public DbSet<CategorySubImagesList> CategorySubImagesList_Tbl { get; set; }
 
-        //public DbSet<ImagesListCategoryImagesList> ImagesListCategoryImagesList_Tbl { get; set; }
         public DbSet<CategoryReportSub> CategoryReportSub_Tbl { get; set; }
 
         public DbSet<NewsImagesList> NewsImagesList_Tbl { get; set; }
         public DbSet<UjobPesronel01> UjobPesronel01_Tbl { get; set; }
 
-        //public DbSet<FlightEvidence01> FlightEvidence01_Tbl { get; set; }
         public DbSet<FlightEvidence01> FlightEvidence01_Tbl { get; set; }
 
         public DbSet<TblLuLookupSub> TblLuLookupSub_Tbl { get; set; }
-
-        //public DbSet<StandCheck01> StandCheck01_Tbl { get; set; }
 
         public DbSet<StandCheckWritten01> StandCheckWritten01_Tbl { get; set; }
         public DbSet<HealthEvidence01> HealthEvidence01_Tbl { get; set; }
@@ -130,15 +114,12 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
         public DbSet<MeetingMembersEvidence01> MeetingMembersEvidence01_Tbl { get; set; }
         public DbSet<PhoneEvidence01> PhoneEvidence01_Tbl { get; set; }
 
-
-
         public DbSet<GaurdActivityEvidence01> GaurdActivityEvidence01_Tbl { get; set; }
         public DbSet<GaurdPlanEvidence01> GaurdPlanEvidence01_Tbl { get; set; }
         public DbSet<DailyPlanEvidenceStatAmar01Summary01> DailyPlanEvidenceStatAmar01Summary01_Tbl { get; set; }
 
         public DbSet<DailyActivityEvidence01> DailyActivityEvidence01_Tbl { get; set; }
         public DbSet<DailyPlanEvidence01> DailyPlanEvidence01_Tbl { get; set; }
-
 
         public DbSet<DatePropertyPlanEvidence01> DatePropertyPlanEvidence01_Tbl { get; set; }
         public DbSet<CrewGaurdPlanEvidence01> CrewGaurdPlanEvidence01_Tbl { get; set; }
@@ -173,18 +154,12 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
         public DbSet<UnitOrganization01> UnitOrganization01_Tbl { get; set; }
         public DbSet<UnitCountAmar01> UnitCountAmar01_Tbl { get; set; }
 
-
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            //builder.UseLazyLoadingProxies();
-            //    builder.Entity<TblMaster>().HasOne<CategoryGeneral>(p => p.UitID01).WithMany(b => b.CategoryGeneralId)
-            //.OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<UnitCountAmar01>(entity =>
             {
-                // سایر کانفیگ‌ها...
-
                 entity.Property(e => e.averold)
                     .HasComputedColumnSql(
                         "CASE " +
@@ -194,25 +169,22 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                         stored: true);
             });
 
-
-
             builder.Entity<DailyActivityEvidence01>()
-    .HasIndex(e => e.DailyActivityEvidence01IDStateName01)
-    .IsUnique();
+                .HasIndex(e => e.DailyActivityEvidence01IDStateName01)
+                .IsUnique();
 
             builder.Entity<PersonalCorrespondence01>()
-    .HasIndex(e => e.DocumentNO01)
-    .IsUnique();
-
+                .HasIndex(e => e.DocumentNO01)
+                .IsUnique();
 
             builder.Entity<CrewPersonalCorrespondence01>()
-    .HasIndex(e => e.DocumentNO01)
-    .IsUnique();
+                .HasIndex(e => e.DocumentNO01)
+                .IsUnique();
 
             builder.Entity<Quiz>()
-    .HasMany(q => q.Questions02)
-    .WithOne(q => q.Quiz)
-    .HasForeignKey(q => q.QuizId);
+                .HasMany(q => q.Questions02)
+                .WithOne(q => q.Quiz)
+                .HasForeignKey(q => q.QuizId);
 
             builder.Entity<Question02>()
                 .HasMany(q => q.Choices)
@@ -223,73 +195,7 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                 .HasOne(a => a.Question02)
                 .WithMany(q => q.Answers)
                 .HasForeignKey(a => a.QuestionId);
-            //    builder.Entity<PersonnelVazife01>().HasOne<CategoryGeneral>(p => p.RankID).WithMany(b => b.CategoryGeneralSubId)
-            //.OnDelete(DeleteBehavior.Restrict);
 
-            //One to One
-            //modelBuilder.Entity<Biography>().HasOne(a => a.Author).WithOne().HasForeignKey<Biography>(v => v.FK_AuthorId)
-            //    .HasConstraintName("B_A_Key").IsRequired(false);
-
-            //One to One
-            //builder.Entity<TblMaster>().HasOne(a => a.BRT_COD).WithOne().HasForeignKey<TblMaster>(v => v._BRT_COD);
-            //builder.Entity<TblMaster>().HasOne(a => a._BRT_COD).WithOne().HasForeignKey<TblMaster>(v => v.BRT_COD);
-
-            //     builder.HasSequence<int>("MySimpleSequence")
-            //.StartsAt(1)
-            //.IncrementsBy(1);
-            //     builder.HasSequence<int>("MySimpleSequence")
-            //.StartsAt(1)
-            //.IncrementsBy(1);
-            //     builder.Entity<MyEntity>()
-            //         .Property(e => e.SequenceNumber)
-            //         .HasDefaultValueSql("NEXTVAL('MySimpleSequence')");
-            //builder.HasSequence<int>("FactorNumber", schema: "Fdbo").StartsAt(1).IncrementsBy(1).HasMax(5);
-            //builder.Entity<FlightPlanEvidence01>().Property(a => a.FactorNumber).HasDefaultValueSql("Next Value For Fdbo.FactorNumber");
-
-
-            //.Property(l => l.FactorNumber).ForSqlServerUseSequenceHiLo("Fdbo.FactorNumber").IsRequired()
-            //.Property(a => a.FactorNumber).HasDefaultValueSql("Next Value For Fdbo.FactorNumber");
-            //builder.HasSequence<int>("MySimpleSequence" )
-
-            //  .StartsAt(1)
-            // .IncrementsBy(1)
-            // .HasMin(1)
-            // .HasMax(1000)
-            // .IsCyclic()
-
-            //  ;
-
-            //builder.HasSequence<int>("Number").StartsAt(1).IncrementsBy(1).IsCyclic(false); ;
-
-            //builder.Entity<MyEntity>().Property(x => x.Code).HasDefaultValueSql("NEXT VALUE FOR Number");
-
-
-            //builder.Entity<FlightPlanEvidence01>(entity =>
-            //{
-            //    entity.Property(e => e.SerialNOPlan)
-            //              //.HasDefaultValueSql("CONCAT('FromDateFlightPlanEvidence01Title', MySimpleSequence))");
-            //              .HasDefaultValueSql("CONCAT('FromDateFlightPlanEvidence01Title-', FORMAT((NEXT VALUE FOR MySimpleSequence), '0000'))");
-            //});
-
-
-            // builder.Entity<FlightPlanEvidence01>(entity =>
-            //{
-            //    entity.Property(x => x.SerialNOPlan)
-            //    entity.u
-
-
-            //    //      entity.UseIdentityColumn(seed: 1, increment: 1)
-            //    // entity.HasColumnName("Id")
-            //    //entity.HasColumnType("int")
-            //    // entity.IsRequired()
-            //    ;
-            //});
-
-            //builder.Entity<FlightPlanEvidence01>(entity =>
-            //{
-            //    entity.Property(e => e.SerialNOPlan)
-            //              .HasDefaultValueSql("CONCAT('FromDateFlightPlanEvidence01Title-',IDENTITY ))");
-            //});
             var hasher = new PasswordHasher<ApplicationUsers>();
 
             builder.Entity<ApplicationUsers>()
@@ -300,7 +206,6 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                 .Property(p => p.LastPasswordChangeDate)
                 .HasDefaultValueSql("GETDATE()");
 
-
             builder.Entity<ApplicationUsers>(entity =>
             {
                 entity.ToTable(name: "Users_Tbl");
@@ -310,7 +215,6 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                 {
                     UserName = "lb123456",
                     Id = "3300697e-daa9-42c0-b3fa-99c8dfc080c3",
-                    //PasswordHash = hasher.HashPassword(null, "lb123456"), // هش کردن رمز عبور
                     PasswordHash = "AQAAAAIAAYagAAAAEDr2e8Jbo6sutkQJI6SCwuQ2nGko2CD4AchCPyr6lNf6bdIY/LlC9TevOqbd16O2xg==",
                     FirstName = "مدیر",
                     LastName = "سامانه شریف",
@@ -337,20 +241,14 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                     Personelcodes = "",
                     Rate = "",
                     JobsLevel = "",
-
                 });
             });
-
-
-            //        modelBuilder.Entity<Article>().HasData(
-            //new Article { Id = 1, Name = "Article1", JournalName = "JournalName1" },
 
             builder.Entity<ApplicationRoles>(entity =>
             {
                 entity.ToTable(name: "Roles_Tbl");
                 entity.HasKey(e => e.Id);
 
-                // تنظیم Seed Data
                 entity.HasData(
                     new ApplicationRoles
                     {
@@ -397,13 +295,6 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                         NormalizedName = "MANAGEUSER01",
                         ConcurrencyStamp = "355f684a-3146-444c-b5cb-ff0f019bd61e"
                     },
-
-
-                #region "مدیریت کارکنان"
-
-
-
-
                     new ApplicationRoles
                     {
                         Id = "90579366-628e-477f-ac9a-4a7471a9986e",
@@ -422,8 +313,6 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                         NormalizedName = "MANAGEPERSONNELPAYOR",
                         ConcurrencyStamp = null
                     },
-
-
                     new ApplicationRoles
                     {
                         Id = "27162af1-d67a-49af-b8d2-766a2d4467ec",
@@ -433,7 +322,6 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                         NormalizedName = "ADDFIEPERSONNELPAYOR",
                         ConcurrencyStamp = null
                     },
-
                     new ApplicationRoles
                     {
                         Id = "998d0d7f-18e5-4cf0-8152-e6ccf1822502",
@@ -443,7 +331,6 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                         NormalizedName = "ADDFILEACCESSHOGHOGHI01",
                         ConcurrencyStamp = null
                     },
-
                     new ApplicationRoles
                     {
                         Id = "ed4a4f49-9ba5-4871-a366-ddd049006ab3",
@@ -453,8 +340,6 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                         NormalizedName = "VIEWPERSONNELPAYOR",
                         ConcurrencyStamp = null
                     },
-
-
                     new ApplicationRoles
                     {
                         Id = "23a68401-f865-4e1e-87a6-9bdfe2f1c773",
@@ -464,7 +349,6 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                         NormalizedName = "VIEWPERSONNELPAYOR02",
                         ConcurrencyStamp = null
                     },
-
                     new ApplicationRoles
                     {
                         Id = "9dec9ab3-95fa-478b-b0a4-4966b736ce97",
@@ -474,7 +358,6 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                         NormalizedName = "VIEWPERSONNELPAYOR03",
                         ConcurrencyStamp = null
                     },
-
                     new ApplicationRoles
                     {
                         Id = "f23d8fb0-f077-44c7-a503-635845ab0fb1",
@@ -484,12 +367,6 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                         NormalizedName = "VIEWPERSONNELPAYOR01",
                         ConcurrencyStamp = null
                     },
-
-
-
-
-
-
                     new ApplicationRoles
                     {
                         Id = "c993f1cb-7a97-424c-9e0f-554d402d2b92",
@@ -526,54 +403,36 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                         NormalizedName = "PERSONNEL02",
                         ConcurrencyStamp = null
                     }
-                    #endregion
-
                 );
             });
 
-
-
-            // Seed Data برای AspNetUserRoles
             builder.Entity<IdentityUserRole<string>>().HasData(
                 new IdentityUserRole<string>
                 {
-                    UserId = "3300697e-daa9-42c0-b3fa-99c8dfc080c3", // مقدار UserId
-                    RoleId = "efa7d0e0-b4b8-489c-a52a-4182e2f3b3b7"                  // مقدار RoleId
+                    UserId = "3300697e-daa9-42c0-b3fa-99c8dfc080c3",
+                    RoleId = "efa7d0e0-b4b8-489c-a52a-4182e2f3b3b7"
                 },
                 new IdentityUserRole<string>
                 {
-                    UserId = "3300697e-daa9-42c0-b3fa-99c8dfc080c3", // مقدار UserId
-                    RoleId = "1a18cdbc-8197-49c0-92a6-747dbcb34350"                  // مقدار RoleId
+                    UserId = "3300697e-daa9-42c0-b3fa-99c8dfc080c3",
+                    RoleId = "1a18cdbc-8197-49c0-92a6-747dbcb34350"
                 },
                 new IdentityUserRole<string>
                 {
-                    UserId = "3300697e-daa9-42c0-b3fa-99c8dfc080c3", // مقدار UserId
-                    RoleId = "27162af1-d67a-49af-b8d2-766a2d4467ec"                  // مقدار RoleId
+                    UserId = "3300697e-daa9-42c0-b3fa-99c8dfc080c3",
+                    RoleId = "27162af1-d67a-49af-b8d2-766a2d4467ec"
                 },
                 new IdentityUserRole<string>
                 {
-                    UserId = "3300697e-daa9-42c0-b3fa-99c8dfc080c3", // مقدار UserId
-                    RoleId = "f23d8fb0-f077-44c7-a503-635845ab0fb1"                  // مقدار RoleId
+                    UserId = "3300697e-daa9-42c0-b3fa-99c8dfc080c3",
+                    RoleId = "f23d8fb0-f077-44c7-a503-635845ab0fb1"
                 },
-
                 new IdentityUserRole<string>
                 {
-                    UserId = "3300697e-daa9-42c0-b3fa-99c8dfc080c3", // مقدار UserId
-                    RoleId = "e414e2cc-2b05-454a-9a07-60da4d929e6c"                  // مقدار RoleId
+                    UserId = "3300697e-daa9-42c0-b3fa-99c8dfc080c3",
+                    RoleId = "e414e2cc-2b05-454a-9a07-60da4d929e6c"
                 }
             );
-
-            //            builder.Entity<TblLuLookup>()
-            //       .HasKey(e => new { e.Id, e.Type });
-
-            //            builder.Entity<TblLookupsData>()
-            //.HasKey(e => new { e.Id, e.Type });
-
-
-            //    builder.Entity<TblLuLookup>()
-            //.HasKey(nameof(TblLuLookup.Id), nameof(Actor.LastName), nameof(Actor.BirthDate));
-
-
 
             builder.Entity<NewsCategory>().HasKey(sc => new { sc.NewsId, sc.CategoryID });
             builder.Entity<NewsCategory>()
@@ -588,42 +447,24 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                 .HasForeignKey(sc => sc.CategoryID)
                 .OnDelete(DeleteBehavior.Restrict);
 
-
             builder.Entity<StandCheckWritten01>()
                 .HasOne(s => s.ooMelliCodeList_3)
-        .WithMany()
-        .HasForeignKey(s => s.MelliCode)
-        .IsRequired(false); // Make the relationship optional
+                .WithMany()
+                .HasForeignKey(s => s.MelliCode)
+                .IsRequired(false);
 
             builder.Entity<StandCheckWritten01>()
-    .HasOne(s => s.ooMelliCodeList_4)
-.WithMany()
-.HasForeignKey(s => s.MelliCodeExamer)
-.IsRequired(false); // Make the relationship optional
+                .HasOne(s => s.ooMelliCodeList_4)
+                .WithMany()
+                .HasForeignKey(s => s.MelliCodeExamer)
+                .IsRequired(false);
 
             builder.Entity<StandCheckWritten01>()
-         .HasOne(s => s.ooMelliCodeInstructor)
- .WithMany()
- .HasForeignKey(s => s.MelliCodeInstructor)
- .IsRequired(false); // Make the relationship optional
+                .HasOne(s => s.ooMelliCodeInstructor)
+                .WithMany()
+                .HasForeignKey(s => s.MelliCodeInstructor)
+                .IsRequired(false);
 
-
-            //.OnDelete(DeleteBehavior.Cascade);
-
-            //            مشکل شما Multiple cascade paths هست. به این معنی که یک اگر یک ردیف از جدول Provience حذف بشه همه ی ردیف های مرتبط با اون در جدول Candidator حذف میشه.
-
-            //شما می تونید با استفاده از کد زیر این مشکل رو حل کنید:
-            //            builder.Entity<Candidator>().HasOne(p => p.provienceID).WithMany(b => b.ProvienceID)
-            //        .OnDelete(DeleteBehavior.Restrict);
-
-
-            //      builder.Entity<NewsCategory>().HasOne(p => p.provienceID).WithMany(b => b.ProvienceID)
-            //.OnDelete(DeleteBehavior.Restrict);
-            //.OnDelete(DeleteBehavior.Cascade);
-
-            //base.OnModelCreating(modelBuilder);
-
-            //برای مقدار پیش فرض تنیظمات باید انجام شود
             builder.Entity<FlightPlanEvidence01>()
                 .Property(b => b.PlusDateTime)
                 .HasDefaultValue(new DateTime(2024, 6, 1, 0, 0, 0));
@@ -651,22 +492,14 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                 .Property(b => b.QT20MM01)
                 .HasDefaultValue(new string("0"));
 
+            builder.Entity<FlightPlanEvidence01>()
+                .Property(b => b.QTRocket01)
+                .HasDefaultValue(new string("0"));
 
             builder.Entity<FlightPlanEvidence01>()
-    .Property(b => b.QTRocket01)
-    .HasDefaultValue(new string("0"));
+                .Property(b => b.QTFuel01)
+                .HasDefaultValue(new string("0"));
 
-
-            builder.Entity<FlightPlanEvidence01>()
-    .Property(b => b.QTFuel01)
-    .HasDefaultValue(new string("0"));
-
-
-
-
-            //برای مقدار پیش فرض تنیظمات باید انجام شود
-
-            //برای مقدار پیش فرض تنیظمات باید انجام شود
             builder.Entity<TblMaster>()
                 .Property(b => b.DRJ_COD)
                 .HasDefaultValue(new string("100"));
@@ -675,114 +508,77 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                 .Property(b => b.UitID01)
                 .HasDefaultValue(123);
 
-
-
-
-            //برای مقدار پیش فرض تنیظمات باید انجام شود
-
-
-            //برای مقدار پیش فرض تنیظمات باید انجام شود
             builder.Entity<TblMaster>()
                 .Property(b => b.DRJ_COD)
                 .HasDefaultValue(new string("100"));
-            //برای مقدار پیش فرض تنیظمات باید انجام شود
-
-
 
             builder.Entity<StudentCourse>().HasKey(sc => new { sc.StudentId, sc.CourseId });
 
             builder.Entity<StudentCourse>()
-           .HasOne<Student>(sc => sc.Student)
-                   .WithMany(s => s.StudentCourses)
+                .HasOne<Student>(sc => sc.Student)
+                .WithMany(s => s.StudentCourses)
                 .HasForeignKey(sc => sc.StudentId);
-
 
             builder.Entity<StudentCourse>()
                 .HasOne<Course>(sc => sc.Course)
                 .WithMany(s => s.StudentCourses)
                 .HasForeignKey(sc => sc.CourseId);
 
-
-
-
             builder.Entity<UsersCategorySub>().HasKey(sc => new { sc.CategrySubId, sc.UserID });
 
             builder.Entity<UsersCategorySub>()
-           .HasOne<CategorySub>(sc => sc.CategorySub)
-                   .WithMany(s => s.UsersCategorySubs)
+                .HasOne<CategorySub>(sc => sc.CategorySub)
+                .WithMany(s => s.UsersCategorySubs)
                 .HasForeignKey(sc => sc.CategrySubId);
-
 
             builder.Entity<UsersCategorySub>()
                 .HasOne<ApplicationUsers>(sc => sc.ApplicationUsers)
                 .WithMany(s => s.UsersCategorySubs)
                 .HasForeignKey(sc => sc.UserID);
 
-
-
-
-            //UsersCategory
             builder.Entity<UsersCategory>().HasKey(sc => new { sc.CategryId, sc.UserID });
 
             builder.Entity<UsersCategory>()
-           .HasOne<Category>(sc => sc.Category)
-                   .WithMany(s => s.UsersCategorys)
+                .HasOne<Category>(sc => sc.Category)
+                .WithMany(s => s.UsersCategorys)
                 .HasForeignKey(sc => sc.CategryId);
-
 
             builder.Entity<UsersCategory>()
                 .HasOne<ApplicationUsers>(sc => sc.ApplicationUsers)
                 .WithMany(s => s.UsersCategorys)
                 .HasForeignKey(sc => sc.UserID);
-            //UsersCategory
 
-
-            //NewsImagesList
             builder.Entity<NewsImagesList>().HasKey(sc => new { sc.NewsImagesID });
 
             builder.Entity<NewsImagesList>()
-           .HasOne<News>(sc => sc.News)
-                   .WithMany(s => s.NewsImagesLists)
+                .HasOne<News>(sc => sc.News)
+                .WithMany(s => s.NewsImagesLists)
                 .HasForeignKey(sc => sc.NewsId);
-
 
             builder.Entity<NewsImagesList>()
                 .HasOne<ImagesList>(sc => sc.ImagesList)
                 .WithMany(s => s.NewsImagesLists)
                 .HasForeignKey(sc => sc.ImagesListId);
-            //NewsImagesList
 
-
-            //UjobPesronel01
-            builder.Entity<UjobPesronel01>().HasKey(sc => new
-            {
-                sc.UjobPesronel01ID
-            });
+            builder.Entity<UjobPesronel01>().HasKey(sc => new { sc.UjobPesronel01ID });
 
             builder.Entity<UjobPesronel01>()
-           .HasOne<ApplicationUsers>(sc => sc.Users)
-                   .WithMany(s => s.UjobPesronel01s)
+                .HasOne<ApplicationUsers>(sc => sc.Users)
+                .WithMany(s => s.UjobPesronel01s)
                 .HasForeignKey(sc => sc.UserID);
 
-
             builder.Entity<UjobPesronel01>()
-                        .HasOne<TblMaster>(sc => sc.MelliCodeList)
-                        .WithMany(s => s.UjobPesronel01s)
-                        .HasForeignKey(sc => sc.MelliCode);
-            //UjobPesronel01
+                .HasOne<TblMaster>(sc => sc.MelliCodeList)
+                .WithMany(s => s.UjobPesronel01s)
+                .HasForeignKey(sc => sc.MelliCode);
 
-
-
-
-            // //ImagesListCategoryImagesList
             builder.Entity<ImagesListCategoryImagesList>().HasKey(sc => new { sc.ImagesListId, sc.CategoryImagesId });
 
             builder.Entity<ImagesListCategoryImagesList>()
-           .HasOne<ImagesList>(sc => sc.ImagesList)
-                   .WithMany(s => s.ImagesListCategoryImagesLists)
+                .HasOne<ImagesList>(sc => sc.ImagesList)
+                .WithMany(s => s.ImagesListCategoryImagesLists)
                 .HasForeignKey(sc => sc.ImagesListId)
                 .OnDelete(DeleteBehavior.Restrict);
-
 
             builder.Entity<ImagesListCategoryImagesList>()
                 .HasOne<CategoryImagesList>(sc => sc.CategoryImagesList)
@@ -790,65 +586,22 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
                 .HasForeignKey(sc => sc.CategoryImagesId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-
-
-
-
-            //.OnDelete(DeleteBehavior.Restrict);
-            //.OnDelete(DeleteBehavior.Cascade);
-
-            //builder.Entity<GuardboardVPG>().HasKey(sc => new { sc.GuardboardVPGID, sc.PropertyDayID, sc.GaurdPostID, sc.VazifeID });
-
             builder.Entity<GuardboardVPG>().HasKey(sc => new { sc.GuardboardVPGID });
 
-
             builder.Entity<GuardboardVPG>()
-           .HasOne<PropertyDay>(sc => sc.TBL_date)
-                   .WithMany(s => s.TBL_GuardboardVPG)
+                .HasOne<PropertyDay>(sc => sc.TBL_date)
+                .WithMany(s => s.TBL_GuardboardVPG)
                 .HasForeignKey(sc => sc.PropertyDayID);
 
             builder.Entity<GuardboardVPG>()
-                 .HasOne<GaurdPost>(sc => sc.TBL_GaurdPost)
-                         .WithMany(s => s.TBL_GuardboardVPG)
-                      .HasForeignKey(sc => sc.GaurdPostID);
+                .HasOne<GaurdPost>(sc => sc.TBL_GaurdPost)
+                .WithMany(s => s.TBL_GuardboardVPG)
+                .HasForeignKey(sc => sc.GaurdPostID);
 
             builder.Entity<GuardboardVPG>()
-             .HasOne<PersonnelVazife01>(sc => sc.TBL_Vazife)
-                     .WithMany(s => s.TBL_GuardboardVPG)
-                  .HasForeignKey(sc => sc.VazifeID);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            // //ImagesListCategoryImagesList
-
-            //builder.Entity<NewsCategory>().HasKey(sc => new { sc.NewsId, sc.CategoryID });
-            //builder.Entity<NewsCategory>()
-            //    .HasOne<News>(sc => sc.News)
-            //    .WithMany(s => s.NewsCategorys)
-            //    .HasForeignKey(sc => sc.NewsId)
-            //    .OnDelete(DeleteBehavior.Restrict);
-
-            //builder.Entity<NewsCategory>()
-            //    .HasOne<Category>(sc => sc.Category)
-            //    .WithMany(s => s.NewsCategorys)
-            //    .HasForeignKey(sc => sc.CategoryID)
-            //    .OnDelete(DeleteBehavior.Restrict);
-
-
+                .HasOne<PersonnelVazife01>(sc => sc.TBL_Vazife)
+                .WithMany(s => s.TBL_GuardboardVPG)
+                .HasForeignKey(sc => sc.VazifeID);
         }
     }
 }

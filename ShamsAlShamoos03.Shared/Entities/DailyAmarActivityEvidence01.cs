@@ -1,12 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 public class DailyActivityEvidence01
 {
     [Key]
     public string? DailyActivityEvidence01ID { get; set; }
-
 
     /// <summary>
     ///01 کد ملی ثبت کننده
@@ -15,7 +13,6 @@ public class DailyActivityEvidence01
     [ForeignKey("RegisterPesronel01")]
     public virtual UjobPesronel01 oo_RegisterPesronel01 { get; set; }
 
-
     /// <summary>
     /// یگان
     /// </summary>
@@ -23,38 +20,10 @@ public class DailyActivityEvidence01
     [ForeignKey("UnitID01")]
     public virtual CategoryGeneral? oo_UnitID01 { get; set; }
 
-
-    /// <summary>
-    ///// روز
-    ///// </summary>
-    //public int? PropertyDay01ID { get; set; }
-    //[ForeignKey("PropertyDay01ID")]
-    //public virtual CategoryGeneral? oo_PropertyDay01ID { get; set; }
-
-
-
-    //public int PropertyDay01ID { get; set; }
-    //public virtual PropertyDay? oo_PropertyDay01ID { get; set; }
-
-
-    /// <summary>
-    ///  رجه نام و نشان ش کا کد ملی
-    /// </summary>
-    //public string? MelliCode { get; set; }
-    //[ForeignKey("MelliCode")]
-    //public virtual TblMaster oo_DailyActivityEvidence01 { get; set; }
-
-    /// <summary>
-    ///  شماره بالگرد 
-    /// </summary>
-    //public string? TailHelicopter { get; set; }
-
     /// <summary>
     /// ای دی و نام پابگاه 
     /// </summary>
-
     public string? DailyActivityEvidence01IDStateName01 { get; set; }
-
 
     /// <summary>
     /// نام پابگاه 
@@ -63,27 +32,12 @@ public class DailyActivityEvidence01
     [ForeignKey("StateName01")]
     public virtual CategoryGeneral oo_StateName01 { get; set; }
 
-
-
-
-    ///// <summary>
-    ///// نام پابگاه 
-    ///// </summary>
-    //public int? FLTAREANOTAMCHECK { get; set; }
-    //[ForeignKey("FLTAREANOTAMCHECK")]
-    //public virtual CategoryGeneral oo_FLTAREANOTAMCHECK { get; set; }
-
-
     /// <summary>
     //تاریخ
     /// </summary>
     public string? FromDateDailyActivityEvidence01Title { get; set; }
     [ForeignKey("FromDateDailyActivityEvidence01Title")]
     public virtual DateProperty01 oo_FromDateDailyActivityEvidence01Title { get; set; }
-
-
-
-
 
     /// <summary>
     ///  ترتیب
@@ -92,13 +46,10 @@ public class DailyActivityEvidence01
     [ForeignKey("Sortable01Id")]
     public virtual Sortable01 Sortable01 { get; set; }
 
-
     /// <summary>
     /// متن نوتم 01
     /// </summary>
     public string? NOTAMCHECKETitle01 { get; set; }
-
-
 
     #region "امضاء کنندگان"
     /// <summary>
@@ -115,7 +66,6 @@ public class DailyActivityEvidence01
     [ForeignKey("StatusConfirmation01")]
     public virtual CategoryGeneral oo_StatusConfirmation01 { get; set; }
 
-
     /// <summary>
     ///02 کد ملی تأیید کننده
     /// </summary>
@@ -129,7 +79,6 @@ public class DailyActivityEvidence01
     public int? StatusConfirmation02 { get; set; }
     [ForeignKey("StatusConfirmation02")]
     public virtual CategoryGeneral oo_StatusConfirmation02 { get; set; }
-
 
     /// <summary>
     ///03 کد ملی تأیید کننده
@@ -145,7 +94,6 @@ public class DailyActivityEvidence01
     [ForeignKey("StatusConfirmation03")]
     public virtual CategoryGeneral oo_StatusConfirmation03 { get; set; }
 
-
     /// <summary>
     ///04 کد ملی تأیید کننده
     /// </summary>
@@ -159,7 +107,6 @@ public class DailyActivityEvidence01
     public int? StatusConfirmation04 { get; set; }
     [ForeignKey("StatusConfirmation04")]
     public virtual CategoryGeneral oo_StatusConfirmation04 { get; set; }
-
 
     /// <summary>
     ///05 کد ملی تأیید کننده
@@ -175,7 +122,6 @@ public class DailyActivityEvidence01
     [ForeignKey("StatusConfirmation05")]
     public virtual CategoryGeneral oo_StatusConfirmation05 { get; set; }
 
-
     /// <summary>
     ///06 کد ملی تأیید کننده
     /// </summary>
@@ -189,7 +135,6 @@ public class DailyActivityEvidence01
     public int? StatusConfirmation06 { get; set; }
     [ForeignKey("StatusConfirmation06")]
     public virtual CategoryGeneral oo_StatusConfirmation06 { get; set; }
-
 
     /// <summary>
     ///07 کد ملی تأیید کننده
@@ -205,7 +150,6 @@ public class DailyActivityEvidence01
     [ForeignKey("StatusConfirmation07")]
     public virtual CategoryGeneral oo_StatusConfirmation07 { get; set; }
 
-
     /// <summary>
     ///08 کد ملی تأیید کننده
     /// </summary>
@@ -219,7 +163,6 @@ public class DailyActivityEvidence01
     public int? StatusConfirmation08 { get; set; }
     [ForeignKey("StatusConfirmation08")]
     public virtual CategoryGeneral oo_StatusConfirmation08 { get; set; }
-
 
     /// <summary>
     ///09 کد ملی تأیید کننده
@@ -235,7 +178,6 @@ public class DailyActivityEvidence01
     [ForeignKey("StatusConfirmation09")]
     public virtual CategoryGeneral oo_StatusConfirmation09 { get; set; }
 
-
     /// <summary>
     ///10 کد ملی تأیید کننده
     /// </summary>
@@ -250,8 +192,6 @@ public class DailyActivityEvidence01
     [ForeignKey("StatusConfirmation10")]
     public virtual CategoryGeneral oo_StatusConfirmation10 { get; set; }
 
-
-
     /// <summary>
     ///11 کد ملی تأیید کننده
     /// </summary>
@@ -265,9 +205,6 @@ public class DailyActivityEvidence01
     public int? StatusConfirmation11 { get; set; }
     [ForeignKey("StatusConfirmation11")]
     public virtual CategoryGeneral oo_StatusConfirmation11 { get; set; }
-
-
-
 
     /// <summary>
     ///12 کد ملی تأیید کننده
@@ -284,8 +221,6 @@ public class DailyActivityEvidence01
     public virtual CategoryGeneral oo_StatusConfirmation12 { get; set; }
 
     #endregion
-
-
 
     /// <summary>
     ///  فعال غیر فعال

@@ -1,6 +1,0 @@
-﻿--select distinct (Vartext01) FROM [NewsDB].[dbo].[PersonalCorrespondence01_Tbl]
---select distinct (Vartext02) FROM [NewsDB].[dbo].[PersonalCorrespondence01_Tbl]
---select distinct (Vartext03) FROM [NewsDB].[dbo].[PersonalCorrespondence01_Tbl]
---select distinct (Vartext04) FROM [NewsDB].[dbo].[PersonalCorrespondence01_Tbl]
---select distinct (Vartext05) FROM [NewsDB].[dbo].[PersonalCorrespondence01_Tbl]
-select distinct (Vartext06) FROM [NewsDB].[dbo].[PersonalCorrespondence01_Tbl]

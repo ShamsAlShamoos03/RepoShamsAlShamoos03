@@ -90,6 +90,7 @@ namespace ShamsAlShamoos03.Server.Controllers
 
             return Ok();
         }
+
         public class CombinedInsertRequestModel
         {
             public DataManagerRequest DataRequest { get; set; }
@@ -120,7 +121,6 @@ namespace ShamsAlShamoos03.Server.Controllers
 
                 var viewModel = model.CrudModel.Value;
 
-                // مقداردهی وضعیت‌ها
                 viewModel.StatusConfirmation01 = 320;
                 viewModel.StatusConfirmation02 = viewModel.StatusConfirmation03 =
                 viewModel.StatusConfirmation04 = viewModel.StatusConfirmation05 =
@@ -145,6 +145,7 @@ namespace ShamsAlShamoos03.Server.Controllers
                 return StatusCode(500, "خطایی در سرور رخ داده است");
             }
         }
+
         public class CombinedRequestModel
         {
             public DataManagerRequest DataRequest { get; set; }
@@ -169,7 +170,6 @@ namespace ShamsAlShamoos03.Server.Controllers
                 if (data == null)
                 {
                     return NotFound("Record not found");
-
                 }
 
                 UpdateEntityBasedOnRoles(data, model.CrudModel.Value, model.Roles);
@@ -228,14 +228,4 @@ namespace ShamsAlShamoos03.Server.Controllers
             public string Name { get; set; }
         }
     }
-
-    // کلاس LoadDataRequest
-    //public class LoadDataRequest
-    //{
-    //    public string UserId { get; set; }
-    //    public int Skip { get; set; }
-    //    public int Take { get; set; }
-    //    public string Filter { get; set; }
-    //    public string Sort { get; set; }
-    //}
 }

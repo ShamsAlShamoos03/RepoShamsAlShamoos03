@@ -1,6 +1,0 @@
-
-//بعد دستور زیر را تایپ کنید
-//dotnet publish -c Release -r win-x64 --self-contained true
-
-//این دستور یک پوشه در bin\Release\netX.X\win-x64\publish می‌سازد که تمام فایل‌های لازم + YourApp.exe داخلش هست.
-//روی سرور کافی است این فولدر را کپی کنید و YourApp.exe را اجرا کنید → سایت شما روی Kestrel بالا می‌آید.

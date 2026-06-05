@@ -6,9 +6,3 @@
 
     public virtual Question02 Question02 { get; set; }
 }
-
-//public ICollection<Option> Options { get; set; }
-//public string? Options { get; set; }
-//[ForeignKey("Options")]
-//public virtual Option oo_Options { get; set; }
-

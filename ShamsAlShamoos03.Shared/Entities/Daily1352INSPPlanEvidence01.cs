@@ -1,16 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 public class Daily1352INSPPlanEvidence01
 {
     [Key]
     public string? Daily1352INSPPlanEvidence01ID { get; set; }
-    //public int FactorNumber { get; set; }
-
-
-
-
 
     /// <summary>
     ///شماره و مدل بالگرد 
@@ -19,23 +13,12 @@ public class Daily1352INSPPlanEvidence01
     [ForeignKey("HelicopterTailEvidence01")]
     public virtual HelicopterTailEvidence01 oo_HelicopterTailEvidence01 { get; set; }
 
-
-
-
     /// <summary>
     ///وضعیت آمار روزانه 
     /// </summary>
     public string? INSPEDID01 { get; set; }
     [ForeignKey("INSPEDID01")]
     public virtual Daily1352INSPListPlanEvidence01 oo_INSPEDID01 { get; set; }
-
-
-
-
-
-
-
-
 
     /// <summary>
     ///01 کد ملی ثبت کننده
@@ -51,10 +34,7 @@ public class Daily1352INSPPlanEvidence01
     [ForeignKey("EditedPesronel01")]
     public virtual UjobPesronel01 oo_EditedPesronel011 { get; set; }
 
-
     #region "امضاء کنندگان"
-
-
     /// <summary>
     ///01 کد ملی تأیید کننده
     /// </summary>
@@ -68,13 +48,6 @@ public class Daily1352INSPPlanEvidence01
     public int? StatusConfirmation01 { get; set; }
     [ForeignKey("StatusConfirmation01")]
     public virtual CategoryGeneral oo_StatusConfirmation01 { get; set; }
-
-
-
-
-
-
-
 
     /// <summary>
     ///02 کد ملی تأیید کننده
@@ -90,7 +63,6 @@ public class Daily1352INSPPlanEvidence01
     [ForeignKey("StatusConfirmation02")]
     public virtual CategoryGeneral oo_StatusConfirmation02 { get; set; }
 
-
     /// <summary>
     ///03 کد ملی تأیید کننده
     /// </summary>
@@ -104,7 +76,6 @@ public class Daily1352INSPPlanEvidence01
     public int? StatusConfirmation03 { get; set; }
     [ForeignKey("StatusConfirmation03")]
     public virtual CategoryGeneral oo_StatusConfirmation03 { get; set; }
-
 
     /// <summary>
     ///04 کد ملی تأیید کننده
@@ -120,7 +91,6 @@ public class Daily1352INSPPlanEvidence01
     [ForeignKey("StatusConfirmation04")]
     public virtual CategoryGeneral oo_StatusConfirmation04 { get; set; }
 
-
     /// <summary>
     ///05 کد ملی تأیید کننده
     /// </summary>
@@ -134,7 +104,6 @@ public class Daily1352INSPPlanEvidence01
     public int? StatusConfirmation05 { get; set; }
     [ForeignKey("StatusConfirmation05")]
     public virtual CategoryGeneral oo_StatusConfirmation05 { get; set; }
-
 
     /// <summary>
     ///06 کد ملی تأیید کننده
@@ -150,7 +119,6 @@ public class Daily1352INSPPlanEvidence01
     [ForeignKey("StatusConfirmation06")]
     public virtual CategoryGeneral oo_StatusConfirmation06 { get; set; }
 
-
     /// <summary>
     ///07 کد ملی تأیید کننده
     /// </summary>
@@ -164,7 +132,6 @@ public class Daily1352INSPPlanEvidence01
     public int? StatusConfirmation07 { get; set; }
     [ForeignKey("StatusConfirmation07")]
     public virtual CategoryGeneral oo_StatusConfirmation07 { get; set; }
-
 
     /// <summary>
     ///08 کد ملی تأیید کننده
@@ -180,7 +147,6 @@ public class Daily1352INSPPlanEvidence01
     [ForeignKey("StatusConfirmation08")]
     public virtual CategoryGeneral oo_StatusConfirmation08 { get; set; }
 
-
     /// <summary>
     ///09 کد ملی تأیید کننده
     /// </summary>
@@ -194,7 +160,6 @@ public class Daily1352INSPPlanEvidence01
     public int? StatusConfirmation09 { get; set; }
     [ForeignKey("StatusConfirmation09")]
     public virtual CategoryGeneral oo_StatusConfirmation09 { get; set; }
-
 
     /// <summary>
     ///10 کد ملی تأیید کننده
@@ -210,8 +175,6 @@ public class Daily1352INSPPlanEvidence01
     [ForeignKey("StatusConfirmation10")]
     public virtual CategoryGeneral oo_StatusConfirmation10 { get; set; }
 
-
-
     /// <summary>
     ///11 کد ملی تأیید کننده
     /// </summary>
@@ -225,9 +188,6 @@ public class Daily1352INSPPlanEvidence01
     public int? StatusConfirmation11 { get; set; }
     [ForeignKey("StatusConfirmation11")]
     public virtual CategoryGeneral oo_StatusConfirmation11 { get; set; }
-
-
-
 
     /// <summary>
     ///12 کد ملی تأیید کننده
@@ -252,7 +212,6 @@ public class Daily1352INSPPlanEvidence01
     [ForeignKey("Sortable01Id")]
     public virtual Sortable01 Sortable01 { get; set; }
 
-
     /// <summary>
     /// متن نوتم 01
     /// </summary>
@@ -268,20 +227,13 @@ public class Daily1352INSPPlanEvidence01
     /// </summary>
     public string? NOTAMCHECKETitle03 { get; set; }
 
-
-
     /// <summary>
     /// تاریخ آخرین ویرایش یا ارسال توسط یگان
     /// </summary>
     public DateTime? TimeSignatureOREditYagen01 { get; set; }
 
-
     /// <summary>
     ///  فعال غیر فعال
     /// </summary>
     public bool? IsHaveJob { get; set; }
-
-
-
-
 }

@@ -1,12 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 public class FlightActivityEvidence01
 {
     [Key]
     public string? FlightActivityEvidence01ID { get; set; }
-
 
     /// <summary>
     ///01 کد ملی ثبت کننده
@@ -15,29 +13,12 @@ public class FlightActivityEvidence01
     [ForeignKey("RegisterPesronel01")]
     public virtual UjobPesronel01 oo_RegisterPesronel01 { get; set; }
 
-
     /// <summary>
     /// یگان
     /// </summary>
     public int? UnitID01 { get; set; }
     [ForeignKey("UnitID01")]
     public virtual CategoryGeneral? oo_UnitID01 { get; set; }
-
-
-    /// <summary>
-    ///  رجه نام و نشان ش کا کد ملی
-    /// </summary>
-    //public string? MelliCode { get; set; }
-    //[ForeignKey("MelliCode")]
-    //public virtual TblMaster oo_FlightActivityEvidence01 { get; set; }
-
-    /// <summary>
-    ///  شماره بالگرد 
-    /// </summary>
-    //public string? TailHelicopter { get; set; }
-
-
-
 
     /// <summary>
     ///01 کد ملی تأیید کننده
@@ -53,7 +34,6 @@ public class FlightActivityEvidence01
     [ForeignKey("PlanStatusConfirmation01")]
     public virtual CategoryGeneral oo_PlanStatusConfirmation01 { get; set; }
 
-
     /// <summary>
     ///01 کد ملی تأیید کننده
     /// </summary>
@@ -67,7 +47,6 @@ public class FlightActivityEvidence01
     public int? StatusConfirmation01 { get; set; }
     [ForeignKey("StatusConfirmation01")]
     public virtual CategoryGeneral oo_StatusConfirmation01 { get; set; }
-
 
     /// <summary>
     ///02 کد ملی تأیید کننده
@@ -83,7 +62,6 @@ public class FlightActivityEvidence01
     [ForeignKey("StatusConfirmation02")]
     public virtual CategoryGeneral oo_StatusConfirmation02 { get; set; }
 
-
     /// <summary>
     ///03 کد ملی تأیید کننده
     /// </summary>
@@ -97,7 +75,6 @@ public class FlightActivityEvidence01
     public int? StatusConfirmation03 { get; set; }
     [ForeignKey("StatusConfirmation03")]
     public virtual CategoryGeneral oo_StatusConfirmation03 { get; set; }
-
 
     /// <summary>
     ///04 کد ملی تأیید کننده
@@ -113,7 +90,6 @@ public class FlightActivityEvidence01
     [ForeignKey("StatusConfirmation04")]
     public virtual CategoryGeneral oo_StatusConfirmation04 { get; set; }
 
-
     /// <summary>
     ///05 کد ملی تأیید کننده
     /// </summary>
@@ -127,7 +103,6 @@ public class FlightActivityEvidence01
     public int? StatusConfirmation05 { get; set; }
     [ForeignKey("StatusConfirmation05")]
     public virtual CategoryGeneral oo_StatusConfirmation05 { get; set; }
-
 
     /// <summary>
     ///06 کد ملی تأیید کننده
@@ -143,7 +118,6 @@ public class FlightActivityEvidence01
     [ForeignKey("StatusConfirmation06")]
     public virtual CategoryGeneral oo_StatusConfirmation06 { get; set; }
 
-
     /// <summary>
     ///07 کد ملی تأیید کننده
     /// </summary>
@@ -157,7 +131,6 @@ public class FlightActivityEvidence01
     public int? StatusConfirmation07 { get; set; }
     [ForeignKey("StatusConfirmation07")]
     public virtual CategoryGeneral oo_StatusConfirmation07 { get; set; }
-
 
     /// <summary>
     ///08 کد ملی تأیید کننده
@@ -173,7 +146,6 @@ public class FlightActivityEvidence01
     [ForeignKey("StatusConfirmation08")]
     public virtual CategoryGeneral oo_StatusConfirmation08 { get; set; }
 
-
     /// <summary>
     ///09 کد ملی تأیید کننده
     /// </summary>
@@ -187,7 +159,6 @@ public class FlightActivityEvidence01
     public int? StatusConfirmation09 { get; set; }
     [ForeignKey("StatusConfirmation09")]
     public virtual CategoryGeneral oo_StatusConfirmation09 { get; set; }
-
 
     /// <summary>
     ///10 کد ملی تأیید کننده
@@ -203,8 +174,6 @@ public class FlightActivityEvidence01
     [ForeignKey("StatusConfirmation10")]
     public virtual CategoryGeneral oo_StatusConfirmation10 { get; set; }
 
-
-
     /// <summary>
     ///11 کد ملی تأیید کننده
     /// </summary>
@@ -218,9 +187,6 @@ public class FlightActivityEvidence01
     public int? StatusConfirmation11 { get; set; }
     [ForeignKey("StatusConfirmation11")]
     public virtual CategoryGeneral oo_StatusConfirmation11 { get; set; }
-
-
-
 
     /// <summary>
     ///12 کد ملی تأیید کننده
@@ -236,13 +202,13 @@ public class FlightActivityEvidence01
     [ForeignKey("StatusConfirmation12")]
     public virtual CategoryGeneral oo_StatusConfirmation12 { get; set; }
 
-
     /// <summary>
     /// منطقه پروازی 
     /// </summary>
     public int? FLTAREANOTAMCHECK { get; set; }
     [ForeignKey("FLTAREANOTAMCHECK")]
     public virtual CategoryGeneral oo_TFLTAREANOTAMCHECK { get; set; }
+
     /// <summary>
     ///  وضعیت هوا
     /// </summary>
@@ -251,31 +217,21 @@ public class FlightActivityEvidence01
     public virtual CategoryGeneral oo_StatusFlightActivityEvidence01 { get; set; }
 
     /// <summary>
-    ///  گرید 
-    /// </summary>
-    //public string? Grade { get; set; }
-
-    /// <summary>
-    ///  سطح آزمون
-    /// </summary>
-    //public int? LevelExam { get; set; }
-    //[ForeignKey("LevelExam")]
-    //public virtual CategoryGeneral oo_LevelExam { get; set; }
-    /// <summary>
     /// تاریخ شروع
     /// </summary>
     public string? FromDateFlightActivityEvidence01Title { get; set; }
+
     /// <summary>
     ///  تاریخ خاتمه
     /// </summary>
     public string? ToDateFlightActivityEvidence01Title { get; set; }
+
     /// <summary>
     ///  ترتیب
     /// </summary>
     public int? Sortable01Id { get; set; }
     [ForeignKey("Sortable01Id")]
     public virtual Sortable01 Sortable01 { get; set; }
-
 
     /// <summary>
     /// متن نوتم 01
@@ -291,7 +247,6 @@ public class FlightActivityEvidence01
     /// متن نوتم 03
     /// </summary>
     public string? NOTAMCHECKETitle03 { get; set; }
-
 
     /// <summary>
     ///  فعال غیر فعال

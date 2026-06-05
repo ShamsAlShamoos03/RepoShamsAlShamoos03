@@ -12,20 +12,7 @@ public class CategoryReport
     public string Seed_01 { get; set; }
     public string Seed_02 { get; set; }
 
-
     public int CategoryReportSubId { get; set; }
     [ForeignKey("CategoryReportSubId")]
-
     public virtual CategoryReportSub CategoryReportSub { get; set; }
-
-
-
-
-
-    //public virtual ICollection<NewsCategory01> NewsCategory01 { get; set; }
-    //public IList<NewsCategory> NewsCategorys { get; set; }
-    //public IList<UsersCategory> UsersCategorys { get; set; }
-
-
 }
-
