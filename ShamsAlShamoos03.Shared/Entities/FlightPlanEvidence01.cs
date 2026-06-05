@@ -152,7 +152,7 @@ public static class CreateSerialNOPlan01
     {
         Random _random = new Random();
         int newNumber = _random.Next(1000, 3000);
-        return date.Replace("/", "").ToString() + newNumber;
+        return date.Replace("/", "") + newNumber;
     }
 
     public static String CreateNewSerialNOPlan04(string date)

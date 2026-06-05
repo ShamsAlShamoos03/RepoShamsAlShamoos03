@@ -20,7 +20,9 @@ namespace ShamsAlShamoos03.Infrastructure.Services
         public List<string> GenerateQrsFromImage(string imagePath)
         {
             if (!File.Exists(imagePath))
+            {
                 return new List<string>();
+            }
 
             byte[] imageBytes = File.ReadAllBytes(imagePath);
             string base64String = Convert.ToBase64String(imageBytes);
