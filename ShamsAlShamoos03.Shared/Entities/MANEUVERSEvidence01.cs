@@ -1,13 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 public class MANEUVERSEvidence01
 {
     [Key]
     public string? MANEUVERSEvidence01ID { get; set; }
-    //public int FactorNumber { get; set; }
-
 
     /// <summary>
     ///ریت خلبان یکم 
@@ -15,20 +12,20 @@ public class MANEUVERSEvidence01
     public int? Rate01 { get; set; }
     [ForeignKey("Rate01")]
     public virtual CategoryGeneral oo_Rate01 { get; set; }
+
     /// <summary>
     ///ریت خلبان دوم 
     /// </summary>
     public int? Rate02 { get; set; }
     [ForeignKey("Rate02")]
     public virtual CategoryGeneral oo_Rate02 { get; set; }
+
     /// <summary>
     ///مدل بالکرد 
     /// </summary>
     public int? ModelAc { get; set; }
     [ForeignKey("ModelAc")]
     public virtual CategoryGeneral oo_ModelAc { get; set; }
-
-
 
     /// <summary>
     ///ای دی فعالیت پروازی 
@@ -48,7 +45,6 @@ public class MANEUVERSEvidence01
     ///CALL-SIGN
     ///شناسه رادیویی
     /// </summary>
-    /// CategoryGeneralSubId=27
     public int? CALLSIGN { get; set; }
     [ForeignKey("CALLSIGN")]
     public virtual CategoryGeneral oo_CALLSIGN { get; set; }
@@ -57,15 +53,9 @@ public class MANEUVERSEvidence01
     ///FLT AREA
     ///منطقه پروازی
     /// </summary>
-    /// CategoryGeneralSubId=28
     public int? FLTAREA { get; set; }
     [ForeignKey("FLTAREA")]
     public virtual CategoryGeneral oo_FLTAREA { get; set; }
-
-
-
-
-
 
     /// <summary>
     ///ETD
@@ -90,24 +80,14 @@ public class MANEUVERSEvidence01
     ///ALT
     ///ارتفاع ترافیک
     /// </summary>
-    /// CategoryGeneralSubId=29
     public int? ALT { get; set; }
     [ForeignKey("ALT")]
     public virtual CategoryGeneral oo_ALT { get; set; }
 
     /// <summary>
-    /// STATION
-    /// </summary>
-    // public int? STATION { get; set; }
-    //[ForeignKey("STATION")]
-    //public virtual CategoryGeneral oo_STATION { get; set; }
-
-
-    /// <summary>
     ///VHF(G)
     ///فرکانس رادیویی 
     /// </summary>
-    /// CategoryGeneralSubId=30
     public int? VHFG { get; set; }
     [ForeignKey("VHFG")]
     public virtual CategoryGeneral oo_VHFG { get; set; }
@@ -116,67 +96,54 @@ public class MANEUVERSEvidence01
     ///UHF(G)
     ///فرکانس رادیویی 
     /// </summary>
-    /// CategoryGeneralSubId=31
     public int? UHFG { get; set; }
     [ForeignKey("UHFG")]
     public virtual CategoryGeneral oo_UHFG { get; set; }
-
 
     /// <summary>
     ///FM(G)
     ///فرکانس رادیویی 
     /// </summary>
-    /// CategoryGeneralSubId=32
     public int? FMG { get; set; }
     [ForeignKey("FMG")]
     public virtual CategoryGeneral oo_FMG { get; set; }
-
 
     /// <summary>
     ///VHF
     ///فرکانس رادیویی 
     /// </summary>
-    /// CategoryGeneralSubId=33
     public int? VHF { get; set; }
     [ForeignKey("VHF")]
     public virtual CategoryGeneral oo_VHF { get; set; }
-
 
     /// <summary>
     ///UHF
     ///فرکانس رادیویی 
     /// </summary>
-    /// CategoryGeneralSubId=34
     public int? UHF { get; set; }
     [ForeignKey("UHF")]
     public virtual CategoryGeneral oo_UHF { get; set; }
-
 
     /// <summary>
     ///ADF
     ///فرکانس رادیویی 
     /// </summary>
-    /// CategoryGeneralSubId=35
     public int? ADF { get; set; }
     [ForeignKey("ADF")]
     public virtual CategoryGeneral oo_ADF { get; set; }
-
 
     /// <summary>
     ///VOR
     ///فرکانس رادیویی 
     /// </summary>
-    /// CategoryGeneralSubId=36
     public int? VOR { get; set; }
     [ForeignKey("VOR")]
     public virtual CategoryGeneral oo_VOR { get; set; }
-
 
     /// <summary>
     ///RADAR
     ///فرکانس رادیویی 
     /// </summary>
-    /// CategoryGeneralSubId=37
     public int? RADAR { get; set; }
     [ForeignKey("RADAR")]
     public virtual CategoryGeneral oo_RADAR { get; set; }
@@ -185,7 +152,6 @@ public class MANEUVERSEvidence01
     ///ATIS
     ///فرکانس رادیویی 
     /// </summary>
-    /// CategoryGeneralSubId=38
     public int? ATIS { get; set; }
     [ForeignKey("ATIS")]
     public virtual CategoryGeneral oo_ATIS { get; set; }
@@ -194,12 +160,9 @@ public class MANEUVERSEvidence01
     ///PURPOSE OF FLT
     ///نوع فعالیت 
     /// </summary>
-    /// CategoryGeneralSubId=39
     public int? PURPOSEOFFLT { get; set; }
     [ForeignKey("PURPOSEOFFLT")]
     public virtual CategoryGeneral oo_PURPOSEOFFLT { get; set; }
-
-
 
     /// <summary>
     ///هواشناسی
@@ -207,20 +170,6 @@ public class MANEUVERSEvidence01
     public string? WeatherEvidence01ID { get; set; }
     [ForeignKey("WeatherEvidence01ID")]
     public virtual WeatherEvidence01 oo_WeatherEvidence01 { get; set; }
-
-
-
-    /// <summary>
-    ///  رجه نام و نشان ش کا کد ملی
-    /// </summary>
-    //public string? MelliCode { get; set; }
-    //[ForeignKey("MelliCode")]
-    //public virtual TblMaster oo_MANEUVERSEvidence01 { get; set; }
-
-    /// <summary>
-    ///  شماره بالگرد 
-    /// </summary>
-    //public string? TailHelicopter { get; set; }
 
     /// <summary>
     ///01 کد ملی تأیید کننده
@@ -236,7 +185,6 @@ public class MANEUVERSEvidence01
     [ForeignKey("StatusConfirmation01")]
     public virtual CategoryGeneral oo_StatusConfirmation01 { get; set; }
 
-
     /// <summary>
     ///02 کد ملی تأیید کننده
     /// </summary>
@@ -250,7 +198,6 @@ public class MANEUVERSEvidence01
     public int? StatusConfirmation02 { get; set; }
     [ForeignKey("StatusConfirmation02")]
     public virtual CategoryGeneral oo_StatusConfirmation02 { get; set; }
-
 
     /// <summary>
     ///03 کد ملی تأیید کننده
@@ -266,7 +213,6 @@ public class MANEUVERSEvidence01
     [ForeignKey("StatusConfirmation03")]
     public virtual CategoryGeneral oo_StatusConfirmation03 { get; set; }
 
-
     /// <summary>
     ///04 کد ملی تأیید کننده
     /// </summary>
@@ -280,7 +226,6 @@ public class MANEUVERSEvidence01
     public int? StatusConfirmation04 { get; set; }
     [ForeignKey("StatusConfirmation04")]
     public virtual CategoryGeneral oo_StatusConfirmation04 { get; set; }
-
 
     /// <summary>
     ///05 کد ملی تأیید کننده
@@ -296,7 +241,6 @@ public class MANEUVERSEvidence01
     [ForeignKey("StatusConfirmation05")]
     public virtual CategoryGeneral oo_StatusConfirmation05 { get; set; }
 
-
     /// <summary>
     ///06 کد ملی تأیید کننده
     /// </summary>
@@ -310,7 +254,6 @@ public class MANEUVERSEvidence01
     public int? StatusConfirmation06 { get; set; }
     [ForeignKey("StatusConfirmation06")]
     public virtual CategoryGeneral oo_StatusConfirmation06 { get; set; }
-
 
     /// <summary>
     ///07 کد ملی تأیید کننده
@@ -326,7 +269,6 @@ public class MANEUVERSEvidence01
     [ForeignKey("StatusConfirmation07")]
     public virtual CategoryGeneral oo_StatusConfirmation07 { get; set; }
 
-
     /// <summary>
     ///08 کد ملی تأیید کننده
     /// </summary>
@@ -340,7 +282,6 @@ public class MANEUVERSEvidence01
     public int? StatusConfirmation08 { get; set; }
     [ForeignKey("StatusConfirmation08")]
     public virtual CategoryGeneral oo_StatusConfirmation08 { get; set; }
-
 
     /// <summary>
     ///09 کد ملی تأیید کننده
@@ -356,7 +297,6 @@ public class MANEUVERSEvidence01
     [ForeignKey("StatusConfirmation09")]
     public virtual CategoryGeneral oo_StatusConfirmation09 { get; set; }
 
-
     /// <summary>
     ///10 کد ملی تأیید کننده
     /// </summary>
@@ -370,8 +310,6 @@ public class MANEUVERSEvidence01
     public int? StatusConfirmation10 { get; set; }
     [ForeignKey("StatusConfirmation10")]
     public virtual CategoryGeneral oo_StatusConfirmation10 { get; set; }
-
-
 
     /// <summary>
     ///11 کد ملی تأیید کننده
@@ -387,9 +325,6 @@ public class MANEUVERSEvidence01
     [ForeignKey("StatusConfirmation11")]
     public virtual CategoryGeneral oo_StatusConfirmation11 { get; set; }
 
-
-
-
     /// <summary>
     ///12 کد ملی تأیید کننده
     /// </summary>
@@ -404,13 +339,13 @@ public class MANEUVERSEvidence01
     [ForeignKey("StatusConfirmation12")]
     public virtual CategoryGeneral oo_StatusConfirmation12 { get; set; }
 
-
     /// <summary>
     /// منطقه پروازی 
     /// </summary>
     public int? FLTAREANOTAMCHECK { get; set; }
     [ForeignKey("FLTAREANOTAMCHECK")]
     public virtual CategoryGeneral oo_TFLTAREANOTAMCHECK { get; set; }
+
     /// <summary>
     ///  وضعیت هوا
     /// </summary>
@@ -419,31 +354,21 @@ public class MANEUVERSEvidence01
     public virtual CategoryGeneral oo_StatusMANEUVERSEvidence01 { get; set; }
 
     /// <summary>
-    ///  گرید 
-    /// </summary>
-    //public string? Grade { get; set; }
-
-    /// <summary>
-    ///  سطح آزمون
-    /// </summary>
-    //public int? LevelExam { get; set; }
-    //[ForeignKey("LevelExam")]
-    //public virtual CategoryGeneral oo_LevelExam { get; set; }
-    /// <summary>
     /// تاریخ شروع
     /// </summary>
     public string? FromDateMANEUVERSEvidence01Title { get; set; }
+
     /// <summary>
     ///  تاریخ خاتمه
     /// </summary>
     public string? ToDateMANEUVERSEvidence01Title { get; set; }
+
     /// <summary>
     ///  ترتیب
     /// </summary>
     public int? Sortable01Id { get; set; }
     [ForeignKey("Sortable01Id")]
     public virtual Sortable01 Sortable01 { get; set; }
-
 
     /// <summary>
     /// متن نوتم 01
@@ -460,12 +385,10 @@ public class MANEUVERSEvidence01
     /// </summary>
     public string? NOTAMCHECKETitle03 { get; set; }
 
-
     /// <summary>
     ///  فعال غیر فعال
     /// </summary>
     public bool? IsHaveJob { get; set; }
-
 
     public bool? HoverFLT { get; set; }
     public bool? SidwardFLT { get; set; }
@@ -483,7 +406,6 @@ public class MANEUVERSEvidence01
     public bool? ConfindOPS { get; set; }
     public bool? PinnacleOPS { get; set; }
     public bool? SLOPOPS { get; set; }
-    //public bool? LOWLEVELFLT { get; set; }
     public bool? NOEFLT { get; set; }
     public bool? FMDFOPS { get; set; }
     public bool? Pricaurionarylanding { get; set; }
@@ -503,5 +425,4 @@ public class MANEUVERSEvidence01
     public bool? HoodFLT { get; set; }
     public bool? INSTFLT { get; set; }
     public bool? AntiTorqueFailure { get; set; }
-
 }

@@ -1,12 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 public class MeetingConetntEvidence01
 {
     [Key]
     public string? MeetingConetntEvidence01ID { get; set; }
-
 
     /// <summary>
     ///01 کد ملی ثبت کننده
@@ -14,19 +12,6 @@ public class MeetingConetntEvidence01
     public string? RegisterPesronel01 { get; set; }
     [ForeignKey("RegisterPesronel01")]
     public virtual UjobPesronel01 oo_RegisterPesronel01 { get; set; }
-
-
-    /// <summary>
-    ///  رجه نام و نشان ش کا کد ملی
-    /// </summary>
-    //public string? MelliCode { get; set; }
-    //[ForeignKey("MelliCode")]
-    //public virtual TblMaster oo_MeetingConetntEvidence01 { get; set; }
-
-    /// <summary>
-    ///  شماره بالگرد 
-    /// </summary>
-    //public string? TailHelicopter { get; set; }
 
     /// <summary>
     ///01 کد ملی تأیید کننده
@@ -42,7 +27,6 @@ public class MeetingConetntEvidence01
     [ForeignKey("StatusConfirmation01")]
     public virtual CategoryGeneral oo_StatusConfirmation01 { get; set; }
 
-
     /// <summary>
     ///02 کد ملی تأیید کننده
     /// </summary>
@@ -56,7 +40,6 @@ public class MeetingConetntEvidence01
     public int? StatusConfirmation02 { get; set; }
     [ForeignKey("StatusConfirmation02")]
     public virtual CategoryGeneral oo_StatusConfirmation02 { get; set; }
-
 
     /// <summary>
     ///03 کد ملی تأیید کننده
@@ -72,7 +55,6 @@ public class MeetingConetntEvidence01
     [ForeignKey("StatusConfirmation03")]
     public virtual CategoryGeneral oo_StatusConfirmation03 { get; set; }
 
-
     /// <summary>
     ///04 کد ملی تأیید کننده
     /// </summary>
@@ -86,7 +68,6 @@ public class MeetingConetntEvidence01
     public int? StatusConfirmation04 { get; set; }
     [ForeignKey("StatusConfirmation04")]
     public virtual CategoryGeneral oo_StatusConfirmation04 { get; set; }
-
 
     /// <summary>
     ///05 کد ملی تأیید کننده
@@ -102,7 +83,6 @@ public class MeetingConetntEvidence01
     [ForeignKey("StatusConfirmation05")]
     public virtual CategoryGeneral oo_StatusConfirmation05 { get; set; }
 
-
     /// <summary>
     ///06 کد ملی تأیید کننده
     /// </summary>
@@ -116,7 +96,6 @@ public class MeetingConetntEvidence01
     public int? StatusConfirmation06 { get; set; }
     [ForeignKey("StatusConfirmation06")]
     public virtual CategoryGeneral oo_StatusConfirmation06 { get; set; }
-
 
     /// <summary>
     ///07 کد ملی تأیید کننده
@@ -132,7 +111,6 @@ public class MeetingConetntEvidence01
     [ForeignKey("StatusConfirmation07")]
     public virtual CategoryGeneral oo_StatusConfirmation07 { get; set; }
 
-
     /// <summary>
     ///08 کد ملی تأیید کننده
     /// </summary>
@@ -146,7 +124,6 @@ public class MeetingConetntEvidence01
     public int? StatusConfirmation08 { get; set; }
     [ForeignKey("StatusConfirmation08")]
     public virtual CategoryGeneral oo_StatusConfirmation08 { get; set; }
-
 
     /// <summary>
     ///09 کد ملی تأیید کننده
@@ -162,7 +139,6 @@ public class MeetingConetntEvidence01
     [ForeignKey("StatusConfirmation09")]
     public virtual CategoryGeneral oo_StatusConfirmation09 { get; set; }
 
-
     /// <summary>
     ///10 کد ملی تأیید کننده
     /// </summary>
@@ -176,8 +152,6 @@ public class MeetingConetntEvidence01
     public int? StatusConfirmation10 { get; set; }
     [ForeignKey("StatusConfirmation10")]
     public virtual CategoryGeneral oo_StatusConfirmation10 { get; set; }
-
-
 
     /// <summary>
     ///11 کد ملی تأیید کننده
@@ -193,9 +167,6 @@ public class MeetingConetntEvidence01
     [ForeignKey("StatusConfirmation11")]
     public virtual CategoryGeneral oo_StatusConfirmation11 { get; set; }
 
-
-
-
     /// <summary>
     ///12 کد ملی تأیید کننده
     /// </summary>
@@ -210,15 +181,12 @@ public class MeetingConetntEvidence01
     [ForeignKey("StatusConfirmation12")]
     public virtual CategoryGeneral oo_StatusConfirmation12 { get; set; }
 
-
-
     /// <summary>
     /// منطقه پروازی 
     /// </summary>
     public int? TypeMeeting { get; set; }
     [ForeignKey("TypeMeeting")]
     public virtual CategoryGeneral oo_TypeMeeting { get; set; }
-
 
     /// <summary>
     /// منطقه پروازی 
@@ -241,14 +209,13 @@ public class MeetingConetntEvidence01
     [ForeignKey("PlaceMeeting")]
     public virtual CategoryGeneral oo_PlaceMeeting { get; set; }
 
-
-
     /// <summary>
     /// منطقه پروازی 
     /// </summary>
     public int? FLTAREANOTAMCHECK { get; set; }
     [ForeignKey("FLTAREANOTAMCHECK")]
     public virtual CategoryGeneral oo_TFLTAREANOTAMCHECK { get; set; }
+
     /// <summary>
     ///  وضعیت هوا
     /// </summary>
@@ -257,31 +224,21 @@ public class MeetingConetntEvidence01
     public virtual CategoryGeneral oo_StatusMeetingConetntEvidence01 { get; set; }
 
     /// <summary>
-    ///  گرید 
-    /// </summary>
-    //public string? Grade { get; set; }
-
-    /// <summary>
-    ///  سطح آزمون
-    /// </summary>
-    //public int? LevelExam { get; set; }
-    //[ForeignKey("LevelExam")]
-    //public virtual CategoryGeneral oo_LevelExam { get; set; }
-    /// <summary>
     /// تاریخ شروع
     /// </summary>
     public string? FromDateMeetingConetntEvidence01Title { get; set; }
+
     /// <summary>
     ///  تاریخ خاتمه
     /// </summary>
     public string? ToDateMeetingConetntEvidence01Title { get; set; }
+
     /// <summary>
     ///  ترتیب
     /// </summary>
     public int? Sortable01Id { get; set; }
     [ForeignKey("Sortable01Id")]
     public virtual Sortable01 Sortable01 { get; set; }
-
 
     /// <summary>
     /// متن نوتم 01
@@ -297,7 +254,6 @@ public class MeetingConetntEvidence01
     /// متن نوتم 03
     /// </summary>
     public string? NOTAMCHECKETitle03 { get; set; }
-
 
     /// <summary>
     ///  فعال غیر فعال

@@ -1,5 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 public class News
@@ -20,7 +19,6 @@ public class News
     public byte NewsType { get; set; }
     public byte IsActive { get; set; }
 
-    //SEO Property
     public string MetaTag { get; set; }
     public string MetaDescription { get; set; }
 
@@ -31,10 +29,8 @@ public class News
     public int CategoryID { get; set; }
     [ForeignKey("CategoryID")]
     public virtual Category tblCategory { get; set; }
-    //public virtual ICollection<NewsCategory01> NewsCategory01 { get; set; }
+
     public virtual IList<NewsCategory> NewsCategorys { get; set; }
 
-
     public virtual IList<NewsImagesList> NewsImagesLists { get; set; }
-
 }

@@ -1,23 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 public class PersonnelVazife01
-
-//.OnDelete(DeleteBehavior.Cascade);
-//Restrict
-//            مشکل شما Multiple cascade paths هست. به این معنی که یک اگر یک ردیف از جدول Provience حذف بشه همه ی ردیف های مرتبط با اون در جدول Candidator حذف میشه.
-
-//شما می تونید با استفاده از کد زیر این مشکل رو حل کنید:
-//            builder.Entity<Candidator>().HasOne(p => p.provienceID).WithMany(b => b.ProvienceID)
-//        .OnDelete(DeleteBehavior.Restrict);
-
-
-//      builder.Entity<NewsCategory>().HasOne(p => p.provienceID).WithMany(b => b.ProvienceID)
 {
     [Key]
     public int VazifeID { get; set; }
-
 
     public int RankID { get; set; }
     [ForeignKey("RankID")]
@@ -26,7 +13,6 @@ public class PersonnelVazife01
     public int RastehID { get; set; }
     [ForeignKey("RastehID")]
     public virtual CategoryGeneral? tblCategoryGeneralRasteh { get; set; }
-
 
     public string Fname { get; set; }
 
@@ -45,8 +31,6 @@ public class PersonnelVazife01
     [ForeignKey("UitID")]
     public virtual CategoryGeneral? tblCategoryGeneralUit { get; set; }
 
-
-
     public int HealthID { get; set; }
     [ForeignKey("HealthID")]
     public virtual CategoryGeneral? tblCategoryGeneralHealth { get; set; }
@@ -55,9 +39,7 @@ public class PersonnelVazife01
     [ForeignKey("MariageID")]
     public virtual CategoryGeneral? tblCategoryGeneralMariage { get; set; }
 
-
     public int NoChild { get; set; }
-
 
     public int StatusID { get; set; }
     [ForeignKey("StatusID")]
@@ -91,8 +73,6 @@ public class PersonnelVazife01
     public string Mobile { get; set; }
     public string Phone { get; set; }
 
-
-
     public string PersonelImage { get; set; }
     public string EvidencelImage01 { get; set; }
     public string EvidencelImage02 { get; set; }
@@ -109,40 +89,4 @@ public class PersonnelVazife01
     public string Title08 { get; set; }
 
     public virtual IList<GuardboardVPG> TBL_GuardboardVPG { get; set; }
-
-
-
-    //public IList<CategoryGeneral> CategoryGeneralss { get; set; }
-
-    //public string Title { get; set; }
-    //public string Content { get; set; }
-    //public string Abstract { get; set; }
-    //public int VisitCount { get; set; }
-    //public DateTime NewsDate { get; set; }
-    //public string NewsDateSham { get; set; }
-    //public DateTime NewsTime { get; set; }
-
-    //public string? IndexImage { get; set; }
-    //public string IndexImage02 { get; set; }
-    //public byte PlaceNewsID { get; set; }
-    //public byte NewsType { get; set; }
-
-    //public string MetaTag { get; set; }
-    //public string MetaDescription { get; set; }
-
-    //public string UserID { get; set; }
-    //[ForeignKey("UserID")]
-    //public virtual ApplicationUsers Users { get; set; }
-
-    //public int CategoryID { get; set; }
-    //[ForeignKey("CategoryID")]
-    //public virtual Category tblCategory { get; set; }
-
-
-
-    //public IList<NewsCategory> NewsCategorys { get; set; }
-
-
-    //public IList<NewsImagesList> NewsImagesLists { get; set; }
-
 }

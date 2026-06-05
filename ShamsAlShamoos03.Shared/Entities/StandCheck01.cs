@@ -1,10 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 public class StandCheck01
 {
-
     [Key]
     public string? StandCheck01ID { get; set; }
 
@@ -23,7 +21,6 @@ public class StandCheck01
     /// </summary>
     public string? EmargencylimitationGrade { get; set; }
 
-
     /// <summary>
     /// گرید مقررات محلی پروازی
     /// </summary>
@@ -32,7 +29,6 @@ public class StandCheck01
     /// <summary>
     /// وضعیت آزمون کتبی
     /// </summary>
-    //CategoryGeneralSubId=بعد شماره تعیین شود
     public int? StatusWritten { get; set; }
     [ForeignKey("StatusWritten")]
     public virtual CategoryGeneral StatusWritten_CategoryGeneral { get; set; }
@@ -50,17 +46,14 @@ public class StandCheck01
     /// <summary>
     /// تاریخ آزمون استندچک
     /// </summary>
-    /// اگر سه نمره قبولی بود در این ستون متن clear for stand check نوشته شود و بعد از انجام استند چک تاریخ وارد شود
     public string? FlightStandardDisionDate { get; set; }
 
     /// <summary>
     /// وضعیت گرید پروازی
     /// </summary>
-    ///CategoryGeneralSubId=42
     public int? StatusFlight { get; set; }
     [ForeignKey("StatusFlight")]
     public virtual CategoryGeneral StatusFlight_CategoryGeneral { get; set; }
-
 
     /// <summary>
     /// گرید پروازی
@@ -70,7 +63,6 @@ public class StandCheck01
     /// <summary>
     /// وضعیت آزمون استندچک
     /// </summary>
-    //CategoryGeneralSubId=بعد شماره تعیین شود
     public int? StatusGradeStatusFlight { get; set; }
     [ForeignKey("StatusGradeStatusFlight")]
     public virtual CategoryGeneral StatusGradeStatusFlight_CategoryGeneral { get; set; }
@@ -78,8 +70,6 @@ public class StandCheck01
     /// <summary>
     /// ریت گرید پروازی
     /// </summary>
-    //CategoryGeneralSubId=25
-    //CP-P-TP-IP-SIP
     public int? RateGradeStatusFlight { get; set; }
     [ForeignKey("RateGradeStatusFlight")]
     public virtual CategoryGeneral RateGradeStatusFlight_CategoryGeneral { get; set; }
@@ -89,11 +79,9 @@ public class StandCheck01
     /// </summary>
     public string? WrittenTPGrade { get; set; }
 
-
     /// <summary>
     /// وضعیت گرید کتبی آزمایشی
     /// </summary>
-    //CategoryGeneralSubId=بعد شماره تعیین شود
     public int? StatusWrittenTPGrade { get; set; }
     [ForeignKey("StatusWrittenTPGrade")]
     public virtual CategoryGeneral StatusWrittenTPGrade_CategoryGeneral { get; set; }
@@ -103,27 +91,21 @@ public class StandCheck01
     /// </summary>
     public string? FlightStandardDisionDateTP { get; set; }
 
-
     /// <summary>
     /// وضعیت گرید کتبی آزمایشی
     /// </summary>
-    //CategoryGeneralSubId=42
     public int? StatusTP { get; set; }
     [ForeignKey("StatusTP")]
     public virtual CategoryGeneral StatusTP_CategoryGeneral { get; set; }
-
 
     /// <summary>
     /// گرید خلبان آزمایشی
     /// </summary>
     public string? GradeStatusTP { get; set; }
 
-
     /// <summary>
     /// ریت گرید خلبان آزمایشی
     /// </summary>
-    //CategoryGeneralSubId=25
-    //TP  IP-TP  SIP-TP       
     public int? RateGradeStatusTP { get; set; }
     [ForeignKey("RateGradeStatusTP")]
     public virtual CategoryGeneral RateGradeStatusTP_CategoryGeneral { get; set; }
@@ -131,7 +113,6 @@ public class StandCheck01
     /// <summary>
     /// وضعیت ریت گرید خلبان آزمایشی
     /// </summary>
-    //CategoryGeneralSubId=بعد شماره تعیین شود
     public int? StatusRateGradeStatusTP { get; set; }
     [ForeignKey("StatusRateGradeStatusTP")]
     public virtual CategoryGeneral StatusRateGradeStatusTP_CategoryGeneral { get; set; }
@@ -154,53 +135,4 @@ public class StandCheck01
     /// فعال
     /// </summary>
     public bool? IsHaveJob { get; set; }
-
-
-    /// <summary>
-    /// نام
-    /// </summary>
-    /// 
-
-    /// <summary>
-    /// نام
-    /// </summary>
-    /// 
-    /// <summary>
-    /// نام
-    /// </summary>
-    /// 
-    //public int? Rate { get; set; }
-    //[ForeignKey("Rate")]
-
-    //public virtual CategoryGeneral Rate_CategoryGeneral { get; set; }
-
-
-    ////CategoryGeneralSubId=24
-    //public int? TypeAC { get; set; }
-    //[ForeignKey("TypeAC")]
-
-    //public virtual CategoryGeneral TypeAC_CategoryGeneral { get; set; }
-
-    //public int? EvidenceFlightTitle { get; set; }
-    //[ForeignKey("EvidenceFlightTitle")]
-
-    //public virtual CategoryGeneral EvidenceFlightTitle_CategoryGeneral { get; set; }
-
-
-
-    //public string? DateSrartEvidenceFlightTitle { get; set; }
-    //public string? DateEndEvidenceFlightTitle { get; set; }
-
-    //public string? MelliCode { get; set; }
-    //[ForeignKey("MelliCode")]
-    //public virtual TblMaster MelliCodeList0 { get; set; }
-
-    //public int Sortable01Id { get; set; }
-    //[ForeignKey("Sortable01Id")]
-
-    //public virtual Sortable01 Sortable01 { get; set; }
-
-    //public bool? IsHaveJob { get; set; }
-
-
 }

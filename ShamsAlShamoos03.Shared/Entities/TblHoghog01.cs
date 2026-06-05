@@ -1,25 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 public class TblHoghog01
 {
-    /// <summary>
-    /// یگان
-    ///// </summary>
-    //[ForeignKey("DeliverTypeCode")]
-    //public virtual TblLuLookup? ooDeliverTypeCode { get; set; }
     /// <summary>
     ///  فعال غیر فعال
     /// </summary>
     public bool? IsHaveJob { get; set; }
 
-
-
-
-    //public int? UitID01 { get; set; }
     [Key]
-
     public string? Hoghog01ID { get; set; }
     public string? Year01 { get; set; }
     public string? Month01 { get; set; }
@@ -79,16 +68,10 @@ public class TblHoghog01
     public string? S2J6MS { get; set; }
     public string? CM42 { get; set; }
     public string? S2S { get; set; }
-    //public string? CML1 { get; set; }
-
 
     public string? CML1 { get; set; }
     [ForeignKey("CML1")]
     public virtual TblMaster oo_MelicodeID { get; set; }
-
-    //public string? MelliCodeID { get; set; }
-    //[ForeignKey("MelliCodeID")]
-    //public virtual TblMaster tblMelicodeID { get; set; }
 
     public string? FIL99 { get; set; }
     public string? HSA { get; set; }
@@ -258,8 +241,4 @@ public class TblHoghog01
     public string? SPB { get; set; }
     public string? SPC { get; set; }
     public string? SPD { get; set; }
-
-
-
-
 }

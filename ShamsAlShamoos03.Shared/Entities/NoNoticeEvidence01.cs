@@ -5,6 +5,7 @@ public class NoNoticeEvidence01
 {
     [Key]
     public string? NoNoticeEvidence01ID { get; set; }
+
     /// <summary>
     ///  رجه نام و نشان ش کا کد ملی
     /// </summary>
@@ -18,19 +19,15 @@ public class NoNoticeEvidence01
     public string? Grade { get; set; }
 
     /// <summary>
-    ///  سطح آزمون
-    /// </summary>
-    //public int? LevelExam { get; set; }
-    //[ForeignKey("LevelExam")]
-    //public virtual CategoryGeneral oo_LevelExam { get; set; }               
-    /// <summary>
     /// تاریخ شروع
     /// </summary>
     public string? FromDateNoNoticeEvidence01Title { get; set; }
+
     /// <summary>
     ///  تاریخ خاتمه
     /// </summary>
     public string? ToDateNoNoticeEvidence01Title { get; set; }
+
     /// <summary>
     ///  ترتیب
     /// </summary>
@@ -44,7 +41,6 @@ public class NoNoticeEvidence01
     public int? StatusNoNoticeEvidence01 { get; set; }
     [ForeignKey("StatusNoNoticeEvidence01")]
     public virtual CategoryGeneral oo_StatusNoNoticeEvidence01 { get; set; }
-
 
     /// <summary>
     ///  فعال غیر فعال

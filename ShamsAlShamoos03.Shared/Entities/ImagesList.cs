@@ -1,8 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
-
 public class ImagesList
 {
     [Key]
@@ -20,20 +18,13 @@ public class ImagesList
     public byte PlaceImagesListID { get; set; }
     public byte ImagesListType { get; set; }
 
-    //SEO Property
     public string MetaTag { get; set; }
     public string MetaDescription { get; set; }
-
-    //public string UserID { get; set; }
-    //[ForeignKey("UserID")]
-    //public virtual ApplicationUsers Users { get; set; }
 
     public int CategoryImagesId { get; set; }
     [ForeignKey("CategoryImagesId")]
     public virtual CategoryImagesList tblCategoryImagesList { get; set; }
 
-
     public virtual IList<ImagesListCategoryImagesList> ImagesListCategoryImagesLists { get; set; }
     public virtual IList<NewsImagesList> NewsImagesLists { get; set; }
-
 }
