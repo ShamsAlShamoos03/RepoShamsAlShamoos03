@@ -1,17 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 public class HelicopterTailEvidence01
 {
     [Key]
     public string? HelicopterTailEvidence01ID { get; set; }
-    /// <summary>
-    ///  رجه نام و نشان ش کا کد ملی
-    /// </summary>
-    //public string? MelliCode { get; set; }
-    //[ForeignKey("MelliCode")]
-    //public virtual TblMaster oo_HelicopterTailEvidence01 { get; set; }
+
     /// <summary>
     ///TotalFlightTime
     /// </summary>
@@ -35,6 +29,7 @@ public class HelicopterTailEvidence01
     public int? TypeHelicopter { get; set; }
     [ForeignKey("TypeHelicopter")]
     public virtual CategoryGeneral oo_TypeHelicopter { get; set; }
+
     /// <summary>
     ///  وضعیت بالگرد
     /// </summary>
@@ -65,16 +60,6 @@ public class HelicopterTailEvidence01
     [ForeignKey("TYPEOFFLIGHT")]
     public virtual CategoryGeneral oo_TYPEOFFLIGHT { get; set; }
 
-    ///// <summary>
-    ///// TYPE OF AIRCRAFT
-    ///// 24
-    ///// </summary>
-    //public int? TYPEOFAIRCRAFT { get; set; }
-    //[ForeignKey("TYPEOFAIRCRAFT")]
-    //public virtual CategoryGeneral oo_TYPEOFAIRCRAFT { get; set; }
-
-
-
     /// <summary>
     /// WAKE TURBULENCE CAL
     /// 73
@@ -82,7 +67,6 @@ public class HelicopterTailEvidence01
     public int? WAKETURBULENCECAL { get; set; }
     [ForeignKey("WAKETURBULENCECAL")]
     public virtual CategoryGeneral oo_WAKETURBULENCECAL { get; set; }
-
 
     /// <summary>
     /// EQUIPMENT AND CAPABILITIES
@@ -92,7 +76,6 @@ public class HelicopterTailEvidence01
     [ForeignKey("EQUIPMENTANDCAPABILITIES")]
     public virtual CategoryGeneral oo_EQUIPMENTANDCAPABILITIES { get; set; }
 
-
     /// <summary>
     /// CRUISING SPEED
     /// 75
@@ -100,19 +83,6 @@ public class HelicopterTailEvidence01
     public int? CRUISINGSPEED { get; set; }
     [ForeignKey("CRUISINGSPEED")]
     public virtual CategoryGeneral oo_CRUISINGSPEED { get; set; }
-
-
-
-    ///// <summary>
-    ///// LEVEL
-    ///// </summary>
-    //public int? LEVEL { get; set; }
-    //[ForeignKey("LEVEL")]
-    //public virtual CategoryGeneral oo_LEVEL { get; set; }
-
-
-
-
 
     /// <summary>
     /// ENDURANCE HR MIN
@@ -122,8 +92,6 @@ public class HelicopterTailEvidence01
     [ForeignKey("ENDURANCEHRMIN")]
     public virtual CategoryGeneral oo_ENDURANCEHRMIN { get; set; }
 
-
-
     /// <summary>
     /// AIRCRAFT COLOUR AND MARKINGS
     /// 77
@@ -131,8 +99,6 @@ public class HelicopterTailEvidence01
     public int? AIRCRAFTCOLOURANDMARKINGS { get; set; }
     [ForeignKey("AIRCRAFTCOLOURANDMARKINGS")]
     public virtual CategoryGeneral oo_AIRCRAFTCOLOURANDMARKINGS { get; set; }
-
-
 
     /// <summary>
     /// EMERGENCY RADIO
@@ -143,33 +109,11 @@ public class HelicopterTailEvidence01
     public virtual CategoryGeneral oo_AEMERGENCYRADIO { get; set; }
 
     /// <summary>
-    ///  گرید 
-    /// </summary>
-    //public string? Grade { get; set; }
-
-    /// <summary>
-    ///  سطح آزمون
-    /// </summary>
-    //public int? LevelExam { get; set; }
-    //[ForeignKey("LevelExam")]
-    //public virtual CategoryGeneral oo_LevelExam { get; set; }
-    /// <summary>
-    /// تاریخ شروع
-    /// </summary>
-    //public string? FromDateHelicopterTailEvidence01Title { get; set; }
-    /// <summary>
-    ///  تاریخ خاتمه
-    /// </summary>
-    //public string? ToDateHelicopterTailEvidence01Title { get; set; }
-    /// <summary>
     ///  ترتیب
     /// </summary>
     public int? Sortable01Id { get; set; }
     [ForeignKey("Sortable01Id")]
     public virtual Sortable01 Sortable01 { get; set; }
-
-
-
 
     /// <summary>
     ///  فعال غیر فعال
