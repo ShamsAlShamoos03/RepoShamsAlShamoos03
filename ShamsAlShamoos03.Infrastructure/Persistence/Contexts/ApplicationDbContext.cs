@@ -120,7 +120,7 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
         public DbSet<CrewPersonalCorrespondence01> CrewPersonalCorrespondence01_Tbl { get; set; } = null!;
         public DbSet<UnitOrganization01> UnitOrganization01_Tbl { get; set; } = null!;
         public DbSet<UnitCountAmar01> UnitCountAmar01_Tbl { get; set; } = null!;
-
+        //ش
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
