@@ -1,7 +1,6 @@
 /* global bootstrap, SimpleLightbox */
 
 window.addEventListener('DOMContentLoaded', () => {
-
     // ---------------------------
     // Navbar shrink function
     // ---------------------------
@@ -26,8 +25,8 @@ window.addEventListener('DOMContentLoaded', () => {
     // Activate Bootstrap scrollspy
     // ---------------------------
     const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav && window.bootstrap) {
-        new window.bootstrap.ScrollSpy(document.body, {
+    if (mainNav && bootstrap) {  // تغییر: window.bootstrap -> bootstrap
+        new bootstrap.ScrollSpy(document.body, {
             target: '#mainNav',
             rootMargin: '0px 0px -40%'
         });
@@ -50,10 +49,9 @@ window.addEventListener('DOMContentLoaded', () => {
     // ---------------------------
     // Activate SimpleLightbox for portfolio items
     // ---------------------------
-    if (window.SimpleLightbox) {
-        new window.SimpleLightbox({
+    if (SimpleLightbox) {  // تغییر: window.SimpleLightbox -> SimpleLightbox
+        new SimpleLightbox({
             elements: '#portfolio a.portfolio-box'
         });
     }
-
 });
