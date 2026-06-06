@@ -145,7 +145,7 @@ public static class CreateSerialNOPlan01
 
     public static String CreateNewSerialNOPlan01(string date)
     {
-        return date.ToString();
+        return date;
     }
 
     public static String CreateNewSerialNOPlan03(string date)

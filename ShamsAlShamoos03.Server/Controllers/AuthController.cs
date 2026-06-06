@@ -60,23 +60,6 @@ public class AuthController : ControllerBase
             return StatusCode(500, ex.ToString());
         }
     }
-
-    //[HttpPost("login")]
-    //    public async Task<IActionResult> Login(LoginModel model)
-    //    {
-    //        var result = await _signInManager.PasswordSignInAsync(
-    //            model.UserName,
-    //            model.Password,
-    //            true,
-    //            false);
-
-    //        if (result.Succeeded)
-    //        {
-    //            return Ok();
-    //        }
-
-    //        return Unauthorized("نام کاربری یا رمز عبور اشتباه است");
-    //    }
 }
 
 

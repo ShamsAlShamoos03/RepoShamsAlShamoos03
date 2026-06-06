@@ -4,3 +4,5 @@ exclude_paths:
   - "ShamsAlShamoos03.Client/Client/wwwroot/css/open-iconic/**"
   - "**/*.min.js"
   - "**/SweetAlert2.js"
+  - "package-lock.json"
+  - "**/package-lock.json"
