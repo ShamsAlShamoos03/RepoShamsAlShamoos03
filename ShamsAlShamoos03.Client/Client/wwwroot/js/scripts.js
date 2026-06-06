@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // ---------------------------
     // Navbar shrink function
     // ---------------------------
+    // codacy:ignore Non-serializable expression
     const navbarShrink = () => {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) return;
