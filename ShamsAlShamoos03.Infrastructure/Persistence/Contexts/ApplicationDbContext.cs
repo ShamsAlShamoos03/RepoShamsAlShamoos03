@@ -12,10 +12,8 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
         {
             ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         }
-
-        // ----------------------
-        // All DbSets
-        // ----------------------
+     
+        #region "DbSets"
         public DbSet<Answer> Answers { get; set; } = null!;
         public DbSet<Choice> Choices { get; set; } = null!;
         public DbSet<Question02> Questions02 { get; set; } = null!;
@@ -120,7 +118,7 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
         public DbSet<CrewPersonalCorrespondence01> CrewPersonalCorrespondence01_Tbl { get; set; } = null!;
         public DbSet<UnitOrganization01> UnitOrganization01_Tbl { get; set; } = null!;
         public DbSet<UnitCountAmar01> UnitCountAmar01_Tbl { get; set; } = null!;
-        //ش
+        #endregion
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
