@@ -35,11 +35,19 @@ public class QrCodeService
     }
     public List<string> SplitText(string text, int maxLength = 2000)
     {
-        var parts = new List<string>();
+        if (string.IsNullOrEmpty(text) || maxLength <= 0)
+        {
+            return new List<string>();
+        }
+
+        var parts = new List<string>((text.Length + maxLength - 1) / maxLength);
+
         for (int i = 0; i < text.Length; i += maxLength)
         {
-            parts.Add(text.Substring(i, Math.Min(maxLength, text.Length - i)));
+            int length = Math.Min(maxLength, text.Length - i);
+            parts.Add(text.Substring(i, length));
         }
+
         return parts;
     }
 

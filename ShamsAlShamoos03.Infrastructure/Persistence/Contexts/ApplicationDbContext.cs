@@ -12,7 +12,7 @@ namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
         {
             ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         }
-     
+
         #region "DbSets"
         public DbSet<Answer> Answers { get; set; } = null!;
         public DbSet<Choice> Choices { get; set; } = null!;

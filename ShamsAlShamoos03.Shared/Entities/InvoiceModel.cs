@@ -15,18 +15,11 @@ public class InvoiceModel
         ["PDF"] = new PdfSaveOptions(),
         ["DOCX"] = new DocxSaveOptions(),
         ["ODT"] = new OdtSaveOptions(),
-        ["HTML"] = new HtmlSaveOptions() { EmbedImages = true },
-        ["MHTML"] = new HtmlSaveOptions() { HtmlType = HtmlType.Mhtml },
+        ["HTML"] = new HtmlSaveOptions { EmbedImages = true },
+        ["MHTML"] = new HtmlSaveOptions { HtmlType = HtmlType.Mhtml },
         ["RTF"] = new RtfSaveOptions(),
         ["XML"] = new XmlSaveOptions(),
         ["TXT"] = new TxtSaveOptions(),
-
-
-        //["XPS"] = new XpsSaveOptions(),
-        //["PNG"] = new ImageSaveOptions(ImageSaveFormat.Png),
-        //["JPG"] = new ImageSaveOptions(ImageSaveFormat.Jpeg),
-        //["BMP"] = new ImageSaveOptions(ImageSaveFormat.Bmp),
-        //["GIF"] = new ImageSaveOptions(ImageSaveFormat.Gif),
-        //["TIF"] = new ImageSaveOptions(ImageSaveFormat.Tiff)
     };
-}
+
+ }

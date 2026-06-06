@@ -169,19 +169,21 @@ public static class CreateSerialNOPlan01
         return date.Replace("/", "") + code;
     }
 
-    public static String CreateNewSerialNOPlan02(string date)
+    public static string CreateNewSerialNOPlan02(string date)
     {
-        HashSet<int> uniqueNumbers = new HashSet<int>();
-        Random random = new Random();
+        // تولید 10 عدد یکتا بین 1 تا 100
+        var uniqueNumbers = new HashSet<int>();
+        var random = new Random();
 
         while (uniqueNumbers.Count < 10)
         {
-            int randomNumber = random.Next(1, 101);
-            if (uniqueNumbers.Add(randomNumber))
-            {
-                Console.WriteLine("Added: " + randomNumber);
-            }
+            uniqueNumbers.Add(random.Next(1, 101));
         }
+
+        // نمایش اعداد تولید شده در کنسول
+        Console.WriteLine("Generated numbers: " + string.Join(", ", uniqueNumbers));
+
+        // برگرداندن همان رشته ورودی
         return date;
     }
 

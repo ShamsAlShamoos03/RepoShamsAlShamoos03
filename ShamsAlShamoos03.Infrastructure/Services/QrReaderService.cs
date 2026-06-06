@@ -2,6 +2,7 @@
 using QRCoder;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
+using System.Text;
 
 namespace ShamsAlShamoos03.Infrastructure.Services
 {
@@ -77,34 +78,40 @@ namespace ShamsAlShamoos03.Infrastructure.Services
 
         // ---------------------------
         // 3️⃣ خواندن QRها و بازسازی عکس
-        public void ReconstructImageFromQrs(List<string> qrFiles, string outputPath)
+
+public void ReconstructImageFromQrs(List<string> qrFiles, string outputPath)
+    {
+        var combinedBase64 = new StringBuilder();
+
+        var reader = new ZXing.ImageSharp.BarcodeReader<Rgba32>
         {
-            string combinedBase64 = "";
-            var reader = new ZXing.ImageSharp.BarcodeReader<Rgba32>
+            AutoRotate = true,
+            Options = new ZXing.Common.DecodingOptions
             {
-                AutoRotate = true,
-                Options = new ZXing.Common.DecodingOptions { TryHarder = true }
-            };
+                TryHarder = true
+            }
+        };
 
-            foreach (var file in qrFiles)
+        foreach (var file in qrFiles)
+        {
+            if (!File.Exists(file))
             {
-                if (!File.Exists(file))
-                {
-                    continue;
-                }
-
-                using var image = Image.Load<Rgba32>(file);
-                var result = reader.Decode(image);
-                if (result != null)
-                {
-                    combinedBase64 += result.Text;
-                }
+                continue;
             }
 
-            byte[] imageBytes = Convert.FromBase64String(combinedBase64);
-            File.WriteAllBytes(outputPath, imageBytes);
+            using var image = Image.Load<Rgba32>(file);
+            var result = reader.Decode(image);
+
+            if (result != null)
+            {
+                combinedBase64.Append(result.Text);
+            }
         }
+
+        byte[] imageBytes = Convert.FromBase64String(combinedBase64.ToString());
+        File.WriteAllBytes(outputPath, imageBytes);
     }
+}
 
     public class QrReaderService
     {
