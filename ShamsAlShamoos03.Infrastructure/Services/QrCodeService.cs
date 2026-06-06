@@ -33,7 +33,12 @@ public class QrCodeService
         using var page = engine.Process(img);
         return page.GetText();
     }
-    public List<string> SplitText(string text, int maxLength = 2000)
+    public List<string> SplitText(string text)
+    {
+        return SplitText(text, 2000);
+    }
+
+    public List<string> SplitText(string text, int maxLength)
     {
         if (string.IsNullOrEmpty(text) || maxLength <= 0)
         {

@@ -1,6 +1,5 @@
 ﻿using GemBox.Document;
 
-
 public class InvoiceModel
 {
     public int Number { get; set; } = 1000;
@@ -10,7 +9,8 @@ public class InvoiceModel
     public string Name { get; set; } = "Joe Smith";
     public string Format { get; set; } = "DOCX";
     public SaveOptions Options => this.FormatMappingDictionary[this.Format];
-    public virtual IDictionary<string, SaveOptions> FormatMappingDictionary => new Dictionary<string, SaveOptions>()
+
+    public virtual IDictionary<string, SaveOptions> FormatMappingDictionary => new Dictionary<string, SaveOptions>
     {
         ["PDF"] = new PdfSaveOptions(),
         ["DOCX"] = new DocxSaveOptions(),
@@ -21,5 +21,4 @@ public class InvoiceModel
         ["XML"] = new XmlSaveOptions(),
         ["TXT"] = new TxtSaveOptions(),
     };
-
- }
+}

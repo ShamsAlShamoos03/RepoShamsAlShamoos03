@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ShamsAlShamoos03.Shared.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace ShamsAlShamoos03.Server.Controllers;
 
@@ -63,9 +64,12 @@ public class AuthController : ControllerBase
 }
 
 
+
 public class LoginModel
 {
-    public string UserName { get; set; } = "";
+    [Required(ErrorMessage = "نام کاربری الزامی است")]
+    public string UserName { get; set; }
 
-    public string Password { get; set; } = "";
+    [Required(ErrorMessage = "رمز عبور الزامی است")]
+    public string Password { get; set; }
 }
