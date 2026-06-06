@@ -182,7 +182,7 @@ public static class CreateSerialNOPlan01
                 Console.WriteLine("Added: " + randomNumber);
             }
         }
-        return date.ToString();
+        return date;
     }
 
     public static bool CheckDateFormat(string Date)
