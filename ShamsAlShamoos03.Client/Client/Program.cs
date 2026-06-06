@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using ShamsAlShamoos03.Client.Client;
-//using ShamsAlShamoos03.Client.Client.Services;
 using ShamsAlShamoos03.Client.Services;
 using Syncfusion.Blazor;
 using Syncfusion.Licensing;

@@ -166,7 +166,7 @@ public static class CreateSerialNOPlan01
             num /= 10;
         }
         string code = new string(fauxbuilder);
-        return date.Replace("/", "").ToString() + code;
+        return date.Replace("/", "") + code;
     }
 
     public static String CreateNewSerialNOPlan02(string date)
