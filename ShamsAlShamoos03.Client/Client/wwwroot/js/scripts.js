@@ -1,58 +1,59 @@
-/*!
-* Start Bootstrap - Creative v7.0.7 (https://startbootstrap.com/theme/creative)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
 /* global bootstrap, SimpleLightbox */
-window.addEventListener('DOMContentLoaded', event => {
 
+window.addEventListener('DOMContentLoaded', () => {
+
+    // ---------------------------
     // Navbar shrink function
-    var navbarShrink = function () {
+    // ---------------------------
+    const navbarShrink = () => {
         const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
+        if (!navbarCollapsible) return;
 
+        if (window.scrollY === 0) {
+            navbarCollapsible.classList.remove('navbar-shrink');
+        } else {
+            navbarCollapsible.classList.add('navbar-shrink');
+        }
     };
 
-    // Shrink the navbar 
+    // Shrink the navbar initially
     navbarShrink();
 
     // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
 
-    // Activate Bootstrap scrollspy on the main nav element
+    // ---------------------------
+    // Activate Bootstrap scrollspy
+    // ---------------------------
     const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
+    if (mainNav && window.bootstrap) {
+        new window.bootstrap.ScrollSpy(document.body, {
             target: '#mainNav',
-            rootMargin: '0px 0px -40%',
+            rootMargin: '0px 0px -40%'
         });
     }
+
+    // ---------------------------
     // Collapse responsive navbar when toggler is visible
+    // ---------------------------
     const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+    const responsiveNavItems = Array.from(document.querySelectorAll('#navbarResponsive .nav-link'));
+
+    responsiveNavItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (navbarToggler && window.getComputedStyle(navbarToggler).display !== 'none') {
                 navbarToggler.click();
             }
         });
     });
 
-    // Activate SimpleLightbox plugin for portfolio items
-    new SimpleLightbox({
-        elements: '#portfolio a.portfolio-box'
-    });
+    // ---------------------------
+    // Activate SimpleLightbox for portfolio items
+    // ---------------------------
+    if (window.SimpleLightbox) {
+        new window.SimpleLightbox({
+            elements: '#portfolio a.portfolio-box'
+        });
+    }
 
 });
