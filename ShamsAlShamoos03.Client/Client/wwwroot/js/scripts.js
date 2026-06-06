@@ -6,7 +6,7 @@
 //
 // Scripts
 // 
-/* global bootstrap */
+/* global bootstrap, SimpleLightbox */
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
