@@ -40,11 +40,13 @@
     align-items: center;
     line-height: 3rem;
 }
+    /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 
     .nav-item :deep(a.active) {
         background-color: rgb(255 255 255 / 25%);
         color: white;
     }
+    /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 
     .nav-item :deep(a:hover) {
         background-color: rgb(255 255 255 / 10%);
