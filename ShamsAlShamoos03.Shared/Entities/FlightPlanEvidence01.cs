@@ -211,7 +211,8 @@ public static class CreateSerialNOPlan01
     }
 }
 
-public class FlightPlanEvidence01 : BaseApprovalNavigationEntity
+
+public class FlightPlanEvidence01 : BaseFlightNavigationEntity
 {
     [Key]
     public string? FlightPlanEvidence01ID { get; set; }
@@ -220,22 +221,27 @@ public class FlightPlanEvidence01 : BaseApprovalNavigationEntity
     ///سورتی پرواز
     /// </summary>
     public string? Sorties01 { get; set; }
+
     /// <summary>
     ///تعداد مسافر
     /// </summary>
     public string? NOPassengers01 { get; set; }
+
     /// <summary>
     ///تعداد مجروح
     /// </summary>
     public string? NOInjured01 { get; set; }
+
     /// <summary>
     ///مقدار بار
     /// </summary>
     public string? QTCargo01 { get; set; }
+
     /// <summary>
     ///مقدار 20 م م
     /// </summary>
     public string? QT20MM01 { get; set; }
+
     /// <summary>
     ///مقدار راکت
     /// </summary>
@@ -247,114 +253,9 @@ public class FlightPlanEvidence01 : BaseApprovalNavigationEntity
     public string? QTFuel01 { get; set; }
 
     /// <summary>
-    ///مقدار سوخت
+    ///مقدار مسیر پروازی
     /// </summary>
     public string? FlightPath01 { get; set; }
-
-    /// <summary>
-    ///ای دی فعالیت پروازی 
-    /// </summary>
-    public string? FlightActivityEvidence01ID { get; set; }
-    [ForeignKey("FlightActivityEvidence01ID")]
-    public virtual FlightActivityEvidence01 oo_FlightActivityEvidence01ID { get; set; }
-
-    /// <summary>
-    ///شماره و مدل بالگرد 
-    /// </summary>
-    public string? HelicopterTailEvidence01 { get; set; }
-    [ForeignKey("HelicopterTailEvidence01")]
-    public virtual HelicopterTailEvidence01 oo_HelicopterTailEvidence01 { get; set; }
-
-    /// <summary>
-    ///CALL-SIGN
-    ///شناسه رادیویی
-    /// </summary>
-    public int? CALLSIGN { get; set; }
-    [ForeignKey("CALLSIGN")]
-    public virtual CategoryGeneral oo_CALLSIGN { get; set; }
-
-    /// <summary>
-    /// NUMBER OF AIRCRAFT
-    /// 79
-    /// </summary>
-    public int? NUMBEROFAIRCRAFT { get; set; }
-    [ForeignKey("NUMBEROFAIRCRAFT")]
-    public virtual CategoryGeneral oo_NUMBEROFAIRCRAFT { get; set; }
-
-    /// <summary>
-    /// DEPARTURE AERODROME
-    ///  فرودگاه مبدأ
-    ///  80
-    /// </summary>
-    public int? DEPARTUREAERODROME { get; set; }
-    [ForeignKey("DEPARTUREAERODROME")]
-    public virtual CategoryGeneral oo_DEPARTUREAERODROME { get; set; }
-
-    /// <summary>
-    ///Time UTC
-    ///زمانی که به فرودگاه برای پرواز اعلام می شود و تا یک ساعت اعتبار دارد
-    /// </summary>
-    public string? TimeUTC { get; set; }
-    public DateTime? TimeUTCDateTime { get; set; }
-    public TimeSpan? TimeUTCTimeSpan { get; set; }
-
-    /// <summary>
-    /// LEVEL
-    /// </summary>
-    public string? LEVEL { get; set; }
-
-    /// <summary>
-    ///ROUTE line1
-    /// </summary>
-    public string? ROUTEline1 { get; set; }
-
-    /// <summary>
-    ///ROUTE line2
-    /// </summary>
-    public string? ROUTEline2 { get; set; }
-    /// <summary>
-    ///ROUTE line3
-    /// </summary>
-    public string? ROUTEline3 { get; set; }
-    /// <summary>
-    ///ROUTE line4
-    /// </summary>
-    public string? ROUTEline4 { get; set; }
-
-    /// <summary>
-    /// DESTINATION AERODROME
-    /// فرودگاه مقصد
-    /// 80
-    /// </summary>
-    public int? DESTINATIONAERODROME { get; set; }
-    [ForeignKey("DESTINATIONAERODROME")]
-    public virtual CategoryGeneral oo_DESTINATIONAERODROME { get; set; }
-
-    /// <summary>
-    /// TOTAL EET HR MIN
-    /// مدت زمان تقریبی مسیر
-    /// </summary>
-    public string? TOTALEETHRMIN { get; set; }
-    public DateTime? TOTALEETHRMINDateTime { get; set; }
-    public TimeSpan? TOTALEETHRMINTimeSpan { get; set; }
-
-    /// <summary>
-    /// ALTNAERODRME
-    /// فرودگاه رزرو اول
-    /// 80
-    /// </summary>
-    public int? ALTNAERODRME { get; set; }
-    [ForeignKey("ALTNAERODRME")]
-    public virtual CategoryGeneral oo_ALTNAERODRME { get; set; }
-
-    /// <summary>
-    /// ALTNAERODRME2
-    /// فرودگاه رزرو دوم
-    /// 80
-    /// </summary>
-    public int? ALTNAERODRME2 { get; set; }
-    [ForeignKey("ALTNAERODRME2")]
-    public virtual CategoryGeneral oo_ALTNAERODRME2 { get; set; }
 
     /// <summary>
     ///OTHER INFORMATION line1
@@ -365,39 +266,16 @@ public class FlightPlanEvidence01 : BaseApprovalNavigationEntity
     ///OTHER INFORMATION line2
     /// </summary>
     public string? OTHERINFORMATIONline2 { get; set; }
+
     /// <summary>
     ///OTHER INFORMATION line3
     /// </summary>
     public string? OTHERINFORMATIONline3 { get; set; }
+
     /// <summary>
     ///OTHER INFORMATION line4
     /// </summary>
     public string? OTHERINFORMATIONline4 { get; set; }
-
-    /// <summary>
-    /// PERSONS ON BOARD
-    /// تعداد سرنشینان
-    /// 81
-    /// </summary>
-    public int? PERSONSONBOARD { get; set; }
-    [ForeignKey("PERSONSONBOARD")]
-    public virtual CategoryGeneral oo_PERSONSONBOARD { get; set; }
-
-    /// <summary>
-    /// REMARKS
-    /// 82
-    /// </summary>
-    public int? REMARKS { get; set; }
-    [ForeignKey("REMARKS")]
-    public virtual CategoryGeneral oo_REMARKS { get; set; }
-
-    /// <summary>
-    ///FLT AREA
-    ///منطقه پروازی
-    /// </summary>
-    public int? FLTAREA { get; set; }
-    [ForeignKey("FLTAREA")]
-    public virtual CategoryGeneral oo_FLTAREA { get; set; }
 
     /// <summary>
     ///زمان اضافه به ساعت اصلی
@@ -415,189 +293,33 @@ public class FlightPlanEvidence01 : BaseApprovalNavigationEntity
     }
 
     /// <summary>
-    ///ETD
-    /// </summary>
-    public string? ETD { get; set; }
-    public TimeSpan? ETDTimeSpan { get; set; }
-    public DateTime? ETDDateTime { get; set; }
-
-    /// <summary>
-    ///ETE
-    /// </summary>
-    public string? ETE { get; set; }
-    public DateTime? ETEDateTime { get; set; }
-    public TimeSpan? ETETimeSpan { get; set; }
-
-    /// <summary>
-    /// SerialNOPlan
-    /// </summary>
-    public string? SerialNOPlan { get; set; }
-
-    /// <summary>
-    ///ALT
-    ///ارتفاع ترافیک
-    /// </summary>
-    public int? ALT { get; set; }
-    [ForeignKey("ALT")]
-    public virtual CategoryGeneral oo_ALT { get; set; }
-
-    /// <summary>
-    ///VHF(G)
-    ///فرکانس رادیویی 
-    /// </summary>
-    public int? VHFG { get; set; }
-    [ForeignKey("VHFG")]
-    public virtual CategoryGeneral oo_VHFG { get; set; }
-
-    /// <summary>
-    ///UHF(G)
-    ///فرکانس رادیویی 
-    /// </summary>
-    public int? UHFG { get; set; }
-    [ForeignKey("UHFG")]
-    public virtual CategoryGeneral oo_UHFG { get; set; }
-
-    /// <summary>
-    ///FM(G)
-    ///فرکانس رادیویی 
-    /// </summary>
-    public int? FMG { get; set; }
-    [ForeignKey("FMG")]
-    public virtual CategoryGeneral oo_FMG { get; set; }
-
-    /// <summary>
-    ///VHF
-    ///فرکانس رادیویی 
-    /// </summary>
-    public int? VHF { get; set; }
-    [ForeignKey("VHF")]
-    public virtual CategoryGeneral oo_VHF { get; set; }
-
-    /// <summary>
-    ///UHF
-    ///فرکانس رادیویی 
-    /// </summary>
-    public int? UHF { get; set; }
-    [ForeignKey("UHF")]
-    public virtual CategoryGeneral oo_UHF { get; set; }
-
-    /// <summary>
-    ///ADF
-    ///فرکانس رادیویی 
-    /// </summary>
-    public int? ADF { get; set; }
-    [ForeignKey("ADF")]
-    public virtual CategoryGeneral oo_ADF { get; set; }
-
-    /// <summary>
-    ///VOR
-    ///فرکانس رادیویی 
-    /// </summary>
-    public int? VOR { get; set; }
-    [ForeignKey("VOR")]
-    public virtual CategoryGeneral oo_VOR { get; set; }
-
-    /// <summary>
-    ///RADAR
-    ///فرکانس رادیویی 
+    ///RADARDF
     /// </summary>
     public int? RADARDF { get; set; }
     [ForeignKey("RADARDF")]
     public virtual CategoryGeneral oo_RADARDF { get; set; }
 
     /// <summary>
-    ///RADAR
-    ///فرکانس رادیویی 
-    /// </summary>
-    public int? RADAR { get; set; }
-    [ForeignKey("RADAR")]
-    public virtual CategoryGeneral oo_RADAR { get; set; }
-
-    /// <summary>
-    ///ATIS
-    ///فرکانس رادیویی 
-    /// </summary>
-    public int? ATIS { get; set; }
-    [ForeignKey("ATIS")]
-    public virtual CategoryGeneral oo_ATIS { get; set; }
-
-    /// <summary>
-    ///PURPOSE OF FLT
-    ///نوع فعالیت 
-    /// </summary>
-    public int? PURPOSEOFFLT { get; set; }
-    [ForeignKey("PURPOSEOFFLT")]
-    public virtual CategoryGeneral oo_PURPOSEOFFLT { get; set; }
-
-    /// <summary>
-    ///PURPOSE OF FLT
-    ///نوع فعالیت 
+    ///PURPOSE OF FLT Dispatch
     /// </summary>
     public int? PURPOSEOFFLTDispatch { get; set; }
     [ForeignKey("PURPOSEOFFLTDispatch")]
     public virtual CategoryGeneral oo_PURPOSEOFFLTDispatch { get; set; }
 
     /// <summary>
-    ///هواشناسی
-    /// </summary>
-    public string? WeatherEvidence01ID { get; set; }
-    [ForeignKey("WeatherEvidence01ID")]
-    public virtual WeatherEvidence01 oo_WeatherEvidence01 { get; set; }
-     
-    /// <summary>
-    /// منطقه پروازی 
-    /// </summary>
-    public int? FLTAREANOTAMCHECK { get; set; }
-    [ForeignKey("FLTAREANOTAMCHECK")]
-    public virtual CategoryGeneral oo_TFLTAREANOTAMCHECK { get; set; }
-
-    /// <summary>
-    ///  وضعیت هوا
-    /// </summary>
-    public int? StatusFlightPlanEvidence01 { get; set; }
-    [ForeignKey("StatusFlightPlanEvidence01")]
-    public virtual CategoryGeneral oo_StatusFlightPlanEvidence01 { get; set; }
-
-    /// <summary>
-    /// تاریخ شروع
+    ///From/To تاریخ‌ها
     /// </summary>
     public string? FromDateFlightPlanEvidence01Title { get; set; }
-    /// <summary>
-    ///  تاریخ خاتمه
-    /// </summary>
     public string? ToDateFlightPlanEvidence01Title { get; set; }
-    /// <summary>
-    ///  ترتیب
-    /// </summary>
-    public int? Sortable01Id { get; set; }
-    [ForeignKey("Sortable01Id")]
-    public virtual Sortable01 Sortable01 { get; set; }
-
-    /// <summary>
-    /// متن نوتم 01
-    /// </summary>
-    public string? NOTAMCHECKETitle01 { get; set; }
-
-    /// <summary>
-    /// متن نوتم 02
-    /// </summary>
-    public string? NOTAMCHECKETitle02 { get; set; }
-
-    /// <summary>
-    /// متن نوتم 03
-    /// </summary>
-    public string? NOTAMCHECKETitle03 { get; set; }
-
-    /// <summary>
-    ///  فعال غیر فعال
-    /// </summary>
-    public bool? IsHaveJob { get; set; }
 
     /// <summary>
     ///  پرواز/فعالیت
     /// </summary>
     public bool? IsFlight { get; set; }
 
+    /// <summary>
+    ///  سایر وضعیت‌ها
+    /// </summary>
     public bool? HoverFLT { get; set; }
     public bool? SidwardFLT { get; set; }
     public bool? BackwardFLT { get; set; }
