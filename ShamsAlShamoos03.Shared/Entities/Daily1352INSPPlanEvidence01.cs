@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class Daily1352INSPPlanEvidence01 : BaseApprovalNavigationEntity
+public class Daily1352INSPPlanEvidence01 : BaseTrackingNavigationEntity
 {
     [Key]
     public string? Daily1352INSPPlanEvidence01ID { get; set; }
