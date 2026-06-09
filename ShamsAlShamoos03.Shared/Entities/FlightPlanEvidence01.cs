@@ -74,23 +74,7 @@ public static class CreateSerialNOPlan01
         return date + nextNumber.ToString().PadLeft(4, '0');
     }
 
-    public static String CreateNewNoFolder011(string maxSerialNOPlanNo, string Date01)
-    {
-        string Number;
-        if (maxSerialNOPlanNo != null)
-        {
-            string maxSerialNOPlanNo01 = maxSerialNOPlanNo.Substring(11);
-            maxSerialNOPlanNo = (Int32.Parse(maxSerialNOPlanNo01) + 1).ToString();
-            Number = FormatNumber(Int32.Parse(maxSerialNOPlanNo), 3);
-            maxSerialNOPlanNo = Date01 + Number;
-        }
-        else
-        {
-            maxSerialNOPlanNo = ((Date01) + FormatNumber(Int32.Parse("1"), 3)).ToString();
-        }
-        return maxSerialNOPlanNo;
-    }
-
+ 
     public static String CreateNewNoFolderGaurdActivity01(string maxSerialNOPlanNo, string Date01)
     {
         string Number;
@@ -108,23 +92,7 @@ public static class CreateSerialNOPlan01
         return maxSerialNOPlanNo;
     }
 
-    public static String CreateNewNoFolderFlightActivity(string maxSerialNOPlanNo, string Date01)
-    {
-        string Number;
-        if (maxSerialNOPlanNo != null)
-        {
-            string maxSerialNOPlanNo01 = maxSerialNOPlanNo.Substring(4);
-            maxSerialNOPlanNo = (Int32.Parse(maxSerialNOPlanNo01) + 1).ToString();
-            Number = FormatNumber(Int32.Parse(maxSerialNOPlanNo), 3);
-            maxSerialNOPlanNo = Date01 + Number;
-        }
-        else
-        {
-            maxSerialNOPlanNo = ((Date01) + FormatNumber(Int32.Parse("1"), 3)).ToString();
-        }
-        return maxSerialNOPlanNo;
-    }
-
+ 
     public static String CreateNewSerialNOPlan(string maxSerialNOPlanNo, string Date01)
     {
         string Number;
@@ -143,73 +111,8 @@ public static class CreateSerialNOPlan01
         return maxSerialNOPlanNo;
     }
 
-    public static String CreateNewSerialNOPlan01(string date)
-    {
-        return date;
-    }
 
-    public static String CreateNewSerialNOPlan03(string date)
-    {
-        Random _random = new Random();
-        int newNumber = _random.Next(1000, 3000);
-        return date.Replace("/", "") + newNumber;
-    }
-
-    public static String CreateNewSerialNOPlan04(string date)
-    {
-        Random rg = new Random(0);
-        char[] fauxbuilder = new char[8];
-        int num = rg.Next(0, 100000000);
-        for (int i = 0; i < 8; i++)
-        {
-            fauxbuilder[i] = (char)((num % 10) + 48);
-            num /= 10;
-        }
-        string code = new string(fauxbuilder);
-        return date.Replace("/", "") + code;
-    }
-
-    public static string CreateNewSerialNOPlan02(string date)
-    {
-        // تولید 10 عدد یکتا بین 1 تا 100
-        var uniqueNumbers = new HashSet<int>();
-        var random = new Random();
-
-        while (uniqueNumbers.Count < 10)
-        {
-            uniqueNumbers.Add(random.Next(1, 101));
-        }
-
-        // نمایش اعداد تولید شده در کنسول
-        Console.WriteLine("Generated numbers: " + string.Join(", ", uniqueNumbers));
-
-        // برگرداندن همان رشته ورودی
-        return date;
-    }
-
-    public static bool CheckDateFormat(string Date)
-    {
-        try
-        {
-            if (Date.Length != 10) { return false; }
-
-            System.String[] userDateParts = Date.Split(new[] { "/" }, System.StringSplitOptions.None);
-            int Year = int.Parse(userDateParts[0]);
-            int Month = int.Parse(userDateParts[1]);
-            int Day = int.Parse(userDateParts[2]);
-
-            if (Year < 1300) { return false; }
-            if (Month > 12 || Month < 1) { return false; }
-            if (Day > 31 || Day < 1) { return false; }
-
-            return true;
-        }
-        catch (Exception)
-        {
-            return false;
-        }
-    }
-}
+ }
 
 
 public class FlightPlanEvidence01 : BaseFlightNavigationEntity
