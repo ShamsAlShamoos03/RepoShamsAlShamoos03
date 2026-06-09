@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using ShamsAlShamoos03.Shared.Entities;
 using ShamsAlShamoos03.Infrastructure.Persistence.SeedData;
+using ShamsAlShamoos03.Shared.Entities;
 namespace ShamsAlShamoos03.Infrastructure.Persistence.Contexts
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUsers, ApplicationRoles, string>

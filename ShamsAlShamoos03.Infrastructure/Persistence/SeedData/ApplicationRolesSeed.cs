@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using ShamsAlShamoos03.Shared.Entities;
-using System.Linq;
 
 namespace ShamsAlShamoos03.Infrastructure.Persistence.SeedData
 {

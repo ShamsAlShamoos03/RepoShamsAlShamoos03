@@ -51,7 +51,7 @@ public class Daily1352ActivityEvidence01 : BaseApprovalNavigationEntity
     /// </summary>
     public string? NOTAMCHECKETitle01 { get; set; }
 
- 
+
     /// <summary>
     ///  فعال غیر فعال
     /// </summary>

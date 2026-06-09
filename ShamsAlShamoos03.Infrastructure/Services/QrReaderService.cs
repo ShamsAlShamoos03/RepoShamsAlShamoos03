@@ -79,39 +79,39 @@ namespace ShamsAlShamoos03.Infrastructure.Services
         // ---------------------------
         // 3️⃣ خواندن QRها و بازسازی عکس
 
-public void ReconstructImageFromQrs(List<string> qrFiles, string outputPath)
-    {
-        var combinedBase64 = new StringBuilder();
-
-        var reader = new ZXing.ImageSharp.BarcodeReader<Rgba32>
+        public void ReconstructImageFromQrs(List<string> qrFiles, string outputPath)
         {
-            AutoRotate = true,
-            Options = new ZXing.Common.DecodingOptions
-            {
-                TryHarder = true
-            }
-        };
+            var combinedBase64 = new StringBuilder();
 
-        foreach (var file in qrFiles)
-        {
-            if (!File.Exists(file))
+            var reader = new ZXing.ImageSharp.BarcodeReader<Rgba32>
             {
-                continue;
+                AutoRotate = true,
+                Options = new ZXing.Common.DecodingOptions
+                {
+                    TryHarder = true
+                }
+            };
+
+            foreach (var file in qrFiles)
+            {
+                if (!File.Exists(file))
+                {
+                    continue;
+                }
+
+                using var image = Image.Load<Rgba32>(file);
+                var result = reader.Decode(image);
+
+                if (result != null)
+                {
+                    combinedBase64.Append(result.Text);
+                }
             }
 
-            using var image = Image.Load<Rgba32>(file);
-            var result = reader.Decode(image);
-
-            if (result != null)
-            {
-                combinedBase64.Append(result.Text);
-            }
+            byte[] imageBytes = Convert.FromBase64String(combinedBase64.ToString());
+            File.WriteAllBytes(outputPath, imageBytes);
         }
-
-        byte[] imageBytes = Convert.FromBase64String(combinedBase64.ToString());
-        File.WriteAllBytes(outputPath, imageBytes);
     }
-}
 
     public class QrReaderService
     {

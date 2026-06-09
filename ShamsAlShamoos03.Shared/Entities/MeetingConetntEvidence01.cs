@@ -12,7 +12,7 @@ public class MeetingConetntEvidence01 : BaseApprovalNavigationEntity
     public string? RegisterPesronel01 { get; set; }
     [ForeignKey("RegisterPesronel01")]
     public virtual UjobPesronel01 oo_RegisterPesronel01 { get; set; }
- 
+
     /// منطقه پروازی 
     /// </summary>
     public int? TypeMeeting { get; set; }

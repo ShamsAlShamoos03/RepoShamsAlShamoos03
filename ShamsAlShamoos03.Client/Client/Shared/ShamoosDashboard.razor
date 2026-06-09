@@ -9,9 +9,7 @@
 
     <SfSidebar Width="280px"
                Position="SidebarPosition.Right"
-               DockSize="70px"
-               EnableDock="true"
-               Type="SidebarType.Push"
+               Type="SidebarType.Over"
                IsOpen="@SidebarOpen">
 
         <ChildContent>
@@ -39,18 +37,22 @@
     </SfSidebar>
 
     <div class="content">
-
-        <button class="toggle-btn" @onclick="ToggleSidebar">
-            ☰
-        </button>
-
         @ChildContent
-
     </div>
+
+    <button class="toggle-btn @(SidebarOpen ? "opened" : "closed")"
+            @onclick="ToggleSidebar">
+
+        <span class="menu-icon">
+            @(SidebarOpen ? "❯" : "❮")
+        </span>
+
+    </button>
 
 </div>
 
 @code {
+
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
 
@@ -67,12 +69,17 @@
         new("صفحه یافت نشد", "e-PageNotFound", "/PageNotFound"),
         new("Panel02", "e-Panel02", "/Panel02"),
         new("Panel03", "e-Panel03", "/Panel03")
-
     ];
 
-    private void ToggleSidebar() => SidebarOpen = !SidebarOpen;
+    private void ToggleSidebar()
+    {
+        SidebarOpen = !SidebarOpen;
+    }
 
-    private void NavigateTo(string url) => Navigation.NavigateTo(url);
+    private void NavigateTo(string url)
+    {
+        Navigation.NavigateTo(url);
+    }
 
     private bool IsActive(string url)
     {
@@ -81,9 +88,13 @@
         if (url == "/")
             return string.IsNullOrEmpty(currentPath);
 
-        return currentPath.StartsWith(url.TrimStart('/'),
+        return currentPath.StartsWith(
+            url.TrimStart('/'),
             StringComparison.OrdinalIgnoreCase);
     }
 
-    private record MenuItem(string Title, string Icon, string Url);
+    private record MenuItem(
+        string Title,
+        string Icon,
+        string Url);
 }

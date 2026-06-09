@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-    public class CrewPersonalCorrespondence01 : BaseApprovalNavigationEntity
+public class CrewPersonalCorrespondence01 : BaseApprovalNavigationEntity
 {
     /// <summary>
     ///  تاریخ شمسی
@@ -164,4 +164,4 @@ using System.ComponentModel.DataAnnotations.Schema;
     [ForeignKey("TypeLetter01")]
     public virtual CategoryGeneral oo_TypeLetter01 { get; set; }
 
- }
+}

@@ -74,7 +74,7 @@ public static class CreateSerialNOPlan01
         return date + nextNumber.ToString().PadLeft(4, '0');
     }
 
- 
+
     public static String CreateNewNoFolderGaurdActivity01(string maxSerialNOPlanNo, string Date01)
     {
         string Number;
@@ -92,7 +92,7 @@ public static class CreateSerialNOPlan01
         return maxSerialNOPlanNo;
     }
 
- 
+
     public static String CreateNewSerialNOPlan(string maxSerialNOPlanNo, string Date01)
     {
         string Number;
@@ -112,7 +112,7 @@ public static class CreateSerialNOPlan01
     }
 
 
- }
+}
 
 
 public class FlightPlanEvidence01 : BaseFlightNavigationEntity

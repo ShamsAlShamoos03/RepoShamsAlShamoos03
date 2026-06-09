@@ -27,7 +27,7 @@ public class GaurdPlanEvidence01 : BaseApprovalNavigationEntity
     [ForeignKey("GaurdPost01ID")]
     public virtual GaurdPost oo_GaurdPost01ID { get; set; }
 
- 
+
     /// <summary>
     ///  ترتیب
     /// </summary>

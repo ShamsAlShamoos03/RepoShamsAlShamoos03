@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class HistoryRokn04FAVADetailDastoor01: BaseApprovalNavigationEntity
+public class HistoryRokn04FAVADetailDastoor01 : BaseApprovalNavigationEntity
 {
     /// <summary>
     ///  تاریخ شمسی
