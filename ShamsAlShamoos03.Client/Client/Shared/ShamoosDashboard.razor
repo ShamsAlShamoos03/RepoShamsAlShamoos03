@@ -1,0 +1,89 @@
+﻿@using Syncfusion.Blazor.Navigations
+@inject NavigationManager Navigation
+
+<HeadContent>
+    <link href="/ThemeSite/Css/ShamoosDashboard.css" rel="stylesheet" />
+</HeadContent>
+
+<div class="dashboard-container" dir="rtl">
+
+    <SfSidebar Width="280px"
+               Position="SidebarPosition.Right"
+               DockSize="70px"
+               EnableDock="true"
+               Type="SidebarType.Push"
+               IsOpen="@SidebarOpen">
+
+        <ChildContent>
+
+            <div class="sidebar-header">
+                <img src="ThemeSite/assets/img/black-logo45.png" width="45" />
+                <span>شمس الشموس</span>
+            </div>
+
+            <div class="sidebar-menu">
+                @foreach (var item in MenuItems)
+                {
+                    <div class="menu-item @(IsActive(item.Url) ? "active" : "")"
+                         @onclick="() => NavigateTo(item.Url)">
+
+                        <span class="e-icons @item.Icon"></span>
+                        <span>@item.Title</span>
+
+                    </div>
+                }
+            </div>
+
+        </ChildContent>
+
+    </SfSidebar>
+
+    <div class="content">
+
+        <button class="toggle-btn" @onclick="ToggleSidebar">
+            ☰
+        </button>
+
+        @ChildContent
+
+    </div>
+
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    private bool SidebarOpen = true;
+
+    private readonly List<MenuItem> MenuItems =
+    [
+        new("صفحه اصلی", "e-home", "/"),
+        new("داشبورد", "e-dashboard", "/dashboard"),
+        new("پرسنل", "e-user", "/personnel"),
+        new("مکاتبات", "e-folder", "/letters"),
+        new("گزارشات", "e-description", "/reports"),
+        new("تنظیمات", "e-settings", "/settings"),
+        new("صفحه یافت نشد", "e-PageNotFound", "/PageNotFound"),
+        new("Panel02", "e-Panel02", "/Panel02"),
+        new("Panel03", "e-Panel03", "/Panel03")
+
+    ];
+
+    private void ToggleSidebar() => SidebarOpen = !SidebarOpen;
+
+    private void NavigateTo(string url) => Navigation.NavigateTo(url);
+
+    private bool IsActive(string url)
+    {
+        var currentPath = Navigation.ToBaseRelativePath(Navigation.Uri);
+
+        if (url == "/")
+            return string.IsNullOrEmpty(currentPath);
+
+        return currentPath.StartsWith(url.TrimStart('/'),
+            StringComparison.OrdinalIgnoreCase);
+    }
+
+    private record MenuItem(string Title, string Icon, string Url);
+}
