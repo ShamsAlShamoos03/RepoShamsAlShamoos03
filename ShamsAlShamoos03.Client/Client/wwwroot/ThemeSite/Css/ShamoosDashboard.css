@@ -336,7 +336,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 0 12px rgb(0 0 0 / 15%);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     right: 0;
 }
@@ -352,7 +352,7 @@
     .toggle-btn:hover {
         width: 38px;
         background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-        box-shadow: 4px 0 16px rgba(102, 126, 234, 0.4);
+        box-shadow: 4px 0 16px rgb(102 126 234 / 40%);
     }
 
     .toggle-btn:active {
@@ -509,11 +509,11 @@
     }
 
         .menu-item:hover {
-            background: rgba(102, 126, 234, 0.15);
+            background: rgb(102 126 234 / 15%);
         }
 
     .sidebar-footer {
-        border-top-color: rgba(255, 255, 255, 0.08);
+        border-top-color: rgb(255 255 255 / 8%);
     }
 }
 
