@@ -97,3 +97,37 @@
     font-size: 22px;
     font-weight: bold;
 }
+.sidebar-header {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: #0d6efd;
+    color: #fff;
+}
+
+.user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgb(255 255 255 / 30%);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.user-name {
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.user-role {
+    font-size: 12px;
+    opacity: .85;
+}

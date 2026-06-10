@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using ShamsAlShamoos03.Infrastructure.Persistence.Contexts;
 using ShamsAlShamoos03.Shared.Models;
 using System.ComponentModel.DataAnnotations;
-
+using Microsoft.EntityFrameworkCore;
 namespace ShamsAlShamoos03.Server.Controllers;
 
 [ApiController]
@@ -10,15 +11,17 @@ namespace ShamsAlShamoos03.Server.Controllers;
 public class AuthController : ControllerBase
 {
     private readonly SignInManager<ApplicationUsers> _signInManager;
-
     private readonly UserManager<ApplicationUsers> _userManager;
+    private readonly ApplicationDbContext _context;
 
     public AuthController(
         SignInManager<ApplicationUsers> signInManager,
-        UserManager<ApplicationUsers> userManager)
+        UserManager<ApplicationUsers> userManager,
+        ApplicationDbContext context)
     {
         _signInManager = signInManager;
         _userManager = userManager;
+        _context = context;
     }
 
     [HttpGet("users")]
@@ -36,6 +39,45 @@ public class AuthController : ControllerBase
             .ToList();
 
         return Ok(users);
+    }
+
+    [HttpGet("current-user")]
+    public async Task<IActionResult> CurrentUser()
+    {
+        // برگرداندن اطلاعات کاربر جاری
+        try
+        {
+            var userId = _userManager.GetUserId(User);
+            var user = await _context.Users
+                .Include(x => x.tblMelicodeID)
+                    .ThenInclude(x => x.ooDRJCOD)
+                .FirstOrDefaultAsync(x => x.Id == userId);
+
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            var currentUser = new Currentuser
+            {
+                ID = user.UserName ?? "",
+                FullName = $"{user.tblMelicodeID?.ooDRJCOD?.Title ?? ""} {user.tblMelicodeID?.FST_NAM ?? ""} {user.tblMelicodeID?.LST_NAM ?? ""}",
+                RoleName = $"{user.FirstName ?? ""} {user.LastName ?? ""}",
+                UserImage = user.tblMelicodeID != null
+                          ? "/PersonelImage1/" + user.tblMelicodeID.MelliCode + ".png"
+                          : "/images/users/default-user.png"
+            };
+
+            return Ok(currentUser);
+        }
+        catch (Exception ex)
+        {
+            // نمایش دقیق خطا در کنسول یا لاگ سرور
+            Console.WriteLine(ex);
+            return StatusCode(500, ex.Message);
+        }
+
+        
     }
 
     [HttpPost("login")]

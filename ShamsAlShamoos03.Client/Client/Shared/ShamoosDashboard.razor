@@ -1,6 +1,8 @@
-﻿@using Syncfusion.Blazor.Navigations
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using Syncfusion.Blazor.Navigations
+@using System.Security.Claims
 @inject NavigationManager Navigation
-
+@inject HttpClient Http
 <HeadContent>
     <link href="/ThemeSite/Css/ShamoosDashboard.css" rel="stylesheet" />
 </HeadContent>
@@ -15,8 +17,16 @@
         <ChildContent>
 
             <div class="sidebar-header">
-                <img src="ThemeSite/assets/img/black-logo45.png" width="45" />
-                <span>شمس الشموس</span>
+
+                <img src="@UserImage"
+                     class="user-avatar"
+                     alt="User" />
+
+                <div class="user-info">
+                    <div class="user-name">@UserFullName</div>
+                    <div class="user-role">@UserRole</div>
+                </div>
+
             </div>
 
             <div class="sidebar-menu">
@@ -53,13 +63,33 @@
 
 @code {
 
+    [CascadingParameter] 
+    private Task<AuthenticationState> AuthStateTask { get; set; } = default!;
+
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
 
     private bool SidebarOpen = true;
 
-    private readonly List<MenuItem> MenuItems =
-    [
+    private string UserFullName = "";
+    private string UserRole = "";
+    private string UserImage = "images/users/default-user.png";
+ 
+    protected override async Task OnInitializedAsync()
+    {
+        var currentUser =
+    await Http.GetFromJsonAsync<Currentuser>(
+        "api/auth/current-user");
+
+UserFullName = currentUser.FullName;
+UserRole = currentUser.RoleName;
+UserImage = currentUser.UserImage;
+
+    
+    }
+
+    private readonly List<MenuItem> MenuItems = new()
+    {
         new("صفحه اصلی", "e-home", "/"),
         new("داشبورد", "e-dashboard", "/dashboard"),
         new("پرسنل", "e-user", "/personnel"),
@@ -69,32 +99,18 @@
         new("صفحه یافت نشد", "e-PageNotFound", "/PageNotFound"),
         new("Panel02", "e-Panel02", "/Panel02"),
         new("Panel03", "e-Panel03", "/Panel03")
-    ];
+    };
 
-    private void ToggleSidebar()
-    {
-        SidebarOpen = !SidebarOpen;
-    }
+    private void ToggleSidebar() => SidebarOpen = !SidebarOpen;
 
-    private void NavigateTo(string url)
-    {
-        Navigation.NavigateTo(url);
-    }
+    private void NavigateTo(string url) => Navigation.NavigateTo(url);
 
     private bool IsActive(string url)
     {
         var currentPath = Navigation.ToBaseRelativePath(Navigation.Uri);
-
-        if (url == "/")
-            return string.IsNullOrEmpty(currentPath);
-
-        return currentPath.StartsWith(
-            url.TrimStart('/'),
-            StringComparison.OrdinalIgnoreCase);
+        if (url == "/") return string.IsNullOrEmpty(currentPath);
+        return currentPath.StartsWith(url.TrimStart('/'), StringComparison.OrdinalIgnoreCase);
     }
 
-    private record MenuItem(
-        string Title,
-        string Icon,
-        string Url);
+    private record MenuItem(string Title, string Icon, string Url);
 }
