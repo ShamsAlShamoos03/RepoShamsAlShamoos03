@@ -6,3 +6,11 @@ exclude_paths:
   - "**/SweetAlert2.js"
   - "package-lock.json"
   - "**/package-lock.json"
+
+segments:
+  - name: "backend"
+    path: "ShamsAlShamoos03.Server/**"
+  - name: "client"
+    path: "ShamsAlShamoos03.Client/**"
+  - name: "shared"
+    path: "ShamsAlShamoos03.Shared/**"
