@@ -1,130 +1,167 @@
 ﻿@using Microsoft.AspNetCore.Components.Authorization
 @using Syncfusion.Blazor.Navigations
-@using System.Security.Claims
 @inject NavigationManager Navigation
 @inject HttpClient Http
+@inject AuthenticationStateProvider AuthStateProvider
+
 <HeadContent>
     <link href="/ThemeSite/Css/ShamoosDashboard.css" rel="stylesheet" />
 </HeadContent>
 
 <div class="dashboard-container" dir="rtl">
 
+    <!-- Sidebar -->
     <SfSidebar Width="280px"
                Position="SidebarPosition.Right"
                Type="SidebarType.Over"
-               IsOpen="@SidebarOpen">
-
+               IsOpen="@SidebarOpen"
+               EnableRtl="true">
         <ChildContent>
 
+            <!-- Header -->
             <div class="sidebar-header">
-
-                <img src="@UserImage"
-                     class="user-avatar"
-                     alt="User"
-                     onerror="this.src='/images/default-user.png'" />
-
+                <div class="avatar-wrapper">
+                    <img src="@UserImage" class="user-avatar" alt="User"
+                         onerror="this.src='/images/default-user.png'" />
+                    <div class="avatar-status"></div>
+                </div>
                 <div class="user-info">
                     <div class="user-name">@UserFullName</div>
                     <div class="user-role">@UserRole</div>
                 </div>
-
             </div>
 
+            <!-- Menu -->
             <div class="sidebar-menu">
                 @foreach (var item in MenuItems)
                 {
                     <div class="menu-item @(IsActive(item.Url) ? "active" : "")"
                          @onclick="() => NavigateTo(item.Url)">
-
                         <span class="e-icons @item.Icon"></span>
-                        <span>@item.Title</span>
+                        <span class="menu-title">@item.Title</span>
+                        @if (item.Badge > 0)
+                        {
+                            <span class="menu-badge">@item.Badge</span>
+                        }
+                    </div>
+                }
+            </div>
 
+            <!-- Footer (Login / Logout) -->
+            <div class="sidebar-footer">
+                @if (IsLoggedIn)
+                {
+                    <div class="menu-item logout-item" @onclick="LoginLogout">
+                        <span class="e-icons e-logout"></span>
+                        <span class="menu-title">خروج</span>
+                    </div>
+                }
+                else
+                {
+                    <div class="menu-item login-item" @onclick="LoginLogout">
+                        <span class="e-icons e-login"></span>
+                        <span class="menu-title">ورود</span>
                     </div>
                 }
             </div>
 
         </ChildContent>
-
     </SfSidebar>
 
-    <div class="content">
+    <!-- Main content -->
+    <div class="content"
+         style="margin-right:@(SidebarOpen ? "280px" : "0px"); transition: all 0.3s ease;">
         @ChildContent
     </div>
 
+    <!-- Toggle button -->
     <button class="toggle-btn @(SidebarOpen ? "opened" : "closed")"
-            @onclick="ToggleSidebar">
-
-        <span class="menu-icon">
-            @(SidebarOpen ? "❯" : "❮")
-        </span>
-
+            @onclick="ToggleSidebar"
+            aria-label="Toggle Sidebar">
+        <span class="menu-icon">@((SidebarOpen ? "❮" : "❯"))</span>
     </button>
 
 </div>
 
 @code {
+    [CascadingParameter] private Task<AuthenticationState> AuthStateTask { get; set; } = default!;
+    [Parameter] public RenderFragment? ChildContent { get; set; }
 
-    [CascadingParameter] 
-    private Task<AuthenticationState> AuthStateTask { get; set; } = default!;
-
-    [Parameter]
-    public RenderFragment? ChildContent { get; set; }
-
+    private bool IsLoggedIn = false;
     private bool SidebarOpen = true;
-
     private string UserFullName = "";
     private string UserRole = "";
     private string UserImage = "";
- 
-    protected override async Task OnInitializedAsync()
-    {
-        var currentUser =
-            await Http.GetFromJsonAsync<Currentuser>("api/auth/current-user");
-
-        if (currentUser is null)
-            return;
-
-        UserFullName = currentUser.FullName;
-        UserRole = currentUser.RoleName;
-        UserImage = currentUser.UserImage;
-
-        MenuItems = new()
-    {
-        new("صفحه اصلی", "e-home", "/"),
-        new("داشبورد", "e-dashboard", "/dashboard"),
-        new("پرسنل", "e-user", "/personnel"),
-        new("مکاتبات", "e-folder", "/letters"),
-        new("گزارشات", "e-description", "/reports"),
-        new("تنظیمات", "e-settings", "/settings"),
-        new("صفحه یافت نشد", "e-PageNotFound", "/PageNotFound"),
-        new("Panel02", "e-Panel02", "/Panel02")
-    };
-
-        if (currentUser.Roles.Contains("MANAGEUSER01")
-            || currentUser.Roles.Contains("MANAGEUSER02"))
-        {
-            MenuItems.Add(
-                new("Panel03", "e-Panel03", "/Panel03"));
-        }
-        if (currentUser.Roles.Contains("PersonalCorrespondenceYEGAN")
-            || currentUser.Roles.Contains("PersonalCorrespondenceVazifeh"))
-        {
-            MenuItems.Add(
-                new("Panel04", "e-Panel04", "/Panel04"));
-        }
-    }
     private List<MenuItem> MenuItems = new();
 
-    private void ToggleSidebar() => SidebarOpen = !SidebarOpen;
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthStateTask;
+        IsLoggedIn = authState.User.Identity?.IsAuthenticated ?? false;
 
+        if (!IsLoggedIn) return;
+
+        try
+        {
+            var currentUser = await Http.GetFromJsonAsync<Currentuser>("api/auth/current-user");
+            if (currentUser == null) return;
+
+            UserFullName = currentUser.FullName;
+            UserRole = currentUser.RoleName;
+            UserImage = currentUser.UserImage;
+
+            // منوهای پایه
+            MenuItems = new()
+            {
+                new MenuItem("صفحه اصلی", "e-home", "/", 0),
+                new MenuItem("داشبورد", "e-dashboard", "/dashboard", 5),
+                new MenuItem("پرسنل", "e-user", "/personnel", 0),
+                new MenuItem("مکاتبات", "e-folder", "/letters", 12),
+                new MenuItem("گزارشات", "e-description", "/reports", 0),
+                new MenuItem("تنظیمات", "e-settings", "/settings", 0)
+            };
+
+            // منوهای شرطی بر اساس نقش
+            if (currentUser.Roles != null)
+            {
+                if (currentUser.Roles.Contains("PersonalCorrespondenceYEGAN") ||
+                    currentUser.Roles.Contains("StatusPersonalCorrespondenceConfirmation05"))
+                {
+                    MenuItems.Add(new MenuItem("Panel03", "e-Panel03", "/Panel03", 0));
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading user data: {ex.Message}");
+        }
+    }
+
+    private void ToggleSidebar() => SidebarOpen = !SidebarOpen;
     private void NavigateTo(string url) => Navigation.NavigateTo(url);
+
+    private async Task LoginLogout()
+    {
+        if (IsLoggedIn)
+        {
+            if (AuthStateProvider is SimpleAuthProvider simpleAuth)
+                await simpleAuth.LogoutAsync();
+
+            IsLoggedIn = false;
+            Navigation.NavigateTo("/", true);
+        }
+        else
+        {
+            Navigation.NavigateTo("/login");
+        }
+    }
 
     private bool IsActive(string url)
     {
         var currentPath = Navigation.ToBaseRelativePath(Navigation.Uri);
-        if (url == "/") return string.IsNullOrEmpty(currentPath);
-        return currentPath.StartsWith(url.TrimStart('/'), StringComparison.OrdinalIgnoreCase);
+        return url == "/" ? string.IsNullOrEmpty(currentPath)
+                          : currentPath.StartsWith(url.TrimStart('/'), StringComparison.OrdinalIgnoreCase);
     }
 
-    private record MenuItem(string Title, string Icon, string Url);
+    private record MenuItem(string Title, string Icon, string Url, int Badge = 0);
 }
