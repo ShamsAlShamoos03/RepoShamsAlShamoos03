@@ -37,6 +37,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 // رجیستر سرویس‌های خودت
 builder.Services.AddScoped<HistoryRegisterService>();
+builder.Services.AddScoped<BDailyPlanService>();
 
 // رجیستر Syncfusion
 builder.Services.AddSyncfusionBlazor();

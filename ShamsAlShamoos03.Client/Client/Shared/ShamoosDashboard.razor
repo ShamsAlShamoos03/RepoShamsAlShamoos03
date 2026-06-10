@@ -69,12 +69,11 @@
     </SfSidebar>
 
     <!-- Main Content - اصلاح شده با padding داینامیک -->
-    <div class="content"
-         style="@(SidebarOpen ? "margin-right: 280px; width: calc(100% - 280px);" : "margin-right: 0; width: 100%;")">
+    <div class="content">
         <div class="content-inner">
             @ChildContent
         </div>
-    </div>
+    </div>        
 
     <!-- Toggle Button -->
     <button class="toggle-btn @(SidebarOpen ? "opened" : "closed")"

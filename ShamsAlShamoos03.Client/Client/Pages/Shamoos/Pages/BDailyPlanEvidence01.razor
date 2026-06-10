@@ -1,0 +1,46 @@
+﻿@page "/BDailyPlanEvidence01"
+ @layout DashboardLayout
+@inject BDailyPlanService BDailyPlanService
+
+<PageTitle>BDailyPlanEvidence01</PageTitle>
+
+<h3>BDailyPlanEvidence01</h3>
+<br />
+ <br /><h3>Panel02</h3>
+<br /><h3>Panel02</h3>
+<br /><h3>Panel02</h3>
+<br /><h3>Panel02</h3>
+<br /><h3>Panel02</h3>
+<br />
+
+@code {
+    private object[] PageSizeOptions = new object[] { 5, 10, 20, 50, "All" };
+    private bool IsLoading = true;
+    private bool IsGenerating = false;
+    @inject IJSRuntime JS
+
+    private List<DailyPlanEvidence01ViewModel_Update> GridData = new();
+    public string ImageUrl { get; set; }
+    public string Value { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            GridData = await BDailyPlanService.LoadDataAsync("12345") ?? new List<DailyPlanEvidence01ViewModel_Update>();
+
+        }
+        catch
+        {
+            GridData = new List<DailyPlanEvidence01ViewModel_Update>();
+            await JS.InvokeVoidAsync("console.log", " 333333333333333 ");
+
+        }
+        finally
+        {
+            IsLoading = false;
+
+        }
+    }
+
+ }
