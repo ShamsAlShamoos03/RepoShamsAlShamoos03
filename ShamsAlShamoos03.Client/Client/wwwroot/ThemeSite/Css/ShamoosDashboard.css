@@ -98,19 +98,9 @@
     font-weight: bold;
 }
 
-.sidebar-header {
-    min-height: 80px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 15px;
-    background: #0d6efd;
-    color: #fff;
-}
-
 .user-avatar {
-    width: 58px;
-    height: 78px;
+    width: 50px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
 }
