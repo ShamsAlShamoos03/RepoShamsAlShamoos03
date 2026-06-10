@@ -1,5 +1,22 @@
 ﻿@inherits LayoutComponentBase
 
 <ShamoosDashboard>
-    @Body
+    <div class="dashboard-layout-rtl">
+        @Body
+    </div>
 </ShamoosDashboard>
+
+<style>
+    .dashboard-layout-rtl {
+        direction: rtl;
+        text-align: right;
+    }
+
+        .dashboard-layout-rtl .e-control,
+        .dashboard-layout-rtl .e-grid,
+        .dashboard-layout-rtl .e-dialog,
+        .dashboard-layout-rtl .e-dropdownlist,
+        .dashboard-layout-rtl .e-input {
+            direction: rtl !important;
+        }
+</style>
