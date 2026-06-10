@@ -20,7 +20,8 @@
 
                 <img src="@UserImage"
                      class="user-avatar"
-                     alt="User" />
+                     alt="User"
+                     onerror="this.src='/images/default-user.png'" />
 
                 <div class="user-info">
                     <div class="user-name">@UserFullName</div>
@@ -73,7 +74,7 @@
 
     private string UserFullName = "";
     private string UserRole = "";
-    private string UserImage = "images/users/default-user.png";
+    private string UserImage = "";
  
     protected override async Task OnInitializedAsync()
     {

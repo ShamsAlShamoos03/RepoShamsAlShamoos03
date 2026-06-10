@@ -65,7 +65,7 @@ public class AuthController : ControllerBase
                 RoleName = $"{user.FirstName ?? ""} {user.LastName ?? ""}",
                 UserImage = user.tblMelicodeID != null
                           ? "/PersonelImage1/" + user.tblMelicodeID.MelliCode + ".png"
-                          : "/images/users/default-user.png"
+                          : "/PersonelImage1/" + ".png"
             };
 
             return Ok(currentUser);
