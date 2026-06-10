@@ -11,13 +11,14 @@
 <div class="dashboard-container" dir="rtl">
 
     <!-- Sidebar -->
-    <SfSidebar Width="280px"
+    <SfSidebar @ref="Sidebar"
+               CssClass="dashboard-sidebar"
+               Width="280px"
                Position="SidebarPosition.Right"
                Type="SidebarType.Push"
                IsOpen="@SidebarOpen"
                EnableRtl="true">
         <ChildContent>
-
             <!-- Header -->
             <div class="sidebar-header">
                 <div class="avatar-wrapper">
@@ -47,7 +48,7 @@
                 }
             </div>
 
-            <!-- Footer (Login / Logout) -->
+            <!-- Footer -->
             <div class="sidebar-footer">
                 @if (IsLoggedIn)
                 {
@@ -64,29 +65,34 @@
                     </div>
                 }
             </div>
-
         </ChildContent>
     </SfSidebar>
 
-    <!-- Main content -->
+    <!-- Main Content - اصلاح شده با padding داینامیک -->
     <div class="content"
-         style="margin-right:@(SidebarOpen ? "280px" : "0px"); transition: all 0.3s ease;">
-        @ChildContent
+         style="@(SidebarOpen ? "margin-right: 280px; width: calc(100% - 280px);" : "margin-right: 0; width: 100%;")">
+        <div class="content-inner">
+            @ChildContent
+        </div>
     </div>
 
-    <!-- Toggle button -->
+    <!-- Toggle Button -->
     <button class="toggle-btn @(SidebarOpen ? "opened" : "closed")"
             @onclick="ToggleSidebar"
             aria-label="Toggle Sidebar">
-        <span class="menu-icon">@((SidebarOpen ? "❮" : "❯"))</span>
+        <span class="menu-icon">@(SidebarOpen ? "❮" : "❯")</span>
     </button>
 
 </div>
 
 @code {
-    [CascadingParameter] private Task<AuthenticationState> AuthStateTask { get; set; } = default!;
-    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [CascadingParameter]
+    private Task<AuthenticationState> AuthStateTask { get; set; } = default!;
 
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    private SfSidebar? Sidebar;
     private bool IsLoggedIn = false;
     private bool SidebarOpen = true;
     private string UserFullName = "";
@@ -96,21 +102,30 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var authState = await AuthStateTask;
-        IsLoggedIn = authState.User.Identity?.IsAuthenticated ?? false;
+        await LoadUserData();
+    }
 
-        if (!IsLoggedIn) return;
-
+    private async Task LoadUserData()
+    {
         try
         {
+            var authState = await AuthStateTask;
+            IsLoggedIn = authState.User.Identity?.IsAuthenticated ?? false;
+
+            if (!IsLoggedIn)
+            {
+                MenuItems = new();
+                return;
+            }
+
             var currentUser = await Http.GetFromJsonAsync<Currentuser>("api/auth/current-user");
+
             if (currentUser == null) return;
 
             UserFullName = currentUser.FullName;
             UserRole = currentUser.RoleName;
             UserImage = currentUser.UserImage;
 
-            // منوهای پایه
             MenuItems = new()
             {
                 new MenuItem("صفحه اصلی", "e-home", "/", 0),
@@ -118,16 +133,22 @@
                 new MenuItem("پرسنل", "e-user", "/personnel", 0),
                 new MenuItem("مکاتبات", "e-folder", "/letters", 12),
                 new MenuItem("گزارشات", "e-description", "/reports", 0),
+                new MenuItem("ثبت اقلام", "e-description", "/Shamoos/HistoryRegister", 0),
                 new MenuItem("تنظیمات", "e-settings", "/settings", 0)
             };
 
-            // منوهای شرطی بر اساس نقش
             if (currentUser.Roles != null)
             {
-                if (currentUser.Roles.Contains("PersonalCorrespondenceYEGAN") ||
-                    currentUser.Roles.Contains("StatusPersonalCorrespondenceConfirmation05"))
+                if (currentUser.Roles.Contains("MANAGEUSER01") ||
+                    currentUser.Roles.Contains("MANAGEUSER02"))
                 {
-                    MenuItems.Add(new MenuItem("Panel03", "e-Panel03", "/Panel03", 0));
+                    MenuItems.Add(new MenuItem("مدیریت کاربران", "e-user-manage", "/Panel03", 0));
+                }
+
+                if (currentUser.Roles.Contains("PersonalCorrespondenceYEGAN") ||
+                    currentUser.Roles.Contains("PersonalCorrespondenceVazifeh"))
+                {
+                    MenuItems.Add(new MenuItem("مکاتبات شخصی", "e-mail", "/Panel04", 3));
                 }
             }
         }
@@ -137,17 +158,51 @@
         }
     }
 
-    private void ToggleSidebar() => SidebarOpen = !SidebarOpen;
-    private void NavigateTo(string url) => Navigation.NavigateTo(url);
+    private async void ToggleSidebar()
+    {
+        SidebarOpen = !SidebarOpen;
+        await Task.Delay(50);
+        StateHasChanged();
+    }
 
+    private void NavigateTo(string url)
+    {
+        if (url == "/Shamoos/HistoryRegister" && !IsLoggedIn)
+        {
+            Navigation.NavigateTo($"/login?returnUrl={Uri.EscapeDataString(url)}");
+        }
+        else
+        {
+            Navigation.NavigateTo(url);
+        }
+    }
+    // private void GoToPageAfterLogin(string returnUrl)
+    // {
+    //     if (IsLoggedIn)
+    //     {
+    //         Nav.NavigateTo(returnUrl, true);
+    //     }
+    //     else
+    //     {
+    //         Nav.NavigateTo($"/login?returnUrl={Uri.EscapeDataString(returnUrl)}");
+    //     }
+    // }
     private async Task LoginLogout()
     {
         if (IsLoggedIn)
         {
             if (AuthStateProvider is SimpleAuthProvider simpleAuth)
+            {
                 await simpleAuth.LogoutAsync();
+            }
 
             IsLoggedIn = false;
+            UserFullName = "";
+            UserRole = "";
+            UserImage = "";
+            MenuItems.Clear();
+
+            await Task.Delay(100);
             Navigation.NavigateTo("/", true);
         }
         else
@@ -159,8 +214,11 @@
     private bool IsActive(string url)
     {
         var currentPath = Navigation.ToBaseRelativePath(Navigation.Uri);
-        return url == "/" ? string.IsNullOrEmpty(currentPath)
-                          : currentPath.StartsWith(url.TrimStart('/'), StringComparison.OrdinalIgnoreCase);
+
+        if (url == "/")
+            return string.IsNullOrEmpty(currentPath);
+
+        return currentPath.StartsWith(url.TrimStart('/'), StringComparison.OrdinalIgnoreCase);
     }
 
     private record MenuItem(string Title, string Icon, string Url, int Badge = 0);
