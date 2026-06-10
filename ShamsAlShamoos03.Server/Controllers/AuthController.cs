@@ -52,6 +52,7 @@ public class AuthController : ControllerBase
                 .Include(x => x.tblMelicodeID)
                     .ThenInclude(x => x.ooDRJCOD)
                 .FirstOrDefaultAsync(x => x.Id == userId);
+            var roles = await _userManager.GetRolesAsync(user);
 
             if (user == null)
             {
@@ -65,7 +66,8 @@ public class AuthController : ControllerBase
                 RoleName = $"{user.FirstName ?? ""} {user.LastName ?? ""}",
                 UserImage = user.tblMelicodeID != null
                           ? "/PersonelImage1/" + user.tblMelicodeID.MelliCode + ".png"
-                          : "/PersonelImage1/" + ".png"
+                          : "/images/default-user.png",
+                Roles = roles.ToList()
             };
 
             return Ok(currentUser);

@@ -7,4 +7,6 @@ public class Currentuser
     public string RoleName { get; set; }
     public string MelliCode { get; set; }
     public string UserImage { get; set; }
+    public List<string> Roles { get; set; } = new();
+
 }

@@ -79,17 +79,16 @@
     protected override async Task OnInitializedAsync()
     {
         var currentUser =
-    await Http.GetFromJsonAsync<Currentuser>(
-        "api/auth/current-user");
+            await Http.GetFromJsonAsync<Currentuser>("api/auth/current-user");
 
-UserFullName = currentUser.FullName;
-UserRole = currentUser.RoleName;
-UserImage = currentUser.UserImage;
+        if (currentUser is null)
+            return;
 
-    
-    }
+        UserFullName = currentUser.FullName;
+        UserRole = currentUser.RoleName;
+        UserImage = currentUser.UserImage;
 
-    private readonly List<MenuItem> MenuItems = new()
+        MenuItems = new()
     {
         new("صفحه اصلی", "e-home", "/"),
         new("داشبورد", "e-dashboard", "/dashboard"),
@@ -98,9 +97,23 @@ UserImage = currentUser.UserImage;
         new("گزارشات", "e-description", "/reports"),
         new("تنظیمات", "e-settings", "/settings"),
         new("صفحه یافت نشد", "e-PageNotFound", "/PageNotFound"),
-        new("Panel02", "e-Panel02", "/Panel02"),
-        new("Panel03", "e-Panel03", "/Panel03")
+        new("Panel02", "e-Panel02", "/Panel02")
     };
+
+        if (currentUser.Roles.Contains("MANAGEUSER01")
+            || currentUser.Roles.Contains("MANAGEUSER02"))
+        {
+            MenuItems.Add(
+                new("Panel03", "e-Panel03", "/Panel03"));
+        }
+        if (currentUser.Roles.Contains("PersonalCorrespondenceYEGAN")
+            || currentUser.Roles.Contains("PersonalCorrespondenceVazifeh"))
+        {
+            MenuItems.Add(
+                new("Panel04", "e-Panel04", "/Panel04"));
+        }
+    }
+    private List<MenuItem> MenuItems = new();
 
     private void ToggleSidebar() => SidebarOpen = !SidebarOpen;
 
